@@ -229,11 +229,13 @@ The post explores how **Server-Side Template Injection (SSTI)** vulnerabilities 
 
 **Python Summary:**
 
-![Python Summary](https://github.com/user-attachments/assets/a335c340-e280-42fa-837e-35bf5722b4b6)
+![Python Summary](https://github.com/user-attachments/assets/17583ce6-6772-46d9-908d-c8c27629fdb9)
+
 
 **Ruby Summary:**
 
-![Ruby Summary](https://github.com/user-attachments/assets/9d0761d5-d38b-4309-95f7-d59262bd7739)
+![Ruby Summary](https://github.com/user-attachments/assets/9bbe4e94-98e6-4983-822c-7355b44d09a6)
+
 
 **PHP Summary:**
 
@@ -297,5 +299,3 @@ This article by **@0xAwali** provides one of the most comprehensive overviews of
 
 ---
 
-JavaScript Summary” expandable section)? That makes the file cleaner and easier to navigate.
-```
