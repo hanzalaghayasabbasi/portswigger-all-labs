@@ -68,7 +68,7 @@ Labs are divided into the following groups:
 | Essential Skills                | 2    | [Essential Skills](./Advanced%20labs/Essential%20skills/)           |
 | GraphQL                         | 5    | [GraphQL](./Advanced%20labs/GraphQL/)                               |
 | HTTP Host Header Attacks        | 7    | [Host Header](./Advanced%20labs/HTTP%20Host%20header%20attacks/)    |
-| HTTP Request Smuggling          | 21   | [Request Smuggling](./Advanced%20labs/HTTP%20request%20smuggling/)  |
+| HTTP Request Smuggling          | 22   | [Request Smuggling](./Advanced%20labs/HTTP%20request%20smuggling/)  |
 | Insecure Deserialization        | 10   | [Deserialization](./Advanced%20labs/Insecure%20deserialization/)    |
 | JWT                             | 8    | [JWT](./Advanced%20labs/JWT/)                                       |
 | OAuth                           | 6    | [OAuth](./Advanced%20labs/Oauth/)                                   |
@@ -77,7 +77,7 @@ Labs are divided into the following groups:
 | Web Cache Poisoning             | 13   | [Cache Poisoning](./Advanced%20labs/Web%20cache%20poisoning/)       |
 | Web LLM Attacks                 | 4    | [LLM Attacks](./Advanced%20labs/Web_LLM_Attacks/)                   |
 
-**🧮 Total Advanced Labs:** 93
+**🧮 Total Advanced Labs:** 94
 
 ---
 
