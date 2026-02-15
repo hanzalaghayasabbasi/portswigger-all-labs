@@ -2,23 +2,35 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **Insecure Deserialization**:
 
-**Modifying serialized data types**  
+**2 Modifying serialized data types**  
+<blockquote>
 This lab demonstrates how attackers can alter serialized data types to manipulate application behavior.
+</blockquote>
 
-**Using application functionality to exploit insecure deserialization**  
+**3 Using application functionality to exploit insecure deserialization**  
+<blockquote>
 This lab shows how legitimate application functionality can be leveraged to exploit insecure deserialization vulnerabilities.
-
-**Arbitrary object injection in PHP**  
+</blockquote>
+	
+**4 Arbitrary object injection in PHP**  
+<blockquote>
 This lab demonstrates how attackers can inject arbitrary objects into PHP applications to achieve malicious effects.
+</blockquote>
 
-**Exploiting Java deserialization with Apache Commons**  
+**5 Exploiting Java deserialization with Apache Commons**  
+<blockquote>
 This lab shows how attackers can exploit insecure Java deserialization using gadget chains in the Apache Commons Collections library.
+</blockquote>
 
-**Exploiting PHP deserialization with a pre-built gadget chain**  
+**6 Exploiting PHP deserialization with a pre-built gadget chain**  
+<blockquote>
 This lab demonstrates how attackers can exploit PHP deserialization vulnerabilities using pre-existing gadget chains for remote code execution.
+</blockquote>
 
-**Exploiting Ruby deserialization using a documented gadget chain**  
+**7 Exploiting Ruby deserialization using a documented gadget chain**  
+<blockquote>
 This lab shows how attackers can exploit Ruby deserialization vulnerabilities using documented gadget chains to achieve code execution.
+</blockquote>
 
 ---
 
@@ -775,3 +787,4 @@ Copy and pasting above base64 encode cookie the lab is solved
 
 
 ---
+
