@@ -2,27 +2,40 @@
 
 This write-up focuses on the following **EXPERT-level labs** from the PortSwigger Web Security Academy related to **HTTP Request Smuggling**:
 
-**Exploiting HTTP request smuggling to perform web cache poisoning**  
+**16 Exploiting HTTP request smuggling to perform web cache poisoning**  
+<blockquote>
 This lab demonstrates how request smuggling can be used to poison cache entries, causing the cache to serve malicious responses to other users.
+</blockquote>
 
-**Exploiting HTTP request smuggling to perform web cache deception**  
+**17 Exploiting HTTP request smuggling to perform web cache deception**  
+<blockquote>
 This lab shows how request smuggling can be leveraged to trigger web cache deception attacks, exposing sensitive resources to unintended caching.
+</blockquote>
 
-**Bypassing access controls via HTTP/2 request tunnelling**  
+**18 Bypassing access controls via HTTP/2 request tunnelling**  
+<blockquote>
 This lab demonstrates how HTTP/2 tunneling can be abused to bypass access controls using request smuggling techniques.
+</blockquote>
 
-**Web cache poisoning via HTTP/2 request tunnelling**  
+**19 Web cache poisoning via HTTP/2 request tunnelling**  
+<blockquote>
 This lab shows how attackers can combine HTTP/2 tunneling with cache poisoning to inject malicious responses into cached content.
+</blockquote>
 
-**Client-side desync**  
+**20 Client-side desync** 
+<blockquote>
 This lab covers client-side desynchronization attacks that occur when inconsistencies between client and server request parsing lead to vulnerabilities.
-
-**Server-side pause-based request smuggling**  
+</blockquote>
+	
+**21 Server-side pause-based request smuggling**  
+<blockquote>
 This lab demonstrates advanced request smuggling using deliberate pauses to manipulate server request parsing behavior.
+</blockquote>
 
-**Server-side CL.0 request smuggling**
-
+**22 Server-side CL.0 request smuggling**
+<blockquote>
 This lab demonstrates request smuggling vulnerabilities caused by inconsistent handling of the `Content-Length` header. The front-end server honors the header while the back-end server ignores it for specific endpoints, allowing an attacker to smuggle requests and gain unauthorized access to the admin panel.
+</blockquote>
 
 ---
 
@@ -825,3 +838,4 @@ Launch the attack. It typically solves the lab in seconds to a minute by smuggli
  <img width="940" height="392" alt="image" src="https://github.com/user-attachments/assets/069281d0-0f91-4683-bbdf-4f13ab46e7c9" />
 
 ---
+
