@@ -1,5 +1,17 @@
 # HTTP Host Header and Host Header Attacks
 
+
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+  
+## Introduction
+
 ## What is the HTTP Host Header?
 
 The HTTP `Host` header is a mandatory component of HTTP/1.1 requests. It specifies the domain name the client wants to access:
