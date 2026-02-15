@@ -1,5 +1,17 @@
 # Large Language Models (LLMs) and Web Attacks
 
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+  
+## Introduction
+
+
 Organizations are rushing to integrate Large Language Models (LLMs) in order to improve their online customer experience. This exposes them to **web LLM attacks** that take advantage of the model's access to data, APIs, or user information that an attacker cannot access directly.  
 
 For example, an attack may:
