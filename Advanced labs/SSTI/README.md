@@ -1,8 +1,15 @@
 
-
 # Server-Side Template Injection (SSTI) Guide
 
----
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+  
+## Introduction
 
 ## Overview
 
