@@ -1,7 +1,17 @@
 
-# 🛡️ JavaScript Prototype Pollution: A Deep Dive
+# JavaScript Prototype Pollution: A Deep Dive
 
-## 🔍 What is Prototype Pollution?
+
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+  
+## Introduction
+## What is Prototype Pollution?
 
 Prototype pollution is a vulnerability in JavaScript where an attacker adds arbitrary properties to a global object prototype (like `Object.prototype`). These polluted properties are then inherited by all objects in the application, potentially leading to security issues such as:
 - Arbitrary code execution
@@ -13,7 +23,7 @@ Prototype pollution is a vulnerability in JavaScript where an attacker adds arbi
 
 ---
 
-## 📦 JavaScript Prototypes & Inheritance
+##  JavaScript Prototypes & Inheritance
 
 ### 🧱 Objects in JavaScript
 
@@ -40,7 +50,7 @@ const user = {
 
 ---
 
-### 🧬 What is a Prototype?
+###  What is a Prototype?
 
 Each object in JavaScript has a `prototype` — an object it inherits from:
 
@@ -57,7 +67,7 @@ Other built-in prototypes:
 
 ---
 
-## 🧭 How Inheritance Works
+##  How Inheritance Works
 
 If a property is not found on an object, JavaScript looks up its prototype chain:
 
@@ -154,7 +164,7 @@ https://site.com/?__proto__[transport_url]=data:,alert(1);//
 
 ## 🔎 Finding Prototype Pollution Vulnerabilities
 
-### 🧪 Manual Testing
+###  Manual Testing
 
 1. Inject via URL:
 
@@ -168,7 +178,7 @@ https://site.com/?__proto__[transport_url]=data:,alert(1);//
    Object.prototype.foo // "bar"
    ```
 
-### ⚙️ Using DOM Invader (Burp Suite)
+###  Using DOM Invader (Burp Suite)
 
 * Automatically tests sources, sinks, and gadgets.
 * Can generate XSS PoCs for valid gadgets.
