@@ -2,8 +2,10 @@
 
 This write-up focuses on the following **EXPERT-level lab** from the PortSwigger Web Security Academy related to **Prototype Pollution**:
 
-**Exfiltrating sensitive data via server-side prototype pollution**  
+**10 Exfiltrating sensitive data via server-side prototype pollution**  
+<blockquote>
 This lab demonstrates how attackers can leverage server-side prototype pollution to extract sensitive information from the application.
+</blockquote>
 
 ---
 
@@ -174,3 +176,4 @@ In your browser, go to the lab banner and click **Submit solution**. Submit the 
 
 
 ---
+
