@@ -578,5 +578,3 @@ Upload it and lab is solved:
 
 
 
----
-
