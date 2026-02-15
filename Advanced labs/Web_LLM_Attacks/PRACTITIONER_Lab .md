@@ -2,11 +2,15 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **Web LLM attacks**:
 
-**Exploiting vulnerabilities in LLM APIs**  
+**2 Exploiting vulnerabilities in LLM APIs**  
+<blockquote>
 This lab demonstrates how attackers can exploit common vulnerabilities in LLM API implementations, potentially leading to data leaks or unintended behaviors.
+</blockquote>
 
-**Indirect prompt injection**  
+**3 Indirect prompt injection**  
+<blockquote>
 This lab shows how attackers can leverage indirect prompt injection techniques to manipulate LLM outputs via external content under attacker control.
+</blockquote>
 
 ---
 
@@ -200,3 +204,4 @@ And then lab is solved
 
 
 ---
+
