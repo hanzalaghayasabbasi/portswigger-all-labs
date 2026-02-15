@@ -3,7 +3,7 @@
 This write-up focuses on the following **APPRENTICE-level lab** from the PortSwigger Web Security Academy related to **GraphQL API Vulnerabilities**:
 
 **1 Accessing private GraphQL posts**  
-This lab demonstrates how insufficient access controls on GraphQL queries allow unauthorized users to retrieve private data.
+    This lab demonstrates how insufficient access controls on GraphQL queries allow unauthorized users to retrieve private data.
 
 ---
 
@@ -77,4 +77,5 @@ Submit it and then lab is solved
 
 
 ---
+
 
