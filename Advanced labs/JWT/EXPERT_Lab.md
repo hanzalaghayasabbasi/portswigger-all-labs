@@ -3,10 +3,14 @@
 This write-up focuses on the following **EXPERT-level labs** from the PortSwigger Web Security Academy related to **JWT (JSON Web Token)** vulnerabilities:
 
 **7 JWT authentication bypass via algorithm confusion**  
+<blockquote>
 This lab demonstrates how attackers can bypass authentication by exploiting algorithm confusion vulnerabilities in JWT implementations.
+</blockquote>
 
 **8 JWT authentication bypass via algorithm confusion with no exposed key**  
+<blockquote>
 This lab shows how attackers can exploit algorithm confusion even when no public signing key is exposed.
+</blockquote>
 
 ---
 
@@ -336,4 +340,5 @@ Save the key.
 
 
 ---
+
 
