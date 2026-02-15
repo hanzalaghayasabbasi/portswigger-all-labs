@@ -2,32 +2,50 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **Prototype Pollution**:
 
-**Client-side prototype pollution via browser APIs**  
+**1 Client-side prototype pollution via browser APIs**  
+<blockquote>
 This lab demonstrates how attackers can pollute JavaScript object prototypes using browser APIs to influence client-side behavior.
+</blockquote>
 
-**DOM XSS via client-side prototype pollution**  
+**2 DOM XSS via client-side prototype pollution**  
+<blockquote>
 This lab shows how prototype pollution can be leveraged to achieve DOM-based Cross-site Scripting (XSS).
+</blockquote>
 
-**DOM XSS via an alternative prototype pollution vector**  
+**3 DOM XSS via an alternative prototype pollution vector**  
+<blockquote>
 This lab demonstrates achieving DOM XSS through less common prototype pollution vectors.
+</blockquote>
 
-**Client-side prototype pollution via flawed sanitization**  
+**4 Client-side prototype pollution via flawed sanitization**  
+<blockquote>
 This lab explores how flawed sanitization can allow prototype pollution attacks on the client side.
+</blockquote>
 
-**Client-side prototype pollution in third-party libraries**  
+**5 Client-side prototype pollution in third-party libraries**
+<blockquote>
 This lab covers prototype pollution vulnerabilities introduced by insecure third-party JavaScript libraries.
+</blockquote>
 
-**Privilege escalation via server-side prototype pollution**  
+**6 Privilege escalation via server-side prototype pollution**  
+<blockquote>
 This lab demonstrates how attackers can leverage prototype pollution on the server side to escalate privileges.
+</blockquote>
 
-**Detecting server-side prototype pollution without polluted property reflection**  
+**7 Detecting server-side prototype pollution without polluted property reflection**  
+<blockquote>
 This lab shows how attackers can identify server-side prototype pollution even when the application does not reflect polluted properties.
+</blockquote>
 
-**Bypassing flawed input filters for server-side prototype pollution**  
+**8 Bypassing flawed input filters for server-side prototype pollution**  
+<blockquote>
 This lab demonstrates bypassing input validation filters to exploit server-side prototype pollution vulnerabilities.
+</blockquote>
 
-**Remote code execution via server-side prototype pollution**  
+**9 Remote code execution via server-side prototype pollution**  
+<blockquote>
 This lab demonstrates how server-side prototype pollution can lead directly to remote code execution.
+</blockquote>
 
 ---
 
@@ -878,3 +896,4 @@ Carlos’s file is deleted and the lab is solved.
 <img width="1556" height="528" alt="image" src="https://github.com/user-attachments/assets/4c957167-e980-498c-a8ae-7b9e780917c4" />
 
 ---
+
