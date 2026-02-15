@@ -2,12 +2,15 @@
 
 This write-up focuses on the following labs from the PortSwigger Web Security Academy related to **JWT (JSON Web Token)** vulnerabilities:
 
-**JWT authentication bypass via unverified signature**   
+**1 JWT authentication bypass via unverified signature**
+<blockquote>
 This lab demonstrates how attackers can bypass authentication by exploiting JWT implementations that fail to verify the token's signature.
+</blockquote>
 
-**JWT authentication bypass via flawed signature verification** 
+**2 JWT authentication bypass via flawed signature verification** 
+<blockquote>
 This lab shows how attackers can exploit incorrect signature verification logic to bypass authentication.
-
+</blockquote>
 
 ---
 
@@ -199,4 +202,5 @@ And after open request in browser we can delete user and then lab is solved
 
 
 ---
+
 
