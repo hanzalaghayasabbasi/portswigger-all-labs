@@ -2,11 +2,15 @@
 
 This write-up focuses on the following **APPRENTICE-level labs** from the PortSwigger Web Security Academy related to **HTTP Host Header Attacks**:
 
-**Basic password reset poisoning**  
+**1 Basic password reset poisoning**  
+<blockquote>
 This lab demonstrates how attackers can exploit unsanitized Host headers to poison password reset links sent to users.
+</blockquote>
 
-**Host header authentication bypass**  
+**2 Host header authentication bypass**  
+<blockquote>
 This lab shows how manipulating the Host header can be used to bypass access controls or authentication checks.
+</blockquote>
 
 ---
 
@@ -139,4 +143,5 @@ And lab is solved
 
 
 ---
+
 
