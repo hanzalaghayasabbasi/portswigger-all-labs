@@ -2,8 +2,10 @@
 
 This write-up focuses on the following **EXPERT-level lab** from the PortSwigger Web Security Academy related to **HTTP Host Header Attacks**:
 
-**Password reset poisoning via dangling markup**  
+**7 Password reset poisoning via dangling markup** 
+<blockquote>
 This lab demonstrates how attackers can exploit dangling markup combined with unsanitized Host headers to poison password reset links and compromise user accounts.
+</blockquote>
 
 ---
 
@@ -136,3 +138,4 @@ This lab demonstrates how attackers can exploit dangling markup combined with un
 	
 
 ---
+
