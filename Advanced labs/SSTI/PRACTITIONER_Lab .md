@@ -2,20 +2,30 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **Server-side template injection (SSTI)**:
 
-**Basic server-side template injection**  
+**1 Basic server-side template injection**  
+<blockquote>
 This lab demonstrates how attackers can inject server-side template expressions to execute arbitrary code or access sensitive data.
+</blockquote>
 
-**Basic server-side template injection (code context)**  
+**2 Basic server-side template injection (code context)**  
+<blockquote>
 This lab shows SSTI exploitation when template expressions are directly evaluated in code execution context.
+</blockquote>
 
-**Server-side template injection using documentation**  
+**3 Server-side template injection using documentation**  
+<blockquote>
 This lab demonstrates how official template engine documentation can help attackers craft effective SSTI payloads.
+</blockquote>
 
-**Server-side template injection in an unknown language with a documented exploit**  
+**4 Server-side template injection in an unknown language with a documented exploit** 
+<blockquote>
 This lab explores how attackers can exploit SSTI in template engines even when the backend language is unknown, by leveraging known techniques.
+</blockquote>
 
-**Server-side template injection with information disclosure via user-supplied objects**  
+**5 Server-side template injection with information disclosure via user-supplied objects**  
+<blockquote>
 This lab demonstrates how attackers can supply specially crafted objects to disclose information during SSTI exploitation.
+</blockquote>
 
 ---
 
@@ -248,3 +258,4 @@ An get the secret key as shown in corner highlight in blue we used settings.secr
 
 
 ---
+
