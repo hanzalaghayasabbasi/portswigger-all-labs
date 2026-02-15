@@ -1,4 +1,15 @@
-# Insecure Deserialization 
+# Insecure Deserialization Overview
+
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+  
+## Introduction
 
 ## 📦 What is Serialization?
 
