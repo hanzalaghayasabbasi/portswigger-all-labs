@@ -2,17 +2,25 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **Host Header Attacks and related HTTP parsing vulnerabilities**:
 
-**Web cache poisoning via ambiguous requests**  
+**3 Web cache poisoning via ambiguous requests**  
+<blockquote>
 This lab demonstrates how ambiguous HTTP requests can be used to poison web caches and serve malicious content to users.
-
-**Routing-based SSRF**  
+</blockquote>
+	
+**4 Routing-based SSRF**  
+<blockquote>
 This lab shows how improper routing based on Host headers can lead to Server-Side Request Forgery (SSRF) vulnerabilities.
+</blockquote>
 
-**SSRF via flawed request parsing**  
+**5 SSRF via flawed request parsing**  
+<blockquote>
 This lab demonstrates how flawed parsing of HTTP requests can be exploited to perform SSRF attacks.
+</blockquote>
 
-**Host validation bypass via connection state attack**  
+**6 Host validation bypass via connection state attack**  
+<blockquote>
 This lab demonstrates how attackers can bypass host validation mechanisms by manipulating connection states.
+</blockquote>
 
 ---
 
@@ -439,3 +447,4 @@ i am stuck here
 
 
 ---
+
