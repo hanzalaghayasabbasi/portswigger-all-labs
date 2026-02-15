@@ -2,18 +2,29 @@
 
 This write-up focuses on the following **EXPERT-level labs** from the PortSwigger Web Security Academy related to **Web Cache Poisoning**:
 
-**Web cache poisoning to exploit a DOM vulnerability via a cache with strict cacheability criteria**  
+**10 Web cache poisoning to exploit a DOM vulnerability via a cache with strict cacheability criteria**  
+<blockquote>
 This lab demonstrates how an attacker can leverage strict caching rules to poison cache responses that trigger DOM-based vulnerabilities in clients.
+</blockquote>
 
-**Combining web cache poisoning vulnerabilities**  
+	
+**11 Combining web cache poisoning vulnerabilities**  
+<blockquote>
 This lab shows how attackers can chain multiple cache poisoning vulnerabilities together to create a more reliable or severe attack.
+</blockquote>
 
-**Cache key injection**  
+	
+**12 Cache key injection**  
+<blockquote>
 This lab demonstrates how injecting characters into the cache key allows attackers to manipulate which responses get cached.
+</blockquote>
 
-**Internal cache poisoning**  
+	
+**13 Internal cache poisoning**  
+<blockquote>
 This lab explores poisoning internal server-side caches that are not directly accessible to external users but influence backend behavior.
-
+</blockquote>
+	
 ---
 
 ### LAB 10 - Web cache poisoning to exploit a DOM vulnerability via a cache with strict cacheability criteria
@@ -416,3 +427,4 @@ And finally lab is solved
 
 
 ---
+
