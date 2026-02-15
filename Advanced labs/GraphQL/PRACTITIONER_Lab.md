@@ -21,6 +21,7 @@ This write-up focuses on the following **PRACTITIONER-level labs** from the Port
 <blockquote>
   This lab shows how attackers can exploit CSRF vulnerabilities via GraphQL queries to perform unauthorized actions on behalf of users.
 </blockquote>
+
 ---
 
 ### LAB 2 - Accidental exposure of private GraphQL fields
@@ -686,6 +687,7 @@ Store and deliver to victum and lab is solved
 
 
 ---
+
 
 
 
