@@ -2,50 +2,80 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **HTTP Request Smuggling**:
 
-**HTTP request smuggling, confirming a CL.TE vulnerability via differential responses**  
+**1 HTTP request smuggling, confirming a CL.TE vulnerability via differential responses**
+<blockquote>
 This lab demonstrates how to confirm a CL.TE (Content-Length then Transfer-Encoding) desynchronization vulnerability using differential responses.
-
-**HTTP request smuggling, confirming a TE.CL vulnerability via differential responses**  
+</blockquote>
+	
+**2 HTTP request smuggling, confirming a TE.CL vulnerability via differential responses**  
+<blockquote>
 This lab shows how to confirm a TE.CL (Transfer-Encoding then Content-Length) desynchronization vulnerability using differential responses.
-
-**Exploiting HTTP request smuggling to bypass front-end security controls, CL.TE vulnerability**  
+</blockquote>
+	
+**3 Exploiting HTTP request smuggling to bypass front-end security controls, CL.TE vulnerability**
+<blockquote>
 This lab demonstrates bypassing front-end security controls by exploiting CL.TE request smuggling vulnerabilities.
+</blockquote>
 
-**Exploiting HTTP request smuggling to bypass front-end security controls, TE.CL vulnerability**  
+**4 Exploiting HTTP request smuggling to bypass front-end security controls, TE.CL vulnerability** 
+<blockquote>
 This lab shows how attackers can bypass security controls using TE.CL desynchronization.
+</blockquote>
 
-**Exploiting HTTP request smuggling to reveal front-end request rewriting**  
+**5 Exploiting HTTP request smuggling to reveal front-end request rewriting**  
+<blockquote>
 This lab demonstrates using request smuggling to reveal how front-end servers rewrite incoming requests.
-
-**Exploiting HTTP request smuggling to capture other users' requests**  
+</blockquote>
+	
+**6 Exploiting HTTP request smuggling to capture other users' requests** 
+<blockquote>
 This lab shows how to leverage request smuggling to capture sensitive data from other users' requests.
+</blockquote>
 
-**Exploiting HTTP request smuggling to deliver reflected XSS**  
+**7 Exploiting HTTP request smuggling to deliver reflected XSS**  
+<blockquote>
 This lab demonstrates using request smuggling to deliver reflected XSS payloads to other users.
-
-**Response queue poisoning via H2.TE request smuggling**  
+</blockquote>
+	
+**8 Response queue poisoning via H2.TE request smuggling**  
+<blockquote>
 This lab covers HTTP/2 request smuggling attacks combining H2 (HTTP/2) and TE desynchronization.
+</blockquote>
 
-**H2.CL request smuggling**  
+**9 H2.CL request smuggling**
+<blockquote>
 This lab demonstrates HTTP/2 request smuggling via H2.CL (HTTP/2 + Content-Length) vulnerabilities.
-
-**HTTP/2 request smuggling via CRLF injection**  
+</blockquote>
+	
+**10 HTTP/2 request smuggling via CRLF injection**  
+<blockquote>
 This lab explores HTTP/2 request smuggling using CRLF (Carriage Return Line Feed) injection.
+</blockquote>
 
-**HTTP/2 request splitting via CRLF injection**  
+**11 HTTP/2 request splitting via CRLF injection**  
+<blockquote>
 This lab shows how HTTP/2 request splitting can occur via CRLF injection.
+</blockquote>
 
-**CL.0 request smuggling**  
+**12 CL.0 request smuggling**  
+<blockquote>
 This lab demonstrates request smuggling attacks using a Content-Length value of zero to manipulate request parsing.
+</blockquote>
 
-**HTTP request smuggling, basic CL.TE vulnerability**  
+**13 HTTP request smuggling, basic CL.TE vulnerability**  
+<blockquote>
 This lab provides a straightforward example of a CL.TE request smuggling vulnerability.
-
-**HTTP request smuggling, basic TE.CL vulnerability**  
+</blockquote>
+	
+**14 HTTP request smuggling, basic TE.CL vulnerability**
+<blockquote>
 This lab provides a basic scenario demonstrating TE.CL request smuggling.
+</blockquote>
 
-**HTTP request smuggling, obfuscating the TE header**  
+**15 HTTP request smuggling, obfuscating the TE header**  
+<blockquote>
 This lab shows how attackers can obfuscate the Transfer-Encoding header to bypass filtering and perform request smuggling.
+</blockquote>
 
 ---
 
@@ -1568,4 +1598,5 @@ When the **next request is sent**, the server **releases the queued GPOST reques
 <img width="1633" height="342" alt="image" src="https://github.com/user-attachments/assets/7a3320ae-bba0-4da4-a47b-a13a3821543a" />
 
 ---
+
 
