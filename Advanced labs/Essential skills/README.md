@@ -1,6 +1,15 @@
 
 # Essential Skills
 
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+
+
+## Introduction
+
 The Web Security Academy labs are designed to be as realistic as possible, but each lab demonstrates just one variation of a given vulnerability. In real-world testing, it's essential to recognize different manifestations of the same underlying issues and adapt your techniques accordingly.
 
 This section introduces broadly applicable skills to help you transition from lab environments to live targets. It includes practical tips, advanced testing techniques, and guidance on using Burp Suite more effectively during manual testing.
