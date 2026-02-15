@@ -1,5 +1,14 @@
 # OAuth 2.0 Authentication Vulnerabilities
 
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+
 ## Overview
 
 OAuth 2.0 is a widely used framework for authorization that enables users to grant third-party applications limited access to their resources without exposing login credentials. While powerful and popular, OAuth 2.0 is prone to implementation errors, leading to vulnerabilities such as sensitive data leakage and authentication bypass.
