@@ -2,14 +2,20 @@
 
 This write-up focuses on the following **EXPERT-level labs** from the PortSwigger Web Security Academy related to **Insecure Deserialization**:
 
-**Developing a custom gadget chain for Java deserialization**  
+**8 Developing a custom gadget chain for Java deserialization**  
+<blockquote>
 This lab demonstrates how attackers can analyze and build custom gadget chains for exploiting insecure Java deserialization vulnerabilities.
+</blockquote>
 
-**Developing a custom gadget chain for PHP deserialization**  
+**9 Developing a custom gadget chain for PHP deserialization**  
+<blockquote>
 This lab shows how attackers can create custom gadget chains tailored for PHP applications to achieve code execution through insecure deserialization.
+</blockquote>
 
-**Using PHAR deserialization to deploy a custom gadget chain**  
+**10 Using PHAR deserialization to deploy a custom gadget chain**  
+<blockquote>
 This lab demonstrates how attackers can leverage PHAR archives to trigger insecure PHP deserialization and execute custom gadget chains.
+</blockquote>
 
 ---
 
@@ -573,3 +579,4 @@ Upload it and lab is solved:
 
 
 ---
+
