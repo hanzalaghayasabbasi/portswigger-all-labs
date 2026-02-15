@@ -1,4 +1,17 @@
-# What is HTTP Request Smuggling?
+# HTTP Request Smuggling Overview
+
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+
+## Introduction
+
+## What is HTTP Request Smuggling?
 
 HTTP request smuggling is a web security vulnerability that allows attackers to manipulate HTTP requests in a way that exploits differences in how front-end and back-end servers interpret them. By sending ambiguous requests, attackers can disrupt the normal processing of request sequences, potentially leading to serious consequences such as bypassing security controls, accessing sensitive data, or interfering with other users’ interactions. This issue is particularly prevalent in HTTP/1 setups, though HTTP/2 systems can also be affected when downgraded to HTTP/1 for back-end communication. It’s a critical concern because it undermines the integrity of web application traffic, making it a powerful tool for attackers.
 
