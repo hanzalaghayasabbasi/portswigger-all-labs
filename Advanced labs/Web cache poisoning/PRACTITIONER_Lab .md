@@ -2,33 +2,52 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **Web Cache Poisoning**:
 
-**Web cache poisoning with an unkeyed header**  
+**1 Web cache poisoning with an unkeyed header**  
+<blockquote>
 This lab demonstrates how attackers can poison cache responses by exploiting headers that are not included in the cache key.
+</blockquote>
 
-**Web cache poisoning with an unkeyed cookie**  
+**2 Web cache poisoning with an unkeyed cookie**  
+<blockquote>
 This lab shows how cookies not included in cache keys can be abused for cache poisoning attacks.
+</blockquote>
 
-**Web cache poisoning with multiple headers**  
+**3 Web cache poisoning with multiple headers**  
+<blockquote>
 This lab explores exploiting combinations of headers that are not properly keyed in the cache system.
-
-**Targeted web cache poisoning using an unknown header**  
+</blockquote>
+	
+**4 Targeted web cache poisoning using an unknown header**  
+<blockquote>
 This lab demonstrates using non-standard or undocumented headers to poison cached responses.
-
-**Web cache poisoning via an unkeyed query string**  
+</blockquote>
+	
+**5 Web cache poisoning via an unkeyed query string**  
+<blockquote>
 This lab shows how query strings that are not part of the cache key can be exploited for poisoning.
+</blockquote>
 
-**Web cache poisoning via an unkeyed query parameter**  
+**6 Web cache poisoning via an unkeyed query parameter**  
+<blockquote>
 This lab demonstrates poisoning attacks targeting individual query parameters that are ignored by the caching layer.
+</blockquote>
 
-**Parameter cloaking**  
+**7 Parameter cloaking**  
+<blockquote>
 This lab shows how attackers can obfuscate parameters to achieve cache poisoning while evading detection.
+</blockquote>
 
-**Web cache poisoning via a fat GET request**  
+**8 Web cache poisoning via a fat GET request**
+<blockquote>
 This lab explores using oversized GET requests to trigger cache poisoning behaviors.
+</blockquote>
 
-**URL normalization**  
+	
+**9 URL normalization**  
+<blockquote>
 This lab demonstrates how URL normalization inconsistencies between cache layers and application servers can lead to successful poisoning attacks.
-
+</blockquote>
+	
 ---
 
 
@@ -682,3 +701,4 @@ Lab is solved
 
 
 ---
+
