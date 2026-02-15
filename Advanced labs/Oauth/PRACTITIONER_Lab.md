@@ -2,18 +2,26 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **OAuth Authentication**:
 
-**SSRF via OpenID dynamic client registration**  
+**2 SSRF via OpenID dynamic client registration**  
+<blockquote>
 This lab demonstrates how attackers can abuse OpenID Connect dynamic client registration to perform server-side request forgery (SSRF).
+</blockquote>
 
-**Forced OAuth profile linking**  
+**3 Forced OAuth profile linking**  
+<blockquote>
 This lab shows how attackers can force users to link their accounts to attacker-controlled profiles during OAuth authorization.
+</blockquote>
 
-**OAuth account hijacking via redirect_uri**  
+**4 OAuth account hijacking via redirect_uri** 
+<blockquote>
 This lab demonstrates how attackers can hijack user accounts by exploiting insecure handling of OAuth redirect URIs.
-
-**Stealing OAuth access tokens via an open redirect**  
+</blockquote>
+    
+**5 Stealing OAuth access tokens via an open redirect**  
+<blockquote>
 This lab shows how attackers can steal OAuth access tokens by chaining open redirect vulnerabilities with OAuth redirection flows.
-
+</blockquote>
+    
 ---
 
 ### LAB 2 - SSRF via OpenID dynamic client registration
@@ -470,3 +478,4 @@ Use the **"Submit solution"** button at the top of the lab page to submit the st
 
 
 ---
+
