@@ -2,11 +2,15 @@
 
 This write-up focuses on the following **EXPERT-level labs** from the PortSwigger Web Security Academy related to **Server-side template injection (SSTI)**:
 
-**Server-side template injection in a sandboxed environment**  
+**6 Server-side template injection in a sandboxed environment**  
+<blockquote>
 This lab demonstrates how attackers can bypass template engine sandbox restrictions to achieve code execution.
-
-**Server-side template injection with a custom exploit**  
+</blockquote>
+	
+**7 Server-side template injection with a custom exploit**  
+<blockquote>
 This lab shows how attackers can craft custom payloads to exploit SSTI in non-standard or custom template engine implementations.
+</blockquote>
 
 ---
 
@@ -279,3 +283,4 @@ Lab solved.
 
 
 ---
+
