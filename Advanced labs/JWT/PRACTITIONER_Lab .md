@@ -2,17 +2,25 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **JWT (JSON Web Token)** vulnerabilities:
 
-**JWT authentication bypass via weak signing key**
+**3 JWT authentication bypass via weak signing key**
+<blockquote>
 This lab demonstrates how a weak or guessable signing key allows attackers to forge valid JWTs and bypass authentication.
+</blockquote>
 
-**JWT authentication bypass via jwk header injection**  
+**4 JWT authentication bypass via jwk header injection**  
+<blockquote>
 This lab demonstrates how attackers can inject a malicious JWK (JSON Web Key) into the JWT header to forge a valid token and bypass authentication.
+</blockquote>
 
-**JWT authentication bypass via jku header injection**  
+**5 JWT authentication bypass via jku header injection** 
+<blockquote>
 This lab shows how attackers can manipulate the `jku` header to point to an attacker-controlled key set, allowing them to sign forged tokens.
+</blockquote>
 
-**JWT authentication bypass via kid header path traversal**  
+**6 JWT authentication bypass via kid header path traversal**  
+<blockquote>
 This lab demonstrates how attackers can exploit insecure file path resolution in the `kid` header to retrieve secret keys and forge tokens.
+</blockquote>
 
 ---
 
@@ -605,3 +613,4 @@ Now we are deleting Carlos to solve the lab
 
 
 ---
+
