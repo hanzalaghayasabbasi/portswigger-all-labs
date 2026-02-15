@@ -2,8 +2,10 @@
 
 This write-up focuses on the following **EXPERT-level lab** from the PortSwigger Web Security Academy related to **OAuth Authentication**:
 
-**Stealing OAuth access tokens via a proxy page**  
+**6 Stealing OAuth access tokens via a proxy page**
+<blockquote>
 This lab demonstrates how attackers can leverage proxy pages to intercept and steal OAuth access tokens during authorization flows.
+</blockquote>
 
 ---
 
@@ -73,3 +75,4 @@ I submitted the **apikey** and solved the lab!
 <img width="1549" height="315" alt="image" src="https://github.com/user-attachments/assets/cc241b37-8e04-49ee-b676-25deb39f67ed" />
 
 ---
+
