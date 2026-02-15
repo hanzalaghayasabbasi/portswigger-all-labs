@@ -6,6 +6,7 @@ This write-up focuses on the following **APPRENTICE-level lab** from the PortSwi
 <blockquote>
 This lab demonstrates how insufficient access controls on GraphQL queries allow unauthorized users to retrieve private data.
 </blockquote>
+
 ---
 
 ### LAB 1 - Accessing private GraphQL posts
@@ -78,6 +79,7 @@ Submit it and then lab is solved
 
 
 ---
+
 
 
 
