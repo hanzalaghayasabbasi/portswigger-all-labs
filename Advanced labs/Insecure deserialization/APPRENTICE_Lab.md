@@ -2,7 +2,7 @@
 
 This write-up focuses on the following **APPRENTICE-level lab** from the PortSwigger Web Security Academy related to **Insecure Deserialization**:
 
-**Modifying serialized objects**  
+**1 Modifying serialized objects**  
 This lab demonstrates how attackers can tamper with serialized data structures to manipulate application logic and potentially gain unauthorized access.
 
 ---
@@ -61,3 +61,4 @@ Follow redirection and now we can see no carlos user in reponse and lab is solve
 
 
 ---
+
