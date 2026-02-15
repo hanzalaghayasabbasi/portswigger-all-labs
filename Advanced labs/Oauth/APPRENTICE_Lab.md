@@ -2,8 +2,10 @@
 
 This write-up focuses on the following **APPRENTICE-level lab** from the PortSwigger Web Security Academy related to **OAuth Authentication**:
 
-**Authentication bypass via OAuth implicit flow**  
+**1 Authentication bypass via OAuth implicit flow**
+<blockquote>
 This lab demonstrates how attackers can exploit weaknesses in OAuth implicit flow to bypass authentication mechanisms.
+</blockquote>
 
 ---
 
@@ -76,3 +78,4 @@ Right-click on the **POST request and select "Request in browser" > "In original
 
 
 ---
+
