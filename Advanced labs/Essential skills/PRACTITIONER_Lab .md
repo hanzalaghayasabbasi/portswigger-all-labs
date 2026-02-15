@@ -2,11 +2,15 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **Essential Skills**:
 
-**Discovering vulnerabilities quickly with targeted scanning**  
+**1 Discovering vulnerabilities quickly with targeted scanning** 
+<blockquote>
 This lab demonstrates how to use targeted scanning techniques to identify vulnerabilities more efficiently by focusing on likely problem areas.
+</blockquote>
 
-**Scanning non-standard data structures**  
+**2 Scanning non-standard data structures**  
+<blockquote>
 This lab shows how to identify and scan non-standard or complex data structures that may not be handled effectively by typical scanning tools.
+</blockquote>
 
 ---
 
@@ -249,3 +253,4 @@ Decoded payload
 
 
 ---
+
