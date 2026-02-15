@@ -3,17 +3,24 @@
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **GraphQL API Vulnerabilities**:
 
 **2 Accidental exposure of private GraphQL fields**  
-  &nbsp;&nbsp;This lab demonstrates how attackers can enumerate GraphQL schema and access fields that should not be exposed to unauthorized users.
-
-**3 Finding a hidden GraphQL endpoint**  
-    &nbsp;&nbsp;This lab shows techniques to discover undisclosed GraphQL API endpoints that may not be directly linked or documented.
+<blockquote>
+  This lab demonstrates how attackers can enumerate GraphQL schema and access fields that should not be exposed to unauthorized users.
+</blockquote>
+  
+**3 Finding a hidden GraphQL endpoint** 
+<blockquote>
+ This lab shows techniques to discover undisclosed GraphQL API endpoints that may not be directly linked or documented.
+</blockquote>
 
 **4 Bypassing GraphQL brute force protections**  
-    &nbsp;&nbsp;This lab demonstrates methods for bypassing brute-force protection mechanisms implemented in GraphQL APIs.
+<blockquote>
+    This lab demonstrates methods for bypassing brute-force protection mechanisms implemented in GraphQL APIs.
+</blockquote>
 
 **5 Performing CSRF exploits over GraphQL**  
-    &nbsp;&nbsp;This lab shows how attackers can exploit CSRF vulnerabilities via GraphQL queries to perform unauthorized actions on behalf of users.
-
+<blockquote>
+  This lab shows how attackers can exploit CSRF vulnerabilities via GraphQL queries to perform unauthorized actions on behalf of users.
+</blockquote>
 ---
 
 ### LAB 2 - Accidental exposure of private GraphQL fields
@@ -679,6 +686,7 @@ Store and deliver to victum and lab is solved
 
 
 ---
+
 
 
 
