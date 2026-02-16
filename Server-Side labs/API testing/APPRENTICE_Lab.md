@@ -2,9 +2,11 @@
 
 This write-up focuses on the following **APPRENTICE-level lab** from the PortSwigger Web Security Academy:
 
-- **Exploiting an API endpoint using documentation**
+**1 Exploiting an API endpoint using documentation**
 
+<blockquote>
 This lab demonstrates how attackers can take advantage of publicly available API documentation to uncover and exploit sensitive endpoints. It emphasizes the importance of not exposing functionality that should remain private.
+</blockquote>
 
 ---
 
@@ -40,3 +42,4 @@ Now we can delete the user carlos by sending a `DELETE` request to `/api/user/ca
 Now we have deleted carlos's account & thus solved the lab.
 
 ![image](https://github.com/user-attachments/assets/874fc537-7fdd-46c6-9063-7eaaff4c732d)
+
