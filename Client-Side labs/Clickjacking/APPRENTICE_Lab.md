@@ -3,9 +3,20 @@
 
 This write-up focuses on the following **APPRENTICE-level labs** from the PortSwigger Web Security Academy related to **Clickjacking**:
 
-- **Basic clickjacking with CSRF token protection**  
-- **Clickjacking with form input data prefilled from a URL parameter**  
-- **Clickjacking with a frame buster script**
+**1 Basic clickjacking with CSRF token protection**
+<blockquote>
+This lab demonstrates bypassing CSRF protection by tricking a logged-in user into clicking a hidden framed page
+</blockquote>
+
+**2 Clickjacking with form input data prefilled from a URL parameter**
+ <blockquote>
+  This lab shows how attackers prefill form fields via URL parameters and use clickjacking to submit the request.
+ </blockquote>
+
+**3 Clickjacking with a frame buster script**
+<blockquote>
+  This lab focuses on bypassing a client-side frame-busting defense to successfully perform clickjacking.
+</blockquote>
 
 ---
 
