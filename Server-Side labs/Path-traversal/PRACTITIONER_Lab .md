@@ -2,20 +2,30 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy:
 
-- **File path traversal, traversal sequences blocked with absolute path bypass**  
+ **2 File path traversal, traversal sequences blocked with absolute path bypass**  
+     <blockquote>
   This lab demonstrates how attackers can bypass basic traversal sequence blocking by supplying absolute paths instead of relative traversal patterns.
+   </blockquote>
 
-- **File path traversal, traversal sequences stripped non-recursively**  
+**3 File path traversal, traversal sequences stripped non-recursively**  
+   <blockquote>
   This lab shows how flawed sanitization that strips traversal sequences only once (non-recursively) can be bypassed by chaining multiple traversal sequences.
+   </blockquote>
 
-- **File path traversal, traversal sequences stripped with superfluous URL-decode**  
+**4 File path traversal, traversal sequences stripped with superfluous URL-decode**  
+  <blockquote>
   This lab demonstrates how attackers can leverage multiple layers of URL encoding to bypass sanitization logic that strips traversal sequences after decoding.
+  </blockquote>
 
-- **File path traversal, validation of start of path**  
+ **5 File path traversal, validation of start of path**  
+   <blockquote>
   This lab shows how poorly implemented checks that validate only the start of a file path can be bypassed to access unauthorized files.
+   </blockquote>
 
-- **File path traversal, validation of file extension with null byte bypass**  
+ **6 File path traversal, validation of file extension with null byte bypass**  
+   <blockquote>
   This lab demonstrates how attackers can use null byte injection to bypass file extension validation and retrieve unauthorized files.
+   </blockquote>
 
 ---
 
@@ -191,3 +201,4 @@ Lab is solved
 ![image](https://github.com/user-attachments/assets/7c2e593d-0fd9-4b22-b8c5-8c5927908f11)
 
 ---
+
