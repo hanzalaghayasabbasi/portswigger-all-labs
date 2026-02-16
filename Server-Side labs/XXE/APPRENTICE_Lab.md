@@ -2,11 +2,15 @@
 
 This write-up focuses on the following **APPRENTICE-level labs** from the PortSwigger Web Security Academy related to **XML External Entity (XXE) Injection**:
 
-**Exploiting XXE using external entities to retrieve files**  
+**1 Exploiting XXE using external entities to retrieve files**  
+<blockquote>
 This lab demonstrates how attackers can exploit XXE vulnerabilities to read sensitive files from the server.
+</blockquote>
 
-**Exploiting XXE to perform SSRF attacks**  
+**2 Exploiting XXE to perform SSRF attacks**  
+<blockquote>
 This lab shows how XXE vulnerabilities can be leveraged to perform server-side request forgery (SSRF) attacks.
+</blockquote>
 
 ---
 
@@ -237,5 +241,6 @@ Once you retrieve and view the AWS credentials from the metadata API, the lab wi
 KeyTakeaway:
 
 ![image](https://github.com/user-attachments/assets/5850d7d0-927a-4b5e-83f7-278ad3dea9ac)
+
 
 
