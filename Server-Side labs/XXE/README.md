@@ -1,4 +1,15 @@
-# XML External Entity (XXE) Injection Guide
+
+# XML External Entity Injection (XXE)
+
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+## XML External Entity (XXE) Injection Guide
 
 > Based on sources:  
 > - [HackTricks – XXE](https://book.hacktricks.xyz/pentesting-web/xxe-xee-xml-external-entity)
@@ -7,7 +18,9 @@
 
 ---
 
-## 🧠 What is XXE?
+## Introduction
+
+## What is XXE?
 
 **XML External Entity Injection (XXE)** is a web vulnerability that allows an attacker to interfere with the processing of XML data by an application. It can result in:
 
@@ -41,38 +54,46 @@ In XML, the above must be written as:
 
 ## 🔧 Entities in XML
 
-XML supports entities, which act like variables storing data. They are defined in the DTD (Document Type Definition) and referenced using:
+XML supports **entities**, which act like variables storing data. They are defined in the DTD (Document Type Definition) and referenced using:
 
 ```xml
 &entityName;
 ```
 
-For example:
+### Example:
 
-![image](https://github.com/user-attachments/assets/2368a0c0-7c80-4460-afaa-5fa92376ea4d)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2368a0c0-7c80-4460-afaa-5fa92376ea4d" width="700" alt="XML Entities Example">
+  <br>
+  <em>Figure: Example of XML entities &add1; and &add2;</em>
+</p>
 
+Here:
 
-Here, 
-
-**&add1;** will be replaced by `15, G Street, Chennai, India`
-
-**&add2;** will be replaced by `25, C Street, Bangalore, India`
+* **&add1;** → `15, G Street, Chennai, India`
+* **&add2;** → `25, C Street, Bangalore, India`
 
 ---
 
 ## 🧩 What is a Local Entity?
 
-A **local entity** is an entity declared directly in the internal DTD. It contains a hardcoded value.
+A **local entity** is declared directly in the internal DTD and contains a hardcoded value.
 
 ### Example:
 
-![image](https://github.com/user-attachments/assets/7013f449-333b-4e91-b5cf-2d763a6034b2)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7013f449-333b-4e91-b5cf-2d763a6034b2" width="700" alt="Local Entity Example">
+  <br>
+  <em>Figure: Local entity declaration in internal DTD</em>
+</p>
 
 ### Response:
 
-![image](https://github.com/user-attachments/assets/470f5f47-7712-4760-98a6-42325bb5d4a5)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/470f5f47-7712-4760-98a6-42325bb5d4a5" width="700" alt="Local Entity Response">
+  <br>
+  <em>Figure: Server response showing the resolved local entity</em>
+</p>
 
 ---
 
@@ -82,17 +103,27 @@ An **external entity** loads content from an external URI — either a remote se
 
 ### Example:
 
-![image](https://github.com/user-attachments/assets/8b0fcce5-acb8-4e60-b44d-c8b094c8d084)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8b0fcce5-acb8-4e60-b44d-c8b094c8d084" width="700" alt="External Entity Example">
+  <br>
+  <em>Figure: External entity declaration accessing /etc/passwd</em>
+</p>
 
+### Response:
 
-Response:
 If the server is vulnerable and parses this XML, the contents of `/etc/passwd` will be inserted into the response.
 
-![image](https://github.com/user-attachments/assets/5f38bac7-6f2c-4cbe-b55e-0ea96c4ec3d8)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5f38bac7-6f2c-4cbe-b55e-0ea96c4ec3d8" width="700" alt="External Entity Response">
+  <br>
+  <em>Figure: Server response with contents of /etc/passwd exposed via XXE</em>
+</p>
 
 ---
 
-## 🧾 DTD (Document Type Definition)
+
+
+##  DTD (Document Type Definition)
 
 The **DTD** defines the structure, tags, and entities allowed in an XML document. It can be:
 
@@ -160,7 +191,7 @@ The **DTD** defines the structure, tags, and entities allowed in an XML document
 
 ## 🧪 Examples
 
-### 📄 Internal Entity
+### Internal Entity
 
 ```xml
 <!DOCTYPE foo [
@@ -171,7 +202,7 @@ The **DTD** defines the structure, tags, and entities allowed in an XML document
 
 ---
 
-### 📂 External Entity
+###  External Entity
 
 ```xml
 <!DOCTYPE foo [
@@ -182,7 +213,7 @@ The **DTD** defines the structure, tags, and entities allowed in an XML document
 
 ---
 
-### 🧬 Parameter Entity (Advanced XXE)
+###  Parameter Entity (Advanced XXE)
 
 ```xml
 <!DOCTYPE foo [
@@ -193,7 +224,7 @@ The **DTD** defines the structure, tags, and entities allowed in an XML document
 
 ---
 
-### 🔒 Predefined Entities
+### Predefined Entities
 
 | Character | Entity   |
 | --------- | -------- |
@@ -205,7 +236,7 @@ The **DTD** defines the structure, tags, and entities allowed in an XML document
 
 ---
 
-### 🔢 Numeric Entities
+###  Numeric Entities
 
 | Entity   | Character |
 | -------- | --------- |
@@ -216,12 +247,12 @@ The **DTD** defines the structure, tags, and entities allowed in an XML document
 ---
 
 
-## 📚 References
+##  References
 
-* 📖 [HackTricks – XXE](https://book.hacktricks.xyz/pentesting-web/xxe-xee-xml-external-entity)
-* 🧑‍💻 [InfoSec Writeups – XXE From Zero to Hero](https://infosecwriteups.com/xxe-from-zero-to-hero-b38118750556)
-* 📖 [PortSwigger Academy – XXE](https://portswigger.net/web-security/xxe)
-* 🔒 [OWASP XXE Guide](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_%28XXE%29_Processing)
+* [HackTricks – XXE](https://book.hacktricks.xyz/pentesting-web/xxe-xee-xml-external-entity)
+* [InfoSec Writeups – XXE From Zero to Hero](https://infosecwriteups.com/xxe-from-zero-to-hero-b38118750556)
+* [PortSwigger Academy – XXE](https://portswigger.net/web-security/xxe)
+* [OWASP XXE Guide](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_%28XXE%29_Processing)
 
 ---
 
