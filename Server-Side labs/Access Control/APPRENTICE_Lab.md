@@ -2,32 +2,56 @@
 
 This write-up focuses on the following **APPRENTICE-level labs** from the PortSwigger Web Security Academy:
 
-- **Unprotected admin functionality**  
+**1 Unprotected admin functionality**  
+<blockquote>
   This lab demonstrates how administrative functionality can be exposed without proper access controls, allowing unauthorized users to access sensitive areas of the application.
+</blockquote>
 
-- **Unprotected admin functionality with unpredictable URL**  
+
+**2 Unprotected admin functionality with unpredictable URL**  
+<blockquote>
   This lab highlights how security through obscurity (using unpredictable URLs) is insufficient if proper authentication and authorization controls are not enforced.
+</blockquote>
 
-- **User role controlled by request parameter**  
+
+ **3 User role controlled by request parameter**  
+ <blockquote>
   This lab illustrates how manipulating request parameters that control user roles can lead to privilege escalation and unauthorized access.
+ </blockquote>
 
-- **User role can be modified in user profile**  
+
+ **4 User role can be modified in user profile**  
+ <blockquote>
   This lab shows how insecure user profile management can allow users to modify their own roles, potentially gaining administrative privileges.
+ </blockquote>
 
-- **User ID controlled by request parameter**  
+
+**5 User ID controlled by request parameter**  
+<blockquote>
   This lab demonstrates insecure direct object reference (IDOR) vulnerabilities where user identifiers in requests can be manipulated to access other users’ data.
+</blockquote>
 
-- **User ID controlled by request parameter, with unpredictable user IDs**  
+**6 User ID controlled by request parameter, with unpredictable user IDs**  
+<blockquote>
   This lab extends the IDOR concept by introducing non-sequential, unpredictable user IDs that still lack proper authorization checks.
+</blockquote>
 
-- **User ID controlled by request parameter with data leakage in redirect**  
-  This lab shows how sensitive information can be leaked via redirects when user input is not properly validated or sanitized.
 
-- **User ID controlled by request parameter with password disclosure**  
-  This lab demonstrates how manipulating request parameters can lead to exposure of password information for other users.
+**7 User ID controlled by request parameter with data leakage in redirect**  
+<blockquote>
+This lab shows how sensitive information can be leaked via redirects when user input is not properly validated or sanitized.
+</blockquote>
 
-- **Insecure direct object references**  
+**8 User ID controlled by request parameter with password disclosure**  
+<blockquote>
+This lab demonstrates how manipulating request parameters can lead to exposure of password information for other users.
+</blockquote>
+
+**9 Insecure direct object references**  
+<blockquote>
   This lab emphasizes the importance of implementing proper access controls to prevent unauthorized access to internal resources based on user-supplied object references.
+</blockquote>
+
 
 ---
 ## LAB 1 - Unprotected admin functionality
@@ -431,7 +455,7 @@ Submit the key and the lab is solved.
 
 ---
 
-## LAB 8 - User ID controlled by request parameter with password disclosur
+## LAB 8 - User ID controlled by request parameter with password disclosure
 
 
 ## Lab Description :
@@ -522,6 +546,7 @@ Now login as carlos, to solve the lab.
 ![image](https://github.com/user-attachments/assets/87c55d49-0e5e-46a8-b0fd-c1aa9abc15b6)
 
 ---
+
 
 
 
