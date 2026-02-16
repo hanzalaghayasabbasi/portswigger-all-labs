@@ -2,11 +2,15 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **Clickjacking**:
 
-**Exploiting clickjacking vulnerability to trigger DOM-based XSS**  
+**4 Exploiting clickjacking vulnerability to trigger DOM-based XSS**  
+<blockquote>
 This lab demonstrates how clickjacking can be used to trigger DOM-based cross-site scripting attacks.
+</blockquote>
 
-**Multistep clickjacking**  
+**5 Multistep clickjacking**  
+<blockquote>
 This lab shows how attackers can perform clickjacking attacks involving multiple steps or user interactions.
+</blockquote>
 
 ---
 
