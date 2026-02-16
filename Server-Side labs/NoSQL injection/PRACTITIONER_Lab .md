@@ -2,11 +2,15 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy:
 
-- **Exploiting NoSQL injection to extract data**  
+**3 Exploiting NoSQL injection to extract data**  
+   <blockquote>
   This lab demonstrates how attackers can use NoSQL injection to enumerate and extract sensitive data directly from the database by manipulating query parameters.
+   </blockquote>
 
-- **Exploiting NoSQL operator injection to extract unknown fields**  
+  **4 Exploiting NoSQL operator injection to extract unknown fields**  
+ <blockquote>
   This lab shows how attackers can use NoSQL operator injection to extract information from fields that are not displayed to the user by leveraging injection payloads to return hidden fields.
+ </blockquote>
 
 ---
 
@@ -318,3 +322,4 @@ and send it. We received a response containing the **password change form**.
 Change password and login to user carlos. Complete lab.
 
 ![image](https://github.com/user-attachments/assets/1691529b-995e-4691-8bde-5d507ebe3696)
+
