@@ -1,5 +1,16 @@
 # Race Conditions
 
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+  
+## Introduction
+
 Race conditions are vulnerabilities that occur when multiple processes access and modify shared data concurrently without proper handling. Attackers exploit the tiny timing window where the application behaves unpredictably, leading to unintended outcomes.
 
 ---
