@@ -2,7 +2,7 @@
 
 This write-up focuses on the following **EXPERT-level** lab from the PortSwigger Web Security Academy:
 
- **2 Exploiting server-side parameter pollution in a REST URL**
+ **5 Exploiting server-side parameter pollution in a REST URL**
 <blockquote>
 This lab demonstrates how attackers can manipulate REST-style URLs to exploit server-side parameter pollution (SSPP) vulnerabilities — potentially leading to unauthorized access, logic bypasses, or information disclosure.
 </blockquote>
@@ -178,5 +178,6 @@ Delete the carlos user
 lab is solved
 
 ![image](https://github.com/user-attachments/assets/e398034e-96e1-4689-a119-5286636c35b7)
+
 
 
