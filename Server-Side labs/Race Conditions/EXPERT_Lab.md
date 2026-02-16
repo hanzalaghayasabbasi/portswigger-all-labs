@@ -2,8 +2,10 @@
 
 This write-up focuses on the following **EXPERT-level lab** from the PortSwigger Web Security Academy related to **Race Conditions**:
 
-**Partial construction race conditions**  
+**6 Partial construction race conditions**  
+<blockquote>
 This lab shows how attackers can interfere with the partial creation of resources by triggering requests at specific times, gaining access to incomplete or inconsistent resource states.
+</blockquote>
 
 ---
 
@@ -157,3 +159,4 @@ def handleResponse(req, interesting):
 24. Delete the `carlos` account, and the lab is solved.
 
     ![image](https://github.com/user-attachments/assets/00d24e81-d3fc-4577-be90-b0aaf2322dca)
+
