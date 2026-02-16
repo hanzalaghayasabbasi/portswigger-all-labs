@@ -2,17 +2,26 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy:
 
-- **URL-based access control can be circumvented**  
+**10 URL-based access control can be circumvented**  
+ <blockquote>
   This lab demonstrates how attackers can bypass access control by directly accessing restricted URLs without proper authorization checks.
+ </blockquote>
 
-- **Method-based access control can be circumvented**  
+**11 Method-based access control can be circumvented**  
+  <blockquote>
   This lab highlights how restricting access based on HTTP methods (e.g., GET, POST) can be ineffective if the server fails to enforce proper authorization on all methods.
+</blockquote>
 
-- **Multi-step process with no access control on one step**  
+**12 Multi-step process with no access control on one step**  
+<blockquote>
   This lab shows how incomplete access control checks on multi-step processes can allow attackers to bypass certain steps and perform unauthorized actions.
+</blockquote>
 
-- **Referer-based access control**  
+**13 Referer-based access control** 
+<blockquote>
   This lab illustrates the weakness of relying on the `Referer` header for access control, which can be easily manipulated by attackers to gain unauthorized access.
+</blockquote>
+
 
 ---
 ## LAB 10 - URL-based access control can be circumvented
@@ -213,6 +222,7 @@ It works chaning the **“Referer”** header to **/admin** and username to **ca
 Thus we solved the lab by upgrading ourselves(wiener) to higher privilege.
 
 ![image](https://github.com/user-attachments/assets/80f84adf-83ea-4d66-ba21-76154b515f78)
+
 
 
 
