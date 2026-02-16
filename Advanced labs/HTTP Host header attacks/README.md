@@ -10,6 +10,9 @@ Jump directly to the lab writeups:
 * [EXPERT](./EXPERT_Lab.md)
 
   
+Your section is already clear and well-structured. To make it **more visually consistent with your other sections** (like SSRF or Web Cache), you can **center the image with a caption**. Here's a polished version:
+
+
 ## Introduction
 
 ## What is the HTTP Host Header?
@@ -19,10 +22,13 @@ The HTTP `Host` header is a mandatory component of HTTP/1.1 requests. It specifi
 ```http
 GET /web-security HTTP/1.1
 Host: portswigger.net
-```
+````
 
-<img width="790" height="537" alt="image" src="https://github.com/user-attachments/assets/7d5f8893-4ca1-455d-a755-3343de9fa59c" />
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7d5f8893-4ca1-455d-a755-3343de9fa59c" width="700" alt="HTTP Host Header Diagram">
+  <br>
+  <em>Figure: Example of an HTTP request showing the Host header</em>
+</p>
 
 ### Purpose of the Host Header
 
@@ -34,6 +40,7 @@ Host: portswigger.net
 Think of the `Host` header like an apartment number in a shared building — it directs the mail (HTTP request) to the correct recipient (website/application).
 
 ---
+
 
 ## HTTP Host Header Attacks
 
