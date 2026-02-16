@@ -2,14 +2,20 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **Web Cache Deception**:
 
-**Exploiting path delimiters for web cache deception**  
+**2 Exploiting path delimiters for web cache deception**  
+<blockquote>
 This lab demonstrates how attackers can abuse path delimiter variations to trick caches into storing sensitive content.
+</blockquote>
 
-**Exploiting origin server normalization for web cache deception**  
+**3 Exploiting origin server normalization for web cache deception**  
+<blockquote>
 This lab shows how mismatches in URL normalization between cache and origin servers can be exploited.
+</blockquote>
 
-**Exploiting cache server normalization for web cache deception**  
+**4 Exploiting cache server normalization for web cache deception**  
+<blockquote>
 This lab covers techniques to exploit cache server normalization issues to achieve web cache deception.
+</blockquote>
 
 ---
 
@@ -350,5 +356,6 @@ Notice that the response includes the API key for the user **carlos**. Copy this
 Click **Submit solution**, then submit the API key for **carlos** to solve the lab.
 
 ![image](https://github.com/user-attachments/assets/a78ed3de-8899-4c5a-a25b-d0042200d044)
+
 
 
