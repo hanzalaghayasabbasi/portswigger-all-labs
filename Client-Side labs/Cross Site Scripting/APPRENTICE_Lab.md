@@ -2,32 +2,52 @@
 
 This write-up focuses on the following **APPRENTICE-level labs** from the PortSwigger Web Security Academy related to **Cross-site scripting (XSS)**:
 
-**Reflected XSS into HTML context with nothing encoded**  
+**1 Reflected XSS into HTML context with nothing encoded**  
+<blockquote>
 This lab demonstrates a reflected XSS vulnerability where no output encoding is performed in the HTML context.
+</blockquote>
 
-**Stored XSS into HTML context with nothing encoded**  
+**2 Stored XSS into HTML context with nothing encoded**  
+<blockquote>
 This lab shows how stored XSS can occur when user input is stored and later rendered without encoding.
+</blockquote>
 
-**DOM XSS in document.write sink using source location.search**  
+**3 DOM XSS in document.write sink using source location.search**  
+<blockquote>
 This lab explores DOM-based XSS vulnerabilities via `document.write()` using URL query parameters as a source.
+</blockquote>
 
-**DOM XSS in innerHTML sink using source location.search**  
+**4 DOM XSS in innerHTML sink using source location.search**  
+<blockquote>
 This lab shows DOM XSS occurring when `innerHTML` is assigned unsanitized URL parameter values.
+</blockquote>
 
-**DOM XSS in jQuery anchor href attribute sink using location.search source**  
+
+**5 DOM XSS in jQuery anchor href attribute sink using location.search source**  
+<blockquote>
 This lab demonstrates DOM XSS by manipulating jQuery selectors that use anchor `href` attributes sourced from URL parameters.
+</blockquote>
 
-**DOM XSS in jQuery selector sink using a hashchange event**  
+**6 DOM XSS in jQuery selector sink using a hashchange event**  
+<blockquote>
 This lab shows how DOM XSS can be triggered through jQuery selectors reacting to the `hashchange` event.
+</blockquote>
 
-**Reflected XSS into attribute with angle brackets HTML-encoded**  
+**7 Reflected XSS into attribute with angle brackets HTML-encoded**  
+<blockquote>
 This lab explores reflected XSS where angle brackets are encoded but the payload still executes.
+</blockquote>
 
-**Stored XSS into anchor href attribute with double quotes HTML-encoded**  
+**8 Stored XSS into anchor href attribute with double quotes HTML-encoded**  
+<blockquote>
 This lab demonstrates stored XSS in anchor href attributes even when double quotes are encoded.
+</blockquote>
 
-**Reflected XSS into a JavaScript string with angle brackets HTML encoded**  
+**9 Reflected XSS into a JavaScript string with angle brackets HTML encoded**  
+<blockquote>
 This lab shows how reflected XSS can occur inside JavaScript strings despite angle bracket encoding.
+</blockquote>
+
 
 ---
 
@@ -307,3 +327,4 @@ With this payload the alert pops:
 After alert pop lab will be solved
 
 ---
+
