@@ -2,24 +2,26 @@
 
 This write-up focuses on the following **APPRENTICE-level labs** from the PortSwigger Web Security Academy:
 
-* **Excessive trust in client-side controls**
+**1 Excessive trust in client-side controls**
+<blockquote>
   This lab demonstrates how relying too much on client-side validation allows attackers to bypass security checks and manipulate requests directly.
+</blockquote>
 
-* **High-level logic vulnerability**
+**2 High-level logic vulnerability**
+<blockquote>
   This lab shows how flaws in business logic can be exploited to achieve unauthorized actions that violate intended workflows.
+</blockquote>
 
-* **Inconsistent security controls**
+**3 Inconsistent security controls**
+<blockquote>
   This lab illustrates how varying levels of security controls across different parts of an application can be exploited by attackers to bypass restrictions.
+</blockquote>
 
-* **Flawed enforcement of business rules**
+ **4 Flawed enforcement of business rules**
+ <blockquote>
   This lab demonstrates how poorly enforced business logic can enable attackers to manipulate application behavior for personal gain.
+ </blockquote>
 
-## Authentication Vulnerabilities
-
-Authentication vulnerabilities can allow attackers to gain access to sensitive data and functionality. They also expose additional attack surface for further exploits.
-
-**Authentication** is the process of verifying that a user is who they claim to be.
-**Authorization** involves verifying whether a user is allowed to do something.
 
 ---
 
@@ -219,5 +221,6 @@ After analyzing the website’s features, we assess the application from an atta
 Place the order to solve the lab.
 
 ![image](https://github.com/user-attachments/assets/745e1885-9dd3-42c1-ab6f-9353c63f318d)
+
 
 
