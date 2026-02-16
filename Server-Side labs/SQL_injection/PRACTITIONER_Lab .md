@@ -2,53 +2,91 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **SQL Injection**:
 
-**SQL injection attack, querying the database type and version on Oracle**  
+**3 SQL injection attack, querying the database type and version on Oracle** 
+<blockquote>
 This lab demonstrates how to perform SQL injection to identify the database type and version specifically on Oracle databases.
+</blockquote>
 
-**SQL injection attack, querying the database type and version on MySQL and Microsoft**  
+**4 SQL injection attack, querying the database type and version on MySQL and Microsoft**  
+<blockquote>
 This lab covers SQL injection techniques to determine the database type and version on MySQL and Microsoft SQL Server databases.
+</blockquote>
 
-**SQL injection attack, listing the database contents on non-Oracle databases**  
+**5 SQL injection attack, listing the database contents on non-Oracle databases**  
+<blockquote>
 This lab shows how to enumerate database contents via SQL injection on non-Oracle database systems.
+</blockquote>
 
-**SQL injection attack, listing the database contents on Oracle**  
+
+**6 SQL injection attack, listing the database contents on Oracle**  
+<blockquote>
 This lab demonstrates techniques for listing database contents through SQL injection specifically on Oracle databases.
+</blockquote>
 
-**SQL injection UNION attack, determining the number of columns returned by the query**  
+**7 SQL injection UNION attack, determining the number of columns returned by the query**  
+<blockquote>
 This lab explains how to use UNION-based SQL injection to find out how many columns the original query returns.
+</blockquote>
 
-**SQL injection UNION attack, finding a column containing text**  
+**8 SQL injection UNION attack, finding a column containing text**  
+<blockquote>
 This lab focuses on identifying which column(s) in the UNION query can contain text data for effective data retrieval.
+</blockquote>
 
-**SQL injection UNION attack, retrieving data from other tables**  
+**9 SQL injection UNION attack, retrieving data from other tables**  
+<blockquote>
 This lab shows how to exploit UNION SQL injection to extract data from other tables in the database.
+</blockquote>
 
-**SQL injection UNION attack, retrieving multiple values in a single column**  
+**10 SQL injection UNION attack, retrieving multiple values in a single column**  
+<blockquote>
 This lab demonstrates how to retrieve multiple values within a single column using UNION SQL injection techniques.
+</blockquote>
 
-**Blind SQL injection with conditional responses**  
+
+**11 Blind SQL injection with conditional responses**  
+<blockquote>
 This lab explores blind SQL injection by observing conditional differences in server responses to infer data.
+</blockquote>
 
-**Blind SQL injection with conditional errors**  
+**12 Blind SQL injection with conditional errors**  
+<blockquote>
 This lab shows how to use error messages conditionally triggered by injection payloads to extract information.
+</blockquote>
 
-**Visible error-based SQL injection**  
+
+**13 Visible error-based SQL injection**  
+<blockquote>
 This lab demonstrates SQL injection techniques that cause visible database errors revealing sensitive information.
+</blockquote>
 
-**Blind SQL injection with time delays**  
+**14 Blind SQL injection with time delays**  
+<blockquote>
 This lab explains how time-based blind SQL injection works by observing delays in server responses.
+</blockquote>
 
-**Blind SQL injection with time delays and information retrieval**  
+
+**15 Blind SQL injection with time delays and information retrieval**  
+<blockquote>
 This lab covers advanced time-based blind SQL injection to retrieve detailed database information.
+</blockquote>
 
-**Blind SQL injection with out-of-band interaction**  
+
+**16 Blind SQL injection with out-of-band interaction**  
+<blockquote>
 This lab shows how attackers can use out-of-band channels to extract data in blind SQL injection scenarios.
+</blockquote>
 
-**Blind SQL injection with out-of-band data exfiltration**  
+**17 Blind SQL injection with out-of-band data exfiltration**  
+<blockquote>
 This lab focuses on exploiting blind SQL injection to exfiltrate data via out-of-band techniques.
+</blockquote>
 
-**SQL injection with filter bypass via XML encoding**  
+
+**18 SQL injection with filter bypass via XML encoding**  
+<blockquote>
 This lab demonstrates bypassing input filters in SQL injection by encoding payloads using XML.
+</blockquote>
 
 ---
 
@@ -1496,3 +1534,4 @@ Let’s start by exploring the query function to check for availability.
 
 
 ---
+
