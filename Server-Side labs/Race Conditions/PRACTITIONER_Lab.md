@@ -2,17 +2,25 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **Race Conditions**:
 
-**Bypassing rate limits via race conditions**  
+**2 Bypassing rate limits via race conditions**
+   <blockquote>
 This lab shows how concurrent requests can overwhelm rate-limiting mechanisms, allowing attackers to bypass restrictions on the number of allowed requests.
+   </blockquote>
 
-**Multi-endpoint race conditions**  
+**3 Multi-endpoint race conditions**  
+   <blockquote>
 This lab demonstrates how using multiple endpoints that modify shared resources simultaneously can lead to race conditions and inconsistent application states.
+   </blockquote>
 
-**Single-endpoint race conditions**  
+**4 Single-endpoint race conditions** 
+   <blockquote>
 This lab shows how a single endpoint, if accessed concurrently, can produce unintended behavior due to unsynchronized processing of shared resources.
+   </blockquote>
 
-**Exploiting time-sensitive vulnerabilities**  
+**5 Exploiting time-sensitive vulnerabilities**
+   <blockquote>
 This lab demonstrates how attackers can exploit timing windows in processes dependent on time-sensitive operations to bypass restrictions or create inconsistent states.
+   </blockquote>
 
 ---
 
@@ -57,7 +65,7 @@ baseball
 000000
 
 ```
-# Overview:
+## Overview:
 
 ## Detecting and Exploiting Limit Overrun Race Conditions with Turbo Intruder
 
@@ -110,7 +118,7 @@ def queueRequests(target, wordlists):
 
 
 
-# Lab Solution
+## Lab Solution
 
 There are two methods to solve the lab.
 
@@ -268,7 +276,7 @@ This approach enhances the accuracy of testing for race condition vulnerabilitie
 ### Solution
 
 
-# Lab Solution
+## Lab Solution
 
 1. Log in with the provided account.
   ![image](https://github.com/user-attachments/assets/f69a16f5-6c50-464e-a819-93e2d4773868)
@@ -350,7 +358,7 @@ This approach enhances the accuracy of testing for race condition vulnerabilitie
 
 ![image](https://github.com/user-attachments/assets/2f041233-5ae1-4555-912f-6606e32b0539)
 
-# Overview
+## Overview
 
 ## Abusing Rate or Resource Limits
 
@@ -470,7 +478,7 @@ One such example is when high-resolution timestamps are used instead of cryptogr
 Consider a password reset token that is only randomized using a timestamp. In this case, it might be possible to trigger two password resets for two different users, which both use the same token. All you need to do is time the requests so that they generate the same timestamp.
 ### Solution
 
-# Lab Solution
+## Lab Solution
 
 1. Click on "Forgot Password," which prompts for a username or email.
 
@@ -571,3 +579,4 @@ Consider a password reset token that is only randomized using a timestamp. In th
 18. Delete the `carlos` account, and the lab is solved.
 
       ![image](https://github.com/user-attachments/assets/acd240d4-8a3f-4d5d-86e0-a453ea8709e8)
+
