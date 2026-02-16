@@ -1,11 +1,25 @@
-# Web Cache Deception – Vulnerability Guide
+# Web Cache Deception – Vulnerability
 
-## Overview
+## Lab Levels
 
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+
+## Introduction
 **Web Cache Deception** is a vulnerability that allows attackers to trick a web cache into storing sensitive, user-specific content. This happens due to discrepancies between how the **cache server** and **origin server** interpret requests.
 
 An attacker lures a victim into accessing a malicious URL. The victim’s request causes their private content to be cached. The attacker can then send the same request and access the cached content.
-<img width="962" height="505" alt="image" src="https://github.com/user-attachments/assets/b10edc36-24b9-4cbc-9178-dfa847ebf148" />
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b10edc36-24b9-4cbc-9178-dfa847ebf148" width="700" alt="Web Cache Deception Diagram">
+  <br>
+  <em>Figure: Web Cache Deception attack flow demonstrating unauthorized cached content access</em>
+</p>
+
 
 ---
 
@@ -29,7 +43,12 @@ A **web cache** is a layer between the user and the origin server that stores st
 - **Cache miss**: The cache does not have the resource → forwards request to origin server → stores the response.
 - **Cache hit**: The requested resource is served directly from the cache (faster, reduces server load).
 
- <img width="1067" height="278" alt="image" src="https://github.com/user-attachments/assets/0bd11bb8-cbd2-4a67-a1c7-6655e5df4722" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0bd11bb8-cbd2-4a67-a1c7-6655e5df4722" width="900" alt="Web Cache Diagram">
+  <br>
+  <em>Figure: Illustration of cache hit and cache miss in a web cache</em>
+</p>
+
 
 ### Example Use Case: CDNs
 
