@@ -1,5 +1,14 @@
 # Clickjacking (UI Redressing)
 
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+
+  
+## Introduction
 Clickjacking is a **web security vulnerability** that allows an attacker to trick users into clicking on something different from what they perceive. This is typically achieved by overlaying **invisible or disguised UI elements** (like buttons) over legitimate content using `<iframe>` tags.
 
 For example, a user may think they're entering a giveaway to win a luxury cruise, but in reality, they're clicking a button that transfers money to an attacker.
