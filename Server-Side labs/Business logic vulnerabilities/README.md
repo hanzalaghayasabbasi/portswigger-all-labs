@@ -77,13 +77,6 @@ Business logic vulnerabilities are flaws in the design or implementation of appl
 
 ---
 
-## Associated Lab Files
-
-- `APPRENTICE_Lab.md`
-- `PRACTITIONER_Lab.md`
-- `EXPERT_Lab.md`
-
----
 
 ## Learn More
 
