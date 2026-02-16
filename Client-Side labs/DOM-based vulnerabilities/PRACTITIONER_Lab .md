@@ -2,20 +2,33 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **DOM-based vulnerabilities**:
 
-**DOM XSS using web messages**  
+**1 DOM XSS using web messages**  
+<blockquote>
 This lab demonstrates how attackers can exploit insecure handling of `postMessage` web messages to achieve DOM-based XSS.
+</blockquote>
 
-**DOM XSS using web messages and a JavaScript URL**  
+
+**2 DOM XSS using web messages and a JavaScript URL**  
+<blockquote>
 This lab extends the previous concept by leveraging JavaScript URLs to achieve DOM-based XSS through web messages.
+</blockquote>
 
-**DOM XSS using web messages and JSON.parse**  
+
+**3 DOM XSS using web messages and JSON.parse**  
+<blockquote>
 This lab explores how insecure parsing of untrusted messages using `JSON.parse` can lead to DOM XSS.
+</blockquote>
 
-**DOM-based open redirection**  
+
+**4 DOM-based open redirection**  
+<blockquote>
 This lab demonstrates how insecure handling of user input in redirects can allow DOM-based open redirection attacks.
+</blockquote>
 
-**DOM-based cookie manipulation**  
+**5 DOM-based cookie manipulation**  
+<blockquote>
 This lab shows how attackers can exploit DOM vulnerabilities to manipulate cookies directly within the browser.
+</blockquote>
 
 ---
 
@@ -329,6 +342,7 @@ After delivering the exploit to the victim, the lab updates to solved
 <img width="874" height="173" alt="image" src="https://github.com/user-attachments/assets/3a02055d-ad37-483f-ae62-df6acbf161f2" />
 
 ---
+
 
 
 
