@@ -153,8 +153,6 @@ Each request will now have a unique query string, forcing a cache miss.
 * `X-Cache: refresh` → Cached copy was refreshed
 * `Cache-Control: public, max-age=3600` → Indicates cacheable content (but not definitive)
 
-* \
-
 ### Response Time
 
 * Significant **decrease in response time** often indicates a cache hit
