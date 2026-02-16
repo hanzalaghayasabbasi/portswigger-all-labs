@@ -2,17 +2,26 @@
 
 This write-up focuses on the following **APPRENTICE-level labs** from the PortSwigger Web Security Academy:
 
-- **Information disclosure in error messages**  
+**1 Information disclosure in error messages**  
+  <blockquote>
   This lab demonstrates how verbose or detailed error messages can leak sensitive information that attackers can use to facilitate further attacks.
+  </blockquote>
 
-- **Information disclosure on debug page**  
+ **2 Information disclosure on debug page**  
+  <blockquote>
   This lab shows how leaving debug or development pages accessible in production can expose sensitive internal information useful to attackers.
+  </blockquote>
 
-- **Source code disclosure via backup files**  
+**3 Source code disclosure via backup files** 
+ <blockquote>
   This lab demonstrates how improperly secured backup files can expose full or partial source code, providing attackers with valuable information for identifying vulnerabilities.
+ </blockquote>
 
-- **Authentication bypass via information disclosure**  
+
+**4 Authentication bypass via information disclosure**  
+ <blockquote>
   This lab shows how attackers can exploit leaked sensitive information to bypass authentication mechanisms and gain unauthorized access.
+ </blockquote>
 
 ---
 
@@ -231,4 +240,5 @@ In the reponse we get the href link to delete user carlos .
 Again one last time, send a *POST* request to `/admin/delete?username=carlos` endpoint (along with the custom header) to delete user carlos & Solve the lab.
 
 ![image](https://github.com/user-attachments/assets/18c7063d-65e8-44d3-897f-ef16771aa97a)
+
 
