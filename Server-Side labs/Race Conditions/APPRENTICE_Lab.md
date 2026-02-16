@@ -2,8 +2,10 @@
 
 This write-up focuses on the following **APPRENTICE-level lab** from the PortSwigger Web Security Academy:
 
-**Limit overrun race conditions**  
+**1 Limit overrun race conditions**  
+   <blockquote>
 This lab demonstrates how attackers can exploit a race condition to exceed server-imposed limits by sending multiple simultaneous requests before the limit is properly enforced.
+   </blockquote>
 
 ---
 
@@ -192,4 +194,5 @@ These features significantly improve your ability to **detect and exploit race c
     - The lab is solved once the leather jacket is successfully purchased with the discount.
     
       ![image](https://github.com/user-attachments/assets/f883565e-5117-4d40-a8df-849a30d58c4e)
+
 
