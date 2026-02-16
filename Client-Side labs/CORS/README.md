@@ -29,19 +29,19 @@ The **Same-Origin Policy (SOP)** is a fundamental browser security concept that 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/ff7455cc-1eaa-4c14-a6e3-a9529610606f" width="700" alt="SOP Example 1">
   <br>
-  <em>Figure: Example of same-origin request being allowed</em>
+  <em>Figure: Example of same-origin request </em>
 </p>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9362be74-251b-4d0b-be3b-16ed1996ebcc" width="700" alt="SOP Example 2">
   <br>
-  <em>Figure: Example of cross-origin request being blocked by SOP</em>
+  <em>Figure: Hierarchical view of SOP restrictions between origins </em>
 </p>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9cca44e8-c5eb-4b4d-b04d-847990f3c9c3" width="700" alt="SOP Tree Diagram">
   <br>
-  <em>Figure: Hierarchical view of SOP restrictions between origins</em>
+  <em>Figure: Example of cross-origin request being blocked by SOP</em>
 </p>
 
 ---
