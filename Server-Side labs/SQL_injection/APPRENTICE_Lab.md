@@ -2,11 +2,15 @@
 
 This write-up focuses on the following **APPRENTICE-level labs** from the PortSwigger Web Security Academy related to **SQL Injection**:
 
-**SQL injection vulnerability in WHERE clause allowing retrieval of hidden data**  
+**1 SQL injection vulnerability in WHERE clause allowing retrieval of hidden data**  
+<blockquote>
 This lab demonstrates how an attacker can exploit SQL injection in the WHERE clause to extract data that is normally hidden or filtered.
+</blockquote>
 
-**SQL injection vulnerability allowing login bypass**  
+**2 SQL injection vulnerability allowing login bypass** 
+<blockquote>
 This lab shows how SQL injection can be used to bypass authentication mechanisms and gain unauthorized access.
+</blockquote>
 
 ---
 
@@ -94,4 +98,5 @@ Using the following payload in the password field it is possible to login:
 Lab is solved
 
 ![image](https://github.com/user-attachments/assets/ee3c01e9-4042-42f2-bb20-331e262e517f)
+
 
