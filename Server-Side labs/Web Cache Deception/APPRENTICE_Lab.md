@@ -2,8 +2,10 @@
 
 This write-up focuses on the following **APPRENTICE-level lab** from the PortSwigger Web Security Academy related to **Web Cache Deception**:
 
-**Exploiting path mapping for web cache deception**  
+**1 Exploiting path mapping for web cache deception**
+<blockquote>
 This lab demonstrates how attackers can exploit path mapping weaknesses to trick web caches into storing sensitive pages.
+</blockquote>
 
 ---
 
@@ -88,6 +90,7 @@ Now in Burp Suite, change the path to `/my-account/hanzalaa.js`. Since Carlos's 
 Click Submit solution, then submit the API key for carlos to solve the lab.
 
 ![image](https://github.com/user-attachments/assets/a1a15877-7a66-44f0-a58c-664b40b74b8c)
+
 
 
 
