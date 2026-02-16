@@ -2,26 +2,43 @@
 
 This write-up includes the following **PRACTITIONER-level labs**:
 
-* **Low-level logic flaw**
+**5 Low-level logic flaw**
+<blockquote>
   This lab shows how attackers can exploit detailed flaws in application logic to bypass intended restrictions or gain unauthorized access.
+</blockquote>
 
-* **Inconsistent handling of exceptional input**
+**6 Inconsistent handling of exceptional input**
+<blockquote>
   This lab demonstrates how inconsistent validation of unusual or unexpected input can be exploited by attackers.
+</blockquote>
 
-* **Weak isolation on dual-use endpoint**
+
+ **7 Weak isolation on dual-use endpoint**
+ <blockquote>
   This lab shows how endpoints that serve multiple purposes without proper isolation can be abused by attackers.
+ </blockquote>
 
-* **Insufficient workflow validation**
+
+**8 Insufficient workflow validation**
+<blockquote>
   This lab demonstrates how flaws in validating user workflows can be used to bypass business logic controls.
+</blockquote>
 
-* **Authentication bypass via flawed state machine**
+
+**9 Authentication bypass via flawed state machine**
+<blockquote>
   This lab shows how attackers can exploit weaknesses in state management to bypass authentication mechanisms.
+</blockquote>
 
-* **Infinite money logic flaw**
+ **10 Infinite money logic flaw**
+ <blockquote>
   This lab demonstrates how logical flaws in financial transaction systems can allow attackers to generate infinite funds.
+ </blockquote>
 
-* **Authentication bypass via encryption oracle**
+**11 Authentication bypass via encryption oracle**
+<blockquote>
   This lab shows how attackers can abuse encryption oracles to bypass authentication mechanisms.
+</blockquote>
 
 ---
 
@@ -794,6 +811,7 @@ Cookie: stay-logged-in=W0Qhvki0tOhz7V7DD4c7gUE5MQ%2fKEsTNpdy4UQnWdyE%3d
 And then delete the user and lab is solved:
 
 ![image](https://github.com/user-attachments/assets/3aa8cea6-ec79-4e0a-8834-ca6e0537b340)
+
 
 
 
