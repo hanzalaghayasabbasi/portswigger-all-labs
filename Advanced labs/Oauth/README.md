@@ -13,7 +13,12 @@ Jump directly to the lab writeups:
 
 OAuth 2.0 is a widely used framework for authorization that enables users to grant third-party applications limited access to their resources without exposing login credentials. While powerful and popular, OAuth 2.0 is prone to implementation errors, leading to vulnerabilities such as sensitive data leakage and authentication bypass.
 
-<img width="1054" height="400" alt="image" src="https://github.com/user-attachments/assets/21223bfa-eb60-4c74-b333-9ba76fff8261" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/21223bfa-eb60-4c74-b333-9ba76fff8261" width="850" alt="OAuth 2.0 Overview Diagram">
+  <br>
+  <em>Figure: Overview of OAuth 2.0 authorization framework</em>
+</p>
+
 
 
 ## What is OAuth?
@@ -51,9 +56,12 @@ OAuth uses different "flows" (grant types) depending on the context. The two mai
 
 ### Authorization Code Grant (Most Secure)
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a48d59b5-7c7d-4d15-ab75-242aa49601a1" width="850" alt="OAuth 2.0 Authorization Code Grant Flow">
+  <br>
+  <em>Figure: OAuth 2.0 Authorization Code Grant flow – considered the most secure grant type</em>
+</p>
 
-
-<img width="882" height="626" alt="image" src="https://github.com/user-attachments/assets/a48d59b5-7c7d-4d15-ab75-242aa49601a1" />
 
 
 1. **Authorization Request**
@@ -111,7 +119,11 @@ Authorization: Bearer z0y9x8w7v6u5
 
 ### Implicit Grant (Less Secure)
 
-<img width="875" height="526" alt="image" src="https://github.com/user-attachments/assets/a7626b6a-04da-40bd-9703-708d51e12f39" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a7626b6a-04da-40bd-9703-708d51e12f39" width="850" alt="OAuth 2.0 Implicit Grant Flow">
+  <br>
+  <em>Figure: OAuth 2.0 Implicit Grant flow – less secure due to exposure of access tokens in the browser</em>
+</p>
 
 
 Best for SPAs and desktop apps.
