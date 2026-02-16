@@ -2,38 +2,61 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **Cross-Site Request Forgery (CSRF)**:
 
-**CSRF where token validation depends on request method**  
+**2 CSRF where token validation depends on request method**  
+<blockquote>
 This lab demonstrates how relying on the request method to validate CSRF tokens can be bypassed.
+</blockquote>
 
-**CSRF where token validation depends on token being present**  
+**3 CSRF where token validation depends on token being present**  
+</blockquote>
 This lab shows vulnerabilities where validation only checks for the presence of a token, not its correctness.
+</blockquote>
 
-**CSRF where token is not tied to user session**  
+**4 CSRF where token is not tied to user session**  
+<blockquote>
 This lab explores issues arising when CSRF tokens are not properly tied to individual user sessions.
+</blockquote>
 
-**CSRF where token is tied to non-session cookie**  
+**5 CSRF where token is tied to non-session cookie**  
+<blockquote>
 This lab demonstrates weaknesses when tokens are linked to cookies unrelated to the user session.
+</blockquote>
 
-**CSRF where token is duplicated in cookie**  
+**6 CSRF where token is duplicated in cookie**  
+<blockquote>
 This lab shows how duplication of CSRF tokens in cookies can be exploited.
+</blockquote>
 
-**SameSite Lax bypass via method override**  
+**7 SameSite Lax bypass via method override**  
+<blockquote>
 This lab demonstrates bypassing SameSite=Lax cookie restrictions by overriding HTTP methods.
+</blockquote>
 
-**SameSite Strict bypass via client-side redirect**  
+**8 SameSite Strict bypass via client-side redirect**  
+<blockquote>
 This lab shows how client-side redirects can be used to bypass SameSite=Strict cookie policies.
+</blockquote>
 
-**SameSite Strict bypass via sibling domain**  
+**9 SameSite Strict bypass via sibling domain**  
+<blockquote>
 This lab explains how sibling domains can be leveraged to bypass SameSite=Strict protections.
+</blockquote>
 
-**SameSite Lax bypass via cookie refresh**  
+**10 SameSite Lax bypass via cookie refresh**  
+<blockquote>
 This lab demonstrates bypassing SameSite=Lax restrictions by refreshing cookies.
+</blockquote>
 
-**CSRF where Referer validation depends on header being present**  
+
+**11 CSRF where Referer validation depends on header being present** 
+<blockquote>
 This lab shows weaknesses when Referer validation is conditional on the presence of the header.
+</blockquote>
 
-**CSRF with broken Referer validation**  
+**12 CSRF with broken Referer validation**  
+<blockquote>
 This lab covers vulnerabilities due to incorrect or incomplete Referer header validation.
+</blockquote>
 
 ---
 
@@ -1274,3 +1297,4 @@ Deliver the exploit to victim to solve the lab.
 
 
 ---
+
