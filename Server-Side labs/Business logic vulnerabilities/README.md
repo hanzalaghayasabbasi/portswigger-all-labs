@@ -1,5 +1,17 @@
 # Business Logic Vulnerabilities
 
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+  
+## Introduction
+
+
 Business logic vulnerabilities are flaws in the design or implementation of application workflows that attackers can exploit to elicit unintended behavior. These are often due to flawed assumptions about how users will interact with the system.
 
 ---
