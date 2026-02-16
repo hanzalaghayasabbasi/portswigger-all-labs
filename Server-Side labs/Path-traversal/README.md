@@ -1,4 +1,4 @@
-# Path traversal
+# Path Traversal
 
 ## Lab Levels
 
@@ -7,11 +7,13 @@ Jump directly to the lab writeups:
 * [APPRENTICE](./APPRENTICE_Lab.md)
 * [PRACTITIONER](./PRACTITIONER_Lab.md)
 
+## Web Application Architecture
 
-
-## Web Application Architecture:
-![image](https://github.com/user-attachments/assets/588af6f9-b2af-4757-9a35-81e58f08b69e)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/588af6f9-b2af-4757-9a35-81e58f08b69e" width="800" alt="Web Application Architecture">
+  <br>
+  <em>Figure: Typical web application architecture illustrating the path traversal attack surface</em>
+</p>
 
 
 ---
