@@ -1,5 +1,17 @@
 # Authentication Vulnerabilities
 
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+  
+## Introduction
+
+
 Authentication vulnerabilities occur when websites implement login and identity verification mechanisms improperly. These issues can allow attackers to gain unauthorized access to user accounts or escalate privileges.
 
 ---
