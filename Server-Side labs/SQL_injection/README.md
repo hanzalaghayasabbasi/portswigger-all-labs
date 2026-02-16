@@ -1,5 +1,56 @@
+# SQL injection
 
-# SQL Injection Cheat Sheet
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+  
+## Introduction
+
+### **1. What SQL Injection (SQLi) Is**
+
+SQL Injection is a **vulnerability in web applications** where **user input is improperly handled** and inserted directly into SQL queries. This allows an attacker to **manipulate the database query** and gain access to data or functionality they shouldn’t have.
+
+Unlike NoSQL injection, SQLi targets **relational databases** like:
+
+* **MySQL**
+* **PostgreSQL**
+* **SQL Server**
+* **Oracle Database**
+* **SQLite**
+
+---
+
+### **2. What SQL Injection Can Do**
+
+Depending on the application and database, SQLi can allow an attacker to:
+
+1. **View sensitive data**
+
+   * Access other users’ information like usernames, passwords, emails, or financial data.
+
+2. **Modify or delete data**
+
+   * Change records, delete entries, or insert malicious data.
+
+3. **Bypass authentication**
+
+   * Log in without valid credentials by manipulating login queries.
+
+4. **Escalate attacks**
+
+   * Execute system commands, access the underlying server, or pivot to other parts of the network.
+
+5. **Cause denial-of-service (DoS)**
+
+   * Use heavy queries or resource-intensive operations to crash or slow down the database.
+
+---
+## SQL Injection Cheat Sheet
 
 This guide provides a comprehensive overview of SQL Injection (SQLi), including common comment syntax, payload examples, evasion techniques, and classification of SQLi types.
 
