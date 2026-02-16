@@ -9,26 +9,56 @@ Jump directly to the lab writeups:
 * [EXPERT](./EXPERT_Lab.md)
 
 
+
+
 ## Introduction
 
-## What is HTTP Request Smuggling?
+### What is HTTP Request Smuggling?
 
-HTTP request smuggling is a web security vulnerability that allows attackers to manipulate HTTP requests in a way that exploits differences in how front-end and back-end servers interpret them. By sending ambiguous requests, attackers can disrupt the normal processing of request sequences, potentially leading to serious consequences such as bypassing security controls, accessing sensitive data, or interfering with other users’ interactions. This issue is particularly prevalent in HTTP/1 setups, though HTTP/2 systems can also be affected when downgraded to HTTP/1 for back-end communication. It’s a critical concern because it undermines the integrity of web application traffic, making it a powerful tool for attackers.
+**HTTP request smuggling** is a web security vulnerability that allows attackers to **manipulate HTTP requests** in a way that exploits differences in how **front-end and back-end servers interpret them**.
 
-<img width="1006" height="503" alt="image" src="https://github.com/user-attachments/assets/6c3d1ec5-b7c7-4c61-8dd0-7ab593dc1b8e" />
+By sending **ambiguous requests**, attackers can disrupt the normal processing of request sequences, potentially leading to:
+
+* Bypassing security controls
+* Accessing sensitive data
+* Interfering with other users’ interactions
+
+This issue is particularly common in **HTTP/1 setups**, though **HTTP/2 systems** can also be affected when downgraded to HTTP/1 for back-end communication.
+
+It is a critical concern because it **undermines the integrity of web application traffic**, making it a powerful tool for attackers.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6c3d1ec5-b7c7-4c61-8dd0-7ab593dc1b8e" width="1006" alt="HTTP Request Smuggling Example">
+  <br>
+  <em>Figure: Overview of HTTP request smuggling</em>
+</p>
+
 
 ---
 
-# What Happens in an HTTP Request Smuggling Attack?
 
-Modern web applications often rely on a chain of servers to process incoming requests. A **front-end server**—like a load balancer or reverse proxy—receives requests from users and forwards them to a **back-end server** for processing. To improve efficiency, the front-end typically sends multiple requests over a single persistent connection, requiring both servers to agree on where one request ends and the next begins.
 
-In an HTTP request smuggling attack, the attacker crafts a request that is interpreted differently by the two servers:
+## What Happens in an HTTP Request Smuggling Attack?
 
-- The **front-end server** might see it as a single, complete request.
-- The **back-end server** might split it into multiple requests or misalign the boundaries.
+Modern web applications often rely on a **chain of servers** to process incoming requests.
 
-- <img width="951" height="515" alt="image" src="https://github.com/user-attachments/assets/6dfc6043-ff34-4050-89c5-eac8b76b96df" />
+* A **front-end server** (e.g., load balancer or reverse proxy) receives requests from users.
+* It then forwards them to a **back-end server** for processing.
+
+To improve efficiency, the front-end may send **multiple requests over a single persistent connection**, so both servers must **agree on where one request ends and the next begins**.
+
+---
+
+In an HTTP request smuggling attack, the attacker crafts a request that is **interpreted differently** by the two servers:
+
+* The **front-end server** may see it as a **single, complete request**.
+* The **back-end server** may **split it into multiple requests** or misalign the request boundaries.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6dfc6043-ff34-4050-89c5-eac8b76b96df" width="951" alt="HTTP Request Smuggling Attack Example">
+  <br>
+  <em>Figure: Front-end vs back-end interpretation in request smuggling</em>
+</p>
 
 
 For example, an attacker could "smuggle" a portion of their request past the front-end server, attaching it to the next legitimate request processed by the back-end. This desynchronization can enable:
@@ -41,7 +71,7 @@ The root of the problem lies in the servers’ disagreement on request boundarie
 
 ---
 
-# How Do HTTP Request Smuggling Vulnerabilities Arise?
+## How Do HTTP Request Smuggling Vulnerabilities Arise?
 
 HTTP request smuggling vulnerabilities stem from the HTTP/1 specification, which provides two methods to define the length of a request’s body:
 
@@ -82,7 +112,7 @@ When the front-end and back-end servers process these headers differently—one 
 
 ---
 
-# Types of HTTP Request Smuggling Attacks
+## Types of HTTP Request Smuggling Attacks
 
 HTTP request smuggling attacks exploit discrepancies in how front-end and back-end servers interpret the `Content-Length` and `Transfer-Encoding` headers. There are three primary types:
 
@@ -124,7 +154,7 @@ HTTP request smuggling attacks exploit discrepancies in how front-end and back-e
 
 ---
 
-# How to Perform an HTTP Request Smuggling Attack
+## How to Perform an HTTP Request Smuggling Attack
 
 Attackers perform HTTP request smuggling by crafting requests that exploit mismatches in header processing. Here’s how the three attack types are executed:
 
@@ -170,7 +200,7 @@ Attackers perform HTTP request smuggling by crafting requests that exploit misma
 
 ---
 
-# Detection and Exploitation
+## Detection and Exploitation
 
 ## Detecting Vulnerabilities
 
@@ -222,14 +252,24 @@ Attackers perform HTTP request smuggling by crafting requests that exploit misma
 
 ---
 
-# Advanced Techniques
 
-- **HTTP Request Tunneling**:  
-  - Sends a single request that triggers two back-end responses, bypassing front-end checks even without connection reuse.  
-- **HTTP/2 Downgrading**:  
-  - When an HTTP/2 front-end converts requests to HTTP/1, attackers can inject `Content-Length` or `Transfer-Encoding` headers to desynchronize processing.
-    
-  <img width="1130" height="403" alt="image" src="https://github.com/user-attachments/assets/e83904ea-0532-4778-839e-4cd1b976ddf4" />
+
+## Advanced Techniques
+
+* **HTTP Request Tunneling**
+
+  * Sends a **single request** that triggers **two back-end responses**, bypassing front-end checks even **without connection reuse**.
+
+* **HTTP/2 Downgrading**
+
+  * When an **HTTP/2 front-end converts requests to HTTP/1**, attackers can inject `Content-Length` or `Transfer-Encoding` headers to **desynchronize request processing**.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e83904ea-0532-4778-839e-4cd1b976ddf4" width="1130" alt="Advanced HTTP Request Smuggling Techniques">
+  <br>
+  <em>Figure: Advanced HTTP request smuggling techniques</em>
+</p>
+
 
 
 ---
