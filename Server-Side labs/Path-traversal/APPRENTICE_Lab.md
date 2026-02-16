@@ -2,8 +2,10 @@
 
 This write-up focuses on the following **APPRENTICE-level lab** from the PortSwigger Web Security Academy:
 
-- **File path traversal, simple case**  
+**1 File path traversal, simple case**  
+   <blockquote>
   This lab demonstrates how attackers can exploit insufficient validation of user-supplied file paths to read arbitrary files on the server.
+   </blockquote>
 
 ---
 
@@ -35,3 +37,4 @@ To retrieve /etc/passwd:
 And lab is solved
 
 ![image](https://github.com/user-attachments/assets/d26ab1b1-da23-4d4f-8839-b20ff9ccaa34)
+
