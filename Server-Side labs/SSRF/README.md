@@ -1,8 +1,20 @@
+# Server-Side Request Forgery (SSRF) 
 
-# Server-Side Request Forgery (SSRF) Vulnerability Guide
+## Lab Levels
 
-![SSRF Diagram](https://media.licdn.com/dms/image/v2/D4D12AQEdv6qTMsDaqg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1731662039422?e=2147483647&v=beta&t=Tz5aBcJ5DjZ6EPj70RACFpBcscEHFoRTtTmCEWGAAmc)  
-                                         *Figure:  SSRF attack flow demonstrating unauthorized internal network access*
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+## Server-Side Request Forgery (SSRF) Vulnerability Guide
+
+<p align="center">
+  <img src="https://media.licdn.com/dms/image/v2/D4D12AQEdv6qTMsDaqg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1731662039422?e=2147483647&v=beta&t=Tz5aBcJ5DjZ6EPj70RACFpBcscEHFoRTtTmCEWGAAmc" alt="SSRF Diagram">
+  <br>
+  <em>Figure: SSRF attack flow demonstrating unauthorized internal network access</em>
+</p>
 
 ---
 
