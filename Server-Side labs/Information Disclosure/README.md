@@ -1,3 +1,20 @@
+# Information disclosure vulnerabilities
+
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+  
+## Introduction
+
+Information disclosure (or leakage) occurs when a web application unintentionally exposes data that it shouldn’t. This data can be:
+
+* **User-sensitive data:** usernames, email addresses, passwords (even hashed), credit card info, or personal details.
+* **Business-sensitive data:** internal reports, pricing strategies, project files, or intellectual property.
+* **Technical information:** server software versions, database types, debug logs, API keys, or directory structures.
+  
 ## Common Places Where Sensitive Information May Be Exposed
 
 When assessing a web application for information disclosure vulnerabilities, it's important to know where to look. Below are some common examples of locations and features that may unintentionally reveal sensitive data:
