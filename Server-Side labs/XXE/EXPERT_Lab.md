@@ -2,8 +2,10 @@
 
 This write-up focuses on the following **EXPERT-level lab** from the PortSwigger Web Security Academy related to **XML External Entity (XXE) Injection**:
 
-**Exploiting XXE to retrieve data by repurposing a local DTD**  
+**9 Exploiting XXE to retrieve data by repurposing a local DTD**  
+<blockquote>
 This lab demonstrates advanced XXE exploitation by repurposing a local Document Type Definition (DTD) to extract sensitive data.
+</blockquote>
 
 ---
 
@@ -124,4 +126,5 @@ Although this is technically an **external entity**, it points to a file **withi
 Lab is solved as we get passwd file
 
 ---
+
 
