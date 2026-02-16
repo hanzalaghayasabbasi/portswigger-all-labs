@@ -2,8 +2,10 @@
 
 This write-up focuses on **APPRENTICE** labs from the PortSwigger Web Security Academy related to **WebSockets**:
 
-**Manipulating WebSocket messages to exploit vulnerabilities** *(APPRENTICE)*  
+**1 Manipulating WebSocket messages to exploit vulnerabilities** *(APPRENTICE)*
+<blockquote>
 This lab demonstrates how attackers can manipulate WebSocket messages directly to exploit application vulnerabilities.
+</blockquote>
 
 ---
 
@@ -68,6 +70,7 @@ SO we have make changes on sever side ,after refresh alert message is coming and
 
 
 ---
+
 
 
 
