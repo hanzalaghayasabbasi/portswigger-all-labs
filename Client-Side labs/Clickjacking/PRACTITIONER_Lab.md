@@ -186,7 +186,3 @@ After reducing the opacity to `0.000`, `Store` and `Deliver exploit to victim`, 
 ---
 
 
-
-
-### Solution
-
