@@ -11,7 +11,7 @@ Jump directly to the lab writeups:
   
 ## Introduction
 
-## 📦 What is Serialization?
+##  What is Serialization?
 
 Serialization (also known as marshaling, pickling, freezing, or flattening) is the process of converting complex data structures (like objects and their attributes) into a stream of bytes or string format that can be:
 
@@ -46,18 +46,22 @@ Serialization (also known as marshaling, pickling, freezing, or flattening) is t
 
 ---
 
-## ⚠️ What is Insecure Deserialization?
+##  What is Insecure Deserialization? 
 
-Insecure deserialization happens when user-controllable serialized data is deserialized by the application without proper validation or integrity checks.
+**Insecure deserialization** occurs when **user-controllable serialized data** is deserialized by an application **without proper validation or integrity checks**.
 
-This can allow an attacker to:
+This vulnerability can allow an attacker to:
 
 * Manipulate the data structure
 * Inject malicious objects
 * Trigger unintended method calls
-* Achieve Remote Code Execution (RCE), privilege escalation, or data exfiltration
+* Achieve **Remote Code Execution (RCE)**, privilege escalation, or data exfiltration
 
-<img width="950" height="809" alt="image" src="https://github.com/user-attachments/assets/bee84850-dc1c-4548-91b6-2268e919ed06" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/bee84850-dc1c-4548-91b6-2268e919ed06" width="950" alt="Insecure Deserialization Example">
+  <br>
+  <em>Figure: Example of insecure deserialization attack flow</em>
+</p>
 
 ---
 
@@ -146,7 +150,7 @@ Watch for:
 
 ---
 
-## 🧠 Summary
+## Summary
 
 Serialization is necessary for transmitting objects but introduces risk when mishandled. Insecure deserialization can lead to severe vulnerabilities such as RCE, privilege escalation, or complete application compromise. Use strict validation, limit deserialization from untrusted sources, and prefer secure serialization formats.
 
