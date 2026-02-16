@@ -2,22 +2,26 @@
 
 This write-up covers **Three PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to API exploitation and testing:
 
-### Exploiting server-side parameter pollution in a query string  
+**2 Exploiting server-side parameter pollution in a query string**
+
+<blockquote>
 This lab demonstrates how manipulating query string parameters can lead to server-side parameter pollution, potentially allowing unauthorized actions or information disclosure.
+</blockquote>
 
-### Finding and exploiting an unused API endpoint  
+**3 Finding and exploiting an unused API endpoint**  
+<blockquote>
 This lab shows how attackers can discover and abuse undocumented or unused API endpoints that may expose sensitive functionality or data.
+</blockquote>
 
-### Exploiting a mass assignment vulnerability  
+**4 Exploiting a mass assignment vulnerability** 
+<blockquote>
 This lab illustrates how improper handling of object properties in API requests can be exploited through mass assignment, allowing attackers to modify unintended data fields.
-
-These labs focus on identifying and abusing insecure API behaviors, data parsing issues, and parameter manipulation to gain unauthorized access or extract sensitive data.
-
+</blockquote>
 
 ---
 
 
-## LAB 2 - Exploiting an API endpoint using documentation
+## LAB 2 - Exploiting server-side parameter pollution in a query string
 
 ## Lab Description :
 
@@ -420,6 +424,7 @@ As we can see that sending below request gives us created response,Now I open th
 Now in the checkout page we can see that the discount has been applied successfully & thus the lab is solved.
 
 ![image](https://github.com/user-attachments/assets/6b1d0c76-814a-41d0-95e9-b085eb930567)
+
 
 
 
