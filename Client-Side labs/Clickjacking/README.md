@@ -108,4 +108,4 @@ Clickjacking is a serious threat when paired with other vulnerabilities. Always:
 * Use tools like Burp Suite + Clickbandit for automated testing
 * Avoid placing sensitive actions behind single-click buttons without confirmation
 
-```
+---
