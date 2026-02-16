@@ -1,33 +1,51 @@
-![image](https://github.com/user-attachments/assets/91c3b219-8547-456d-9999-42b24f556622)![image](https://github.com/user-attachments/assets/a9e27a81-9b89-4694-8572-052144f1c4b3)![image](https://github.com/user-attachments/assets/07b21e2e-3e7e-4b1d-822e-0a9c56140ed4)## Labs Covered
+## Labs Covered
 
 This write-up focuses on the following **PRACTITIONER-level** labs from the PortSwigger Web Security Academy:
 
-### Username enumeration via subtly different responses  
+ **4 Username enumeration via subtly different responses**  
+ <blockquote>
 This lab demonstrates how small differences in server responses during authentication can allow attackers to determine whether a username exists.
+ </blockquote>
 
-### Username enumeration via response timing  
+ **5 Username enumeration via response timing**  
+ <blockquote>
 This lab shows how variations in server response times can leak information about the validity of supplied usernames.
+ </blockquote>
 
-### Broken brute-force protection, IP block  
+ **6 Broken brute-force protection, IP block**  
+ <blockquote>
 This lab demonstrates how insecure brute-force protection logic can be exploited by alternating between valid logins and attack attempt
+ </blockquote>
 
-### Username enumeration via account lock  
+ **7 Username enumeration via account lock**  
+ <blockquote>
 This lab demonstrates how account lockout mechanisms can unintentionally disclose valid usernames to attackers.
+ </blockquote>
 
-### 2FA broken logic  
+ **8 2FA broken logic**
+ <blockquote>
 This lab illustrates how logic flaws in two-factor authentication implementations can allow attackers to bypass 2FA and gain unauthorized access.
+ </blockquote>
 
-### Brute-forcing a stay-logged-in cookie  
+ **9 Brute-forcing a stay-logged-in cookie**
+ <blockquote>
 This lab shows how weak or predictable session tokens (such as stay-logged-in cookies) can be brute-forced to hijack active user sessions.
+ </blockquote>
 
-### Offline password cracking  
+**10 Offline password cracking**
+<blockquote>
 This lab explains how leaked password hashes can be attacked offline using dictionary or brute-force attacks to recover plaintext passwords.
+</blockquote>
 
-### Password reset poisoning via middleware  
+**11 Password reset poisoning via middleware**
+<blockquote>
 This lab demonstrates how insecure handling of password reset tokens via middleware can be exploited to hijack accounts.
+</blockquote>
 
-### Password brute-force via password change  
+**12 Password brute-force via password change**
+<blockquote>
 This lab shows how attackers can exploit flaws in password change functionality to brute-force user passwords.
+</blockquote>
 
 ## LAB 4 - Username enumeration via subtly different responses
 
@@ -678,3 +696,4 @@ Now login as carlos - `carlos:dragon` to solve the lab.
 
 
 ![image](https://github.com/user-attachments/assets/c79e9cad-5792-4b25-9974-f26669b9e6ba)
+
