@@ -1,5 +1,18 @@
 # Cross-Site Scripting (XSS) Overview
 
+
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+  
+## Introduction
+
+
 **Cross-site scripting (XSS)** is a security vulnerability that allows an attacker to inject malicious scripts into web pages viewed by other users. These scripts are usually executed in the context of the victim’s browser, allowing attackers to steal cookies, perform actions on behalf of the victim, or redirect them to malicious sites.
 
 There are **three main types of XSS**:
