@@ -1,9 +1,22 @@
-# Web Application Architecture:
+# Path traversal
+
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+
+
+
+## Web Application Architecture:
 ![image](https://github.com/user-attachments/assets/588af6f9-b2af-4757-9a35-81e58f08b69e)
 
 
 
 ---
+
+## Introduction
 
 ### **1. Path Traversal Vulnerabilities**
 Path traversal vulnerabilities allow attackers to access arbitrary files on a server by manipulating file paths in user inputs, such as URL parameters.
