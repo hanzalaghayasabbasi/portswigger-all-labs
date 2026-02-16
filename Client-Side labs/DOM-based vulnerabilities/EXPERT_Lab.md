@@ -2,11 +2,15 @@
 
 This write-up focuses on the following **EXPERT-level labs** from the PortSwigger Web Security Academy related to **DOM-based vulnerabilities**:
 
-**Exploiting DOM clobbering to enable XSS**  
+**6 Exploiting DOM clobbering to enable XSS**  
+<blockquote>
 This lab demonstrates how attackers can exploit DOM clobbering to manipulate the document structure and enable XSS attacks.
+</blockquote>
 
-**Clobbering DOM attributes to bypass HTML filters**  
+**7 Clobbering DOM attributes to bypass HTML filters**  
+<blockquote>
 This lab shows how attackers can clobber DOM object attributes to bypass server-side or client-side HTML sanitization filters.
+</blockquote>
 
 ---
 
@@ -301,6 +305,7 @@ Once the victim loads the malicious iframe, the payload is triggered and the cha
 
 
 ---
+
 
 
 
