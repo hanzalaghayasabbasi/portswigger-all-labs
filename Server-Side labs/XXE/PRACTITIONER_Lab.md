@@ -2,23 +2,36 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **XML External Entity (XXE) Injection**:
 
-**Blind XXE with out-of-band interaction**  
+**3 Blind XXE with out-of-band interaction**  
+<blockquote>
 This lab demonstrates exploiting blind XXE vulnerabilities that require out-of-band interaction to confirm and extract data.
+</blockquote>
 
-**Blind XXE with out-of-band interaction via XML parameter entities**  
+**4 Blind XXE with out-of-band interaction via XML parameter entities**  
+<blockquote>
 This lab shows advanced blind XXE exploitation using XML parameter entities for out-of-band data retrieval.
+</blockquote>
 
-**Exploiting blind XXE to exfiltrate data using a malicious external DTD**  
+**5 Exploiting blind XXE to exfiltrate data using a malicious external DTD**  
+<blockquote>
 This lab explains how to use malicious external DTDs to exfiltrate data through blind XXE attacks.
+</blockquote>
 
-**Exploiting blind XXE to retrieve data via error messages**  
+**6 Exploiting blind XXE to retrieve data via error messages**  
+<blockquote>
+
 This lab shows how to exploit blind XXE by causing error messages that leak sensitive information.
+</blockquote>
 
-**Exploiting XInclude to retrieve files**  
+**7 Exploiting XInclude to retrieve files**  
+<blockquote>
 This lab demonstrates how XInclude can be abused in XXE attacks to retrieve files from the server.
+</blockquote>
 
-**Exploiting XXE via image file upload**  
+**8 Exploiting XXE via image file upload**  
+<blockquote>
 This lab shows how XXE vulnerabilities can be exploited through image file uploads containing malicious XML data.
+</blockquote>
 
 ---
 
@@ -695,3 +708,4 @@ Many image processing pipelines (like Batik) parse SVGs and **execute embedded X
 
 
 ---
+
