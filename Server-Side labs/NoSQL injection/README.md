@@ -1,4 +1,27 @@
-# Testing and Exploiting NoSQL Injection in MongoDB
+# NoSQL injection
+
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+  
+## Introduction
+
+### **1. What NoSQL Injection Is**
+
+NoSQL injection occurs when **unsanitized user input** is inserted into a NoSQL query, allowing the attacker to manipulate the database operations. While SQL injection targets relational databases (MySQL, PostgreSQL), NoSQL injection targets databases like:
+
+* **MongoDB**
+* **CouchDB**
+* **Redis**
+* **Cassandra**
+* **Firebase**
+
+NoSQL databases often use JSON-like query structures, which changes the attack surface compared to SQL.
+
+## Testing and Exploiting NoSQL Injection in MongoDB
 
 ## Testing for NoSQL Injection
 We can test the web application for NoSQL injections by entering fuzz strings as input. Example fuzz strings include:
