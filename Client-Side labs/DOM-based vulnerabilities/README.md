@@ -12,13 +12,18 @@ Jump directly to the lab writeups:
 
 ## What is the DOM?
 
-The **Document Object Model (DOM)** is the browser’s internal representation of a web page. It is a tree-like structure composed of all the HTML elements on the page.
+The **Document Object Model (DOM)** is the browser’s internal representation of a web page. It is a **tree-like structure** composed of all the HTML elements on the page.
 
-![DOM Representation](https://github.com/sh3bu/Portswigger_labs/assets/67383098/a0e6feed-744b-4c63-89fc-5c55a0110041)
+<p align="center">
+  <img src="https://github.com/sh3bu/Portswigger_labs/assets/67383098/a0e6feed-744b-4c63-89fc-5c55a0110041" width="700" alt="DOM Representation">
+  <br>
+  <em>Figure: Example of DOM representation showing the hierarchical structure of HTML elements</em>
+</p>
 
-JavaScript can access and manipulate the DOM, changing the page's structure, style, and content dynamically. This powerful feature, when misused or handled insecurely, leads to **DOM-based vulnerabilities**.
+JavaScript can access and manipulate the DOM, changing the page's **structure, style, and content dynamically**. While this is a powerful feature, improper handling can lead to **DOM-based vulnerabilities**.
 
 These vulnerabilities occur when **attacker-controlled data (source)** is passed into a **dangerous function or object (sink)** without proper validation or sanitization.
+
 
 ---
 
@@ -78,8 +83,13 @@ If an attacker accesses the page with `?name=<img src=x onerror=alert(1)>`, the 
 
 ## Common DOM-Based Vulnerabilities and Sinks
 
-The table below summarizes typical DOM vulnerabilities and the associated dangerous sinks:
+The table below summarizes **typical DOM vulnerabilities** and their associated dangerous sinks.
 
-![Common DOM Sinks](https://github.com/sh3bu/Portswigger_labs/assets/67383098/4894c83e-8e67-4d33-be53-d3fef8f28c9a)
+<p align="center">
+  <img src="https://github.com/sh3bu/Portswigger_labs/assets/67383098/4894c83e-8e67-4d33-be53-d3fef8f28c9a" width="800" alt="Common DOM Sinks">
+  <br>
+  <em>Figure: Common DOM-based vulnerabilities and corresponding sinks in JavaScript</em>
+</p>
+
 
 ---
