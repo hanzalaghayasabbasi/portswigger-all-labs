@@ -2,11 +2,15 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **WebSockets**:
 
-**Cross-site WebSocket hijacking**  
+**2 Cross-site WebSocket hijacking**  
+<blockquote>
 This lab demonstrates how attackers can hijack WebSocket connections across origins, exploiting trust relationships and insecure implementations.
+</blockquote>
 
-**Manipulating the WebSocket handshake to exploit vulnerabilities**  
+**3 Manipulating the WebSocket handshake to exploit vulnerabilities**  
+<blockquote>
 This lab shows how attackers can manipulate WebSocket handshake headers to exploit vulnerabilities during connection establishment.
+</blockquote>
 
 ---
 
@@ -161,3 +165,4 @@ First I intercept the WebSocket request on client side.
  Now if we give same payload above it will block our ip ,So we have change our paylaod Now it will trigger alert and lab will be solved.
 
  <img width="1870" height="715" alt="image" src="https://github.com/user-attachments/assets/09ecbcea-fe03-4a79-a575-56171fd4c62b" />
+
