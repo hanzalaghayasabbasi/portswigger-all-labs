@@ -2,8 +2,10 @@
 
 This write-up focuses on the following **EXPERT-level lab** from the PortSwigger Web Security Academy related to **Web Cache Deception**:
 
-**Exploiting exact-match cache rules for web cache deception**  
+**5 Exploiting exact-match cache rules for web cache deception**  
+<blockquote>
 This lab demonstrates how attackers can abuse exact-match cache rules to trick caches into storing sensitive resources.
+</blockquote>
 
 ---
 
@@ -211,3 +213,4 @@ Next:
    ![image](https://github.com/user-attachments/assets/bf0ae86d-1cfc-4c36-b6ad-31491f55cf3d)
 
 ---
+
