@@ -2,8 +2,10 @@
 
 This write-up focuses on the following **APPRENTICE-level lab** from the PortSwigger Web Security Academy:
 
-- **OS command injection, simple case**  
+ **1 OS command injection, simple case**  
+ <blockquote>
   This lab demonstrates how an attacker can exploit unsanitized user input that is directly passed to system commands, allowing them to execute arbitrary OS commands on the server.
+ </blockquote>
 
 ---
 
@@ -39,3 +41,4 @@ If we try with  **productId** we will get errror
 Now we will try to exceute **command of** `whoami` from **storeId** and lab will be solved
 
 ![image](https://github.com/user-attachments/assets/e6103ca8-8398-4d75-8f86-4a7c4f9b1797)
+
