@@ -47,18 +47,26 @@ This might return a filtered list of mystery books from a library.
 
 ### API Documentation
 
-- Look for public or internal documentation (e.g., Swagger, OpenAPI, Postman collections).
-- Fuzz common documentation paths such as:
+- Look for public or internal API documentation (e.g., Swagger, OpenAPI, Postman collections).  
+- Fuzz common documentation paths to discover endpoints.
 
-<img width="306" height="112" alt="image" src="https://github.com/user-attachments/assets/c339635d-0771-452a-ba1a-acf4cac32648" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c339635d-0771-452a-ba1a-acf4cac32648" width="400" alt="API Documentation Paths Example">
+  <br>
+  <em>Figure: Example of fuzzing common API documentation paths</em>
+</p>
 
+If you identify an endpoint for a resource, make sure to investigate the **base path**.  
+For example, if the resource endpoint `/api/swagger/v1/users/123` exists, investigate related paths.
 
-If you identify an endpoint for a resource, make sure to investigate the base path. For example, if you identify the resource endpoint `/api/swagger/v1/users/123`, then you should investigate the following paths.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9dce0628-e87e-4166-9a47-dbb10a86cf5d" width="350" alt="API Base Path Investigation">
+  <br>
+  <em>Figure: Investigating the base path to discover additional API endpoints</em>
+</p>
 
-<img width="255" height="127" alt="image" src="https://github.com/user-attachments/assets/9dce0628-e87e-4166-9a47-dbb10a86cf5d" />
+- Use both **human-readable** and **machine-readable** formats to explore the API’s functionality and behavior.
 
-
-- Use both human-readable and machine-readable formats to explore the API’s functionality.
 
 ---
 
