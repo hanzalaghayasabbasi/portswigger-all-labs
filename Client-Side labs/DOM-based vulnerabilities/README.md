@@ -1,3 +1,16 @@
+# DOM-based vulnerabilities Overview
+
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+  
+## Introduction
+
 ## What is the DOM?
 
 The **Document Object Model (DOM)** is the browser’s internal representation of a web page. It is a tree-like structure composed of all the HTML elements on the page.
