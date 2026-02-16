@@ -11,14 +11,24 @@ Jump directly to the lab writeups:
   
 ## Introduction
 
-File upload vulnerabilities are when a web server allows users to upload files to its filesystem without sufficiently validating things like their name, type, contents, or size. Failing to properly enforce restrictions on these could mean that even a basic image upload function can be used to upload arbitrary and potentially dangerous files instead. This could even include server-side script files that enable remote code execution.
+File upload vulnerabilities occur when a web server allows users to upload files to its filesystem without properly validating aspects like:
 
-In some cases, the act of uploading the file is in itself enough to cause damage. Other attacks may involve a follow-up HTTP request for the file, typically to trigger its execution by the server.
+- File name
+- File type
+- File contents
+- File size
 
-<img width="837" height="376" alt="image" src="https://github.com/user-attachments/assets/785a0588-2b72-4bc6-a879-ba1dcd5015ce" />
+Failing to enforce these restrictions could allow even a simple image upload function to be abused to upload **arbitrary and potentially dangerous files**, including server-side scripts that can lead to **remote code execution**.
 
+In some cases, **uploading the file alone** can cause damage. Other attacks may require a follow-up HTTP request to trigger the file’s execution on the server.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/785a0588-2b72-4bc6-a879-ba1dcd5015ce" width="800" alt="File Upload Vulnerability Example">
+  <br>
+  <em>Figure: Illustration of a file upload vulnerability and potential attack flow</em>
+</p>
 
+---
 
 ## Impacts of File Upload Vulnerabilities
 
@@ -110,8 +120,12 @@ Web applications use client-side and server-side filtering to restrict uploads. 
 
 ## Example: Bypassing MIME-Type Filtering
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ade0ddf1-3986-4778-9e02-9f2e4951d745" width="800" alt="MIME Type Bypass Example">
+  <br>
+  <em>Figure: Intercepted upload request demonstrating MIME-type manipulation</em>
+</p>
 
-![image](https://github.com/user-attachments/assets/ade0ddf1-3986-4778-9e02-9f2e4951d745)
 
 
 - **Analysis**:
