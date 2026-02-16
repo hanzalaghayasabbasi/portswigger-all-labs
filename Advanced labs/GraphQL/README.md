@@ -239,34 +239,84 @@ fragment TypeRef on __Type {
 
 **Note**: Remove `onOperation`, `onFragment`, and `onField` directives if the query fails on some servers.
 
-## Working with GraphQL in Burp Suite
-### Viewing and Modifying Requests
-Burp Suite’s GraphQL tab displays the query and variables, making it easy to edit and analyze.
 
-<img width="898" height="742" alt="image" src="https://github.com/user-attachments/assets/433d2692-d1c5-4996-a402-c1388140b307" />
+
+## Working with GraphQL in Burp Suite
+
+### Viewing and Modifying Requests
+
+Burp Suite’s **GraphQL** tab displays the query and variables in a structured format, making it easy to view, edit, and analyze GraphQL requests.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/433d2692-d1c5-4996-a402-c1388140b307" width="898" alt="GraphQL tab in Burp Suite">
+  <br>
+  <em>Figure: Viewing and modifying GraphQL requests in Burp Suite</em>
+</p>
+
 
 ### Accessing Schemas via Introspection
+
 1. Identify GraphQL endpoints (e.g., `/graphql`, `/api`).
-2. Send the request to Burp’s Repeater.
+2. Send the request to **Burp Repeater**.
 3. Use `GraphQL > Set introspection query` to insert an introspection query.
 4. Send the query to retrieve the schema.
 5. For older servers, try `GraphQL > Set legacy introspection query`.
 6. Save queries to the site map for further testing.
 
+---
+
 ## GraphQL API Vulnerabilities
-GraphQL vulnerabilities often stem from implementation flaws:
-- **Introspection Enabled**: Exposes schema details, risking information disclosure.
-- **Insecure Direct Object References (IDOR)**: Unsanitized arguments may allow unauthorized data access.
-- **CSRF**: Endpoints accepting non-JSON POST or GET requests may be vulnerable.
-- **Rate Limit Bypassing**: Aliases can send multiple queries in one request, evading rate limits.
-- **Suggestions**: Apollo’s suggestion feature may leak schema details if enabled.
+
+GraphQL vulnerabilities often stem from **implementation flaws**:
+
+* **Introspection Enabled** – Exposes schema details, leading to information disclosure.
+* **Insecure Direct Object References (IDOR)** – Unsanitized arguments may allow unauthorized data access.
+* **CSRF** – Endpoints accepting non-JSON POST or GET requests may be vulnerable.
+* **Rate Limit Bypassing** – Aliases allow multiple queries in a single request, potentially evading rate limits.
+* **Suggestions** – Apollo’s suggestion feature may leak schema details if enabled.
+
+---
 
 ### Finding GraphQL Endpoints
-- **Universal Query**: Send `query{__typename}` to check for `{"data": {"__typename": "query"}}` in the response.
-- **Common Endpoints**: Test `/graphql`, `/api`, `/api/graphql`, `/graphql/api`, `/graphql/graphql`, or append `/v1`.
-- **Request Methods**: Try POST, GET, or `x-www-form-urlencoded` to identify accepted methods.
 
-<img width="777" height="602" alt="image" src="https://github.com/user-attachments/assets/12fd4bd6-5ca0-4fd6-a1a3-6f169267d5d5" />
+* **Universal Query**
+  Send:
+
+  ```
+  query { __typename }
+  ```
+
+  If the response contains:
+
+  ```
+  {"data": {"__typename": "query"}}
+  ```
+
+  the endpoint is likely GraphQL.
+
+* **Common Endpoints**
+  Test the following paths:
+
+  * `/graphql`
+  * `/api`
+  * `/api/graphql`
+  * `/graphql/api`
+  * `/graphql/graphql`
+  * Append `/v1` where applicable
+
+* **Request Methods**
+  Try:
+
+  * `POST`
+  * `GET`
+  * `x-www-form-urlencoded`
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/12fd4bd6-5ca0-4fd6-a1a3-6f169267d5d5" width="777" alt="GraphQL Introspection and Endpoint Discovery">
+  <br>
+  <em>Figure: GraphQL endpoint discovery and introspection process</em>
+</p>
+
 
 ### Exploiting Unsanitized Arguments
 Direct object access via arguments can lead to IDOR. Example:
