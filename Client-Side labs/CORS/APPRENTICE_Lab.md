@@ -2,11 +2,16 @@
 
 This write-up focuses on the following **APPRENTICE-level labs** from the PortSwigger Web Security Academy related to **Cross-origin resource sharing (CORS)**:
 
-**CORS vulnerability with basic origin reflection**  
+**1 CORS vulnerability with basic origin reflection**  
+<blockquote>
 This lab demonstrates how an application reflects the Origin header insecurely, leading to CORS misconfigurations.
+</blockquote>
 
-**CORS vulnerability with trusted null origin**  
+
+**2 CORS vulnerability with trusted null origin**  
+<blockquote>
 This lab shows how trusting the null origin can lead to CORS vulnerabilities that attackers can exploit.
+</blockquote>
 
 ---
 
@@ -251,5 +256,6 @@ Submit the API key of administrator to solve the lab.
 ```
 
 ---
+
 
 
