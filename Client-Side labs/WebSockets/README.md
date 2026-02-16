@@ -1,11 +1,23 @@
-## 🔌 What is a WebSocket?
+# WebSockets Overview
+
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+  
+## Introduction
+
+
+## What is a WebSocket?
 
 WebSockets are becoming increasingly popular because they greatly simplify communication between a client and a server.
 They enable **bidirectional (full-duplex)** communication over a single, long-lived TCP connection using the **application layer (Layer 7)** of the OSI model.
 
 This allows developers to create **dynamic, real-time web applications** such as instant messaging, online gaming, live dashboards, and photo-sharing apps.
 
-### 🔄 Traditional Communication Limitations
+### Traditional Communication Limitations
 
 Before WebSockets, web communication followed the **request-response** model:
 
@@ -36,7 +48,7 @@ WebSockets shine in scenarios that require **low-latency**, **real-time**, or **
 
 ---
 
-## 🔧 How is a WebSocket Connection Established?
+##  How is a WebSocket Connection Established?
 
 A WebSocket connection is typically initiated from the **client-side using JavaScript**:
 
