@@ -34,7 +34,7 @@ A **JWT (JSON Web Token)** consists of three parts:
 <p align="center">
   <img src="https://github.com/user-attachments/assets/34702012-e5c2-4d04-9c47-e6dd8ddffb46" width="987" alt="JWT Structure Diagram">
   <br>
-  <em>Figure 1: Structure of a JWT</em>
+  <em>Figure: Structure of a JWT</em>
 </p>
 
 Each part is **Base64URL-encoded**.
