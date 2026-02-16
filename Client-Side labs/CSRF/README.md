@@ -1,5 +1,15 @@
 # Cross-Site Request Forgery (CSRF)
 
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+
+  
+## Introduction
+
 Cross-Site Request Forgery (CSRF) is a web security vulnerability that allows an attacker to trick authenticated users into performing unwanted actions on a web application in which they're logged in.
 
 It circumvents the **Same-Origin Policy** (SOP), which is designed to prevent different websites from interfering with each other’s data.
