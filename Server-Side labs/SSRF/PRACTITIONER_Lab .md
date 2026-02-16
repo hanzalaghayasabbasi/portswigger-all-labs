@@ -2,14 +2,21 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **Server-side request forgery (SSRF)**:
 
-**Blind SSRF with out-of-band detection**  
+**3 Blind SSRF with out-of-band detection**  
+<blockquote>
 This lab demonstrates how to exploit SSRF vulnerabilities that require out-of-band interaction to detect and confirm the attack.
+</blockquote>
 
-**SSRF with blacklist-based input filter**  
+**4 SSRF with blacklist-based input filter**  
+<blockquote>
 This lab shows how attackers can bypass blacklist-based filters to exploit SSRF vulnerabilities.
+</blockquote>
 
-**SSRF with filter bypass via open redirection vulnerability**  
+
+**5 SSRF with filter bypass via open redirection vulnerability**  
+<blockquote>
 This lab illustrates how SSRF attacks can bypass filters by leveraging open redirection flaws.
+</blockquote>
 
 ---
 
@@ -315,4 +322,5 @@ We get a `200 OK` response & we can able to access the admin panel.
 
 
 ---
+
 
