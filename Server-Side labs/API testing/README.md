@@ -1,4 +1,17 @@
-# API Testing
+# API Testing Overview
+
+
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+  
+## Introduction
+
 
 APIs (Application Programming Interfaces) enable systems and applications to communicate and share data. Due to their central role in dynamic websites, vulnerabilities in APIs can affect the confidentiality, integrity, and availability of core services.
 
