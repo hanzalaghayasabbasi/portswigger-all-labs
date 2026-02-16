@@ -14,18 +14,22 @@ Jump directly to the lab writeups:
 ## What is Prototype Pollution?
 
 Prototype pollution is a vulnerability in JavaScript where an attacker adds arbitrary properties to a global object prototype (like `Object.prototype`). These polluted properties are then inherited by all objects in the application, potentially leading to security issues such as:
-- Arbitrary code execution
-- Access control bypass
-- XSS
 
-<img width="1221" height="610" alt="image" src="https://github.com/user-attachments/assets/b3ccdb79-c188-4d04-83ac-55a111032529" />
+- Arbitrary code execution  
+- Access control bypass  
+- XSS  
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b3ccdb79-c188-4d04-83ac-55a111032529" width="850" alt="Prototype Pollution Example">
+  <br>
+  <em>Figure: Example of JavaScript prototype pollution affecting all objects</em>
+</p>
 
 ---
 
 ##  JavaScript Prototypes & Inheritance
 
-### 🧱 Objects in JavaScript
+###  Objects in JavaScript
 
 A JavaScript object is a collection of key-value pairs:
 
@@ -67,12 +71,15 @@ Other built-in prototypes:
 
 ---
 
-##  How Inheritance Works
+## How Inheritance Works
 
 If a property is not found on an object, JavaScript looks up its prototype chain:
 
-<img width="937" height="578" alt="image" src="https://github.com/user-attachments/assets/cfc68915-c0d1-41b4-814e-7f0cbcf0aa84" />
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cfc68915-c0d1-41b4-814e-7f0cbcf0aa84" width="850" alt="JavaScript Prototype Chain">
+  <br>
+  <em>Figure: JavaScript prototype chain showing property lookup through inheritance</em>
+</p>
 
 ```js
 existingObject = { propertyA: 'A' }
@@ -83,7 +90,7 @@ console.log(myObject.propertyA); // → 'A'
 
 ---
 
-## 🛠 Accessing & Modifying Prototypes
+##  Accessing & Modifying Prototypes
 
 Every object has a special property: `__proto__`.
 
@@ -103,7 +110,7 @@ String.prototype.removeWhitespace = function() {
 
 ---
 
-## 💣 How Does Prototype Pollution Happen?
+##  How Does Prototype Pollution Happen?
 
 Prototype pollution often occurs during deep merge operations where unsanitized input is merged into an object:
 
@@ -122,7 +129,7 @@ objectFromJson.hasOwnProperty('__proto__'); // true
 
 ---
 
-## 🚰 Pollution Components
+##  Pollution Components
 
 ### ✅ Source
 
@@ -138,7 +145,7 @@ A property that connects the source to the sink in an exploitable way.
 
 ---
 
-## 💥 Example Exploit
+##  Example Exploit
 
 ```js
 let transport_url = config.transport_url || defaults.transport_url;
@@ -185,7 +192,7 @@ https://site.com/?__proto__[transport_url]=data:,alert(1);//
 
 ---
 
-## 🧰 Finding Gadgets Manually
+## Finding Gadgets Manually
 
 1. Identify a potential gadget property used by the application.
 2. Use debugger to pause execution.
