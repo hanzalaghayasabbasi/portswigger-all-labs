@@ -2,50 +2,81 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy related to **Cross-site scripting (XSS)**:
 
-**DOM XSS in document.write sink using source location.search inside a select element**  
-This lab demonstrates DOM XSS occurring via `document.write()` using URL parameters inside a `<select>` element context.
+**10 DOM XSS in document.write sink using source location.search inside a select element**  
+<blockquote>
+This lab demonstrates DOM XSS occurring via <code>document.write()</code> using URL parameters inside a &lt;select&gt; element context.
+</blockquote>
 
-**DOM XSS in AngularJS expression with angle brackets and double quotes HTML-encoded**  
+
+**11 DOM XSS in AngularJS expression with angle brackets and double quotes HTML-encoded**  
+<blockquote>
 This lab explores how AngularJS expressions can be exploited despite HTML encoding of angle brackets and double quotes.
+</blockquote>
 
-**Reflected DOM XSS**  
+**12 Reflected DOM XSS**  
+<blockquote>
 This lab shows reflected DOM-based XSS vulnerabilities where user input is unsafely handled in the DOM.
+</blockquote>
 
-**Stored DOM XSS**  
+**13 Stored DOM XSS**  
+<blockquote>
 This lab covers stored DOM XSS vulnerabilities where malicious scripts are persistently injected and executed.
+</blockquote>
 
-**Reflected XSS into HTML context with most tags and attributes blocked**  
+**14 Reflected XSS into HTML context with most tags and attributes blocked**  
+<blockquote>
 This lab demonstrates reflected XSS where most HTML tags and attributes are blocked but exploitation remains possible.
+</blockquote>
 
-**Reflected XSS into HTML context with all tags blocked except custom ones**  
+**15 Reflected XSS into HTML context with all tags blocked except custom ones**  
+<blockquote>
 This lab shows how attackers can leverage allowed custom tags to carry out reflected XSS attacks.
+</blockquote>
 
-**Reflected XSS with some SVG markup allowed**  
+**16 Reflected XSS with some SVG markup allowed**  
+<blockquote>
 This lab explores XSS attacks exploiting allowed SVG markup.
+</blockquote>
 
-**Reflected XSS in canonical link tag**  
+
+**17 Reflected XSS in canonical link tag**  
 This lab demonstrates XSS via injection into the canonical link tag in the HTML header.
 
-**Reflected XSS into a JavaScript string with single quote and backslash escaped**  
+**18 Reflected XSS into a JavaScript string with single quote and backslash escaped** 
+<blockquote>
 This lab covers XSS where single quotes and backslashes are escaped but scripts still execute.
+</blockquote>
 
-**Reflected XSS into a JavaScript string with angle brackets and double quotes HTML-encoded and single quotes escaped**  
+**19 Reflected XSS into a JavaScript string with angle brackets and double quotes HTML-encoded and single quotes escaped**  
+<blockquote>
 This lab shows reflected XSS despite multiple layers of encoding and escaping.
+</blockquote>
 
-**Stored XSS into onclick event with angle brackets and double quotes HTML-encoded and single quotes and backslash escaped**  
+
+**20 Stored XSS into onclick event with angle brackets and double quotes HTML-encoded and single quotes and backslash escaped**  
+<blockquote>
 This lab demonstrates stored XSS exploiting encoded and escaped event handlers.
+</blockquote>
 
-**Reflected XSS into a template literal with angle brackets, single, double quotes, backslash and backticks Unicode-escaped**  
+**21 Reflected XSS into a template literal with angle brackets, single, double quotes, backslash and backticks Unicode-escaped**  
+<blockquote>
 This lab shows advanced reflected XSS exploiting template literals despite Unicode escaping.
+</blockquote>
 
-**Exploiting cross-site scripting to steal cookies**  
+**22 Exploiting cross-site scripting to steal cookies**  
+<blockquote>
 This lab demonstrates practical exploitation of XSS to steal session cookies.
+</blockquote>
 
-**Exploiting cross-site scripting to capture passwords**  
-This lab shows how XSS can be used to capture user passwords from input fields.
+**23 Exploiting cross-site scripting to capture passwords**  
+<blockquote>
+lab shows how XSS can be used to capture user passwords from input fields.
+</blockquote>
 
-**Exploiting XSS to bypass CSRF defenses**  
+**24 Exploiting XSS to bypass CSRF defenses**  
+<blockquote>
 This lab explains how XSS vulnerabilities can be leveraged to bypass CSRF protections.
+</blockquote>
 
 ---
 
@@ -811,3 +842,4 @@ Now Stored below comment in blog then lab will be marked ad solve
 <img width="1163" height="248" alt="image" src="https://github.com/user-attachments/assets/20f10f05-d180-4bc6-872e-bddbf3c7e425" />
 
 ---
+
