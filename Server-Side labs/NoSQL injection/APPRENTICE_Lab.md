@@ -2,11 +2,15 @@
 
 This write-up focuses on the following **APPRENTICE-level labs** from the PortSwigger Web Security Academy:
 
-- **Detecting NoSQL injection**  
+**1 Detecting NoSQL injection**  
+ <blockquote>
   This lab demonstrates how attackers can identify NoSQL injection vulnerabilities by sending crafted input that modifies the database query behavior.
+ </blockquote>
 
-- **Exploiting NoSQL operator injection to bypass authentication**  
+  **2 Exploiting NoSQL operator injection to bypass authentication**  
+  <blockquote>
   This lab shows how attackers can use NoSQL injection to manipulate query logic and bypass authentication, gaining unauthorized access to accounts.
+  </blockquote>
 
 ---
 
@@ -106,6 +110,7 @@ This allowed entry to the admin panel, confirming the vulnerability and completi
 
 
 ![image](https://github.com/user-attachments/assets/fe5fecf9-4048-4619-b461-2586fdeba400)
+
 
 
 
