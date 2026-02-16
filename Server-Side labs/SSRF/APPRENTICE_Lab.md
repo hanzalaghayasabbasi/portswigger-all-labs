@@ -11,7 +11,7 @@ This lab demonstrates how attackers can exploit SSRF vulnerabilities to send req
 **2 Basic SSRF against another back-end system**  
 <blockquote>
 This lab shows how SSRF can be used to interact with other back-end systems connected to the target server.
-<blockquote>
+</blockquote>
 
 ---
 
@@ -160,4 +160,5 @@ The server processed the internal request and deleted the user `carlos`, success
 
 
 ---
+
 
