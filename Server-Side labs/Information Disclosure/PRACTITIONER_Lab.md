@@ -2,8 +2,10 @@
 
 This write-up focuses on the following **PRACTITIONER-level lab** from the PortSwigger Web Security Academy:
 
-- **Information disclosure in version control history**  
+**5 Information disclosure in version control history** 
+ <blockquote>
   This lab demonstrates how sensitive information, such as credentials or configuration data, may be exposed in version control history and can be extracted by attackers to compromise the application.
+ </blockquote>
 
 ---
 
@@ -108,4 +110,5 @@ This write-up focuses on the following **PRACTITIONER-level lab** from the PortS
 
 
 ---
+
 
