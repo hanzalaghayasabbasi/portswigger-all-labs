@@ -2,14 +2,20 @@
 
 This write-up focuses on the following **APPRENTICE-level labs** from the PortSwigger Web Security Academy:
 
-- **Username enumeration via different responses**  
+**1 Username enumeration via different responses**  
+<blockquote>
   This lab demonstrates how differences in server responses during login attempts can allow attackers to enumerate valid usernames.
+</blockquote>
 
-- **2FA simple bypass**  
+ **2 2FA simple bypass**  
+ <blockquote>
   This lab shows how weak or improperly implemented two-factor authentication mechanisms can be bypassed by attackers to gain unauthorized access.
+ </blockquote>
 
-- **Password reset broken logic**  
+ **3 Password reset broken logic**  
+ <blockquote>
   This lab illustrates how flawed password reset processes can be exploited to reset passwords of other users, compromising their accounts.
+ </blockquote>
 
 ## Authentication Vulnerabilities
 
@@ -215,6 +221,7 @@ Lets try logging in as carlos with the  password which we used for reset - `newp
 
 
 ---
+
 
 
 
