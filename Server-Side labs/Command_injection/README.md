@@ -1,3 +1,20 @@
+#  Command Injection
+
+
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+* [EXPERT](./EXPERT_Lab.md)
+
+  
+## Introduction
+
+OS command injection is also known as shell injection. It allows an attacker to execute operating system (OS) commands on the server that is running an application, and typically fully compromise the application and its data. Often, an attacker can leverage an OS command injection vulnerability to compromise other parts of the hosting infrastructure, and exploit trust relationships to pivot the attack to other systems within the organization.
+
+<img width="781" height="440" alt="image" src="https://github.com/user-attachments/assets/e746f8d3-d2c9-4d92-a0ee-af0a08c5c006" />
 
 
 # Types of Command Injection Vulnerabilities
