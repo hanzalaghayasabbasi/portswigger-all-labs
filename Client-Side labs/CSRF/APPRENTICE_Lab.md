@@ -2,8 +2,10 @@
 
 This write-up focuses on the following labs from the PortSwigger Web Security Academy related to **Cross-Site Request Forgery (CSRF)**:
 
-**CSRF vulnerability with no defenses**  
+**1 CSRF vulnerability with no defenses**
+<blockquote>
 This lab demonstrates how attackers can exploit CSRF vulnerabilities in applications that lack any protection against such attacks.
+</blockquote>
 
 ---
 
@@ -116,4 +118,5 @@ Replace `YOUR-LAB-ID` with your actual lab domain.
 ![image](https://github.com/user-attachments/assets/90512ba2-ef1b-4b29-88c9-3444c238bbeb)
 
 ---
+
 
