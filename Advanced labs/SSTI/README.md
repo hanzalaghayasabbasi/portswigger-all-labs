@@ -21,8 +21,11 @@ Template engines are designed to render dynamic content by combining templates w
 
 ## Constructing an SSTI Attack
 
-![SSTI Concept](https://github.com/user-attachments/assets/0a2d1b29-4dde-407c-8eca-f0c1871db652)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0a2d1b29-4dde-407c-8eca-f0c1871db652" width="850" alt="SSTI Concept Diagram">
+  <br>
+  <em>Figure: Overview of the Server-Side Template Injection (SSTI) attack process</em>
+</p>
 
 ### 1. Detection Phase
 
@@ -109,7 +112,11 @@ ${7/0}
 
 Error messages or stack traces may reveal the engine name (e.g., Jinja2, Twig, Freemarker, etc.).
 
-![Error Output](https://github.com/user-attachments/assets/c46bb395-99da-4871-954a-69e38b54356a)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c46bb395-99da-4871-954a-69e38b54356a" width="750" alt="SSTI Error Output">
+  <br>
+  <em>Figure: Error message disclosing the underlying template engine</em>
+</p>
 
 ---
 
@@ -122,10 +129,14 @@ If no explicit error message appears, test common syntaxes for popular engines:
 ={{7*3}}
 =<%= 7*3 %>
 ```
-
 If a specific syntax evaluates correctly (`21`), it identifies the underlying template engine.
 
-![Syntax Detection](https://github.com/user-attachments/assets/7a622a4f-f19a-453f-8695-827687bb3225)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7a622a4f-f19a-453f-8695-827687bb3225" width="750" alt="Template Engine Syntax Detection">
+  <br>
+  <em>Figure: Using arithmetic evaluation to fingerprint the template engine</em>
+</p>
+
 
 ---
 
@@ -228,43 +239,80 @@ The post explores how **Server-Side Template Injection (SSTI)** vulnerabilities 
 
 ---
 
-### 📊 Language Summaries
+###  Language Summaries
 
-**JavaScript Summary:**
+#### JavaScript Summary
 
-![JavaScript Summary](https://github.com/user-attachments/assets/c141fd66-7325-41f2-be03-d98c250802bb)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c141fd66-7325-41f2-be03-d98c250802bb" width="750" alt="JavaScript Template Engine Summary">
+  <br>
+  <em>Figure: Behavior and payload characteristics for JavaScript template engines</em>
+</p>
 
-**Python Summary:**
+---
 
-![Python Summary](https://github.com/user-attachments/assets/17583ce6-6772-46d9-908d-c8c27629fdb9)
+#### Python Summary
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/17583ce6-6772-46d9-908d-c8c27629fdb9" width="750" alt="Python Template Engine Summary">
+  <br>
+  <em>Figure: Behavior and payload characteristics for Python template engines</em>
+</p>
 
-**Ruby Summary:**
+---
 
-![Ruby Summary](https://github.com/user-attachments/assets/9bbe4e94-98e6-4983-822c-7355b44d09a6)
+#### Ruby Summary
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9bbe4e94-98e6-4983-822c-7355b44d09a6" width="750" alt="Ruby Template Engine Summary">
+  <br>
+  <em>Figure: Behavior and payload characteristics for Ruby template engines</em>
+</p>
 
-**PHP Summary:**
+---
 
-![PHP Summary](https://github.com/user-attachments/assets/e7baced5-3636-45e5-83da-dbc32f50b17d)
+#### PHP Summary
 
-**Java Summary:**
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e7baced5-3636-45e5-83da-dbc32f50b17d" width="750" alt="PHP Template Engine Summary">
+  <br>
+  <em>Figure: Behavior and payload characteristics for PHP template engines</em>
+</p>
 
-![Java Summary](https://github.com/user-attachments/assets/af9db6af-d7e1-4614-970c-b0fba4bdf3e5)
+---
 
-**Go Summary:**
+#### Java Summary
 
-![Go Summary](https://github.com/user-attachments/assets/84f00c5e-ecd1-4fdb-a75f-f4b08d3f9f0e)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/af9db6af-d7e1-4614-970c-b0fba4bdf3e5" width="750" alt="Java Template Engine Summary">
+  <br>
+  <em>Figure: Behavior and payload characteristics for Java template engines</em>
+</p>
+
+---
+
+#### Go Summary
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/84f00c5e-ecd1-4fdb-a75f-f4b08d3f9f0e" width="750" alt="Go Template Engine Summary">
+  <br>
+  <em>Figure: Behavior and payload characteristics for Go template engines</em>
+</p>
 
 ---
 
 ### 🧩 Universal Payloads
 
-After analysis, it was observed that **15 universal payloads** could detect or exploit most template engines:
+After analysis, it was observed that **15 universal payloads** can detect or exploit most template engines across different languages.
 
-![All Template Payloads](https://github.com/user-attachments/assets/10c3d686-60ea-4089-8b9f-e481d755d4ec)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/10c3d686-60ea-4089-8b9f-e481d755d4ec" width="850" alt="Universal SSTI Payloads">
+  <br>
+  <em>Figure: Universal payloads applicable across multiple template engines</em>
+</p>
 
 ---
+
 
 ### 🧠 Key Concepts
 
