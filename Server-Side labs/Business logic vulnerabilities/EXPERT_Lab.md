@@ -2,12 +2,14 @@
 
 This write-up focuses on the following **EXPERT-level lab** from the PortSwigger Web Security Academy:
 
-- **Bypassing access controls using email address parsing discrepancies**  
+ **12 Bypassing access controls using email address parsing discrepancies**  
+ <blockquote>
   This lab demonstrates how discrepancies in email address parsing between different components of an application can be exploited to bypass access controls.
+</blockquote>
 
 ---
 
-## LAB 1 - Bypassing access controls using email address parsing discrepancies
+## LAB 12 - Bypassing access controls using email address parsing discrepancies
 
 ### Lab Description :
 
@@ -93,6 +95,7 @@ Login after Registration successfully.
 Delete the carlos user to solve the lab.
 
 ![image](https://github.com/user-attachments/assets/14545807-a920-4994-a239-f074aa3eee36)
+
 
 
 
