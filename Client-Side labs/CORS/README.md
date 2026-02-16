@@ -1,12 +1,23 @@
 ## Cross-Origin Resource Sharing (CORS) – Overview
 
+## Lab Levels
+
+Jump directly to the lab writeups:
+
+* [APPRENTICE](./APPRENTICE_Lab.md)
+* [PRACTITIONER](./PRACTITIONER_Lab.md)
+
+
+
+## Introduction
+
 **Cross-Origin Resource Sharing (CORS)** is a security mechanism implemented by browsers to control how web applications from one origin can interact with resources on a different origin using specific HTTP headers.
 
 ---
 
 ### Same-Origin Policy (SOP)
 
-The **Same-Origin Policy (SOP)** is a fundamental security concept in browsers that restricts how documents or scripts loaded from one origin can interact with resources from another origin.
+The **Same-Origin Policy (SOP)** is a fundamental browser security concept that restricts how documents or scripts loaded from one origin can interact with resources from another origin.
 
 * SOP **prevents reading** between different origins, not writing.
 * An **origin** is defined by the combination of:
@@ -15,14 +26,23 @@ The **Same-Origin Policy (SOP)** is a fundamental security concept in browsers t
   * **Hostname** (e.g., `example.com`)
   * **Port** (e.g., `:8080`)
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ff7455cc-1eaa-4c14-a6e3-a9529610606f" width="700" alt="SOP Example 1">
+  <br>
+  <em>Figure: Example of same-origin request being allowed</em>
+</p>
 
- ![image](https://github.com/user-attachments/assets/ff7455cc-1eaa-4c14-a6e3-a9529610606f)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9362be74-251b-4d0b-be3b-16ed1996ebcc" width="700" alt="SOP Example 2">
+  <br>
+  <em>Figure: Example of cross-origin request being blocked by SOP</em>
+</p>
 
-
-![image](https://github.com/user-attachments/assets/9362be74-251b-4d0b-be3b-16ed1996ebcc)
-
-
-![image](https://github.com/user-attachments/assets/9cca44e8-c5eb-4b4d-b04d-847990f3c9c3)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9cca44e8-c5eb-4b4d-b04d-847990f3c9c3" width="700" alt="SOP Tree Diagram">
+  <br>
+  <em>Figure: Hierarchical view of SOP restrictions between origins</em>
+</p>
 
 ---
 
@@ -30,38 +50,48 @@ The **Same-Origin Policy (SOP)** is a fundamental security concept in browsers t
 
 #### Access-Control-Allow-Origin
 
-This header specifies which origins are permitted to access the resource.
+Specifies which origins are permitted to access the resource.
 
-* **Specific origin**: For example, `https://example.com`
-* **Wildcard (`*`)**: Allows all origins, but cannot be used when credentials are involved.
-* **`null`**: A special value representing requests originating from:
+* **Specific origin**: e.g., `https://example.com`  
+* **Wildcard (`*`)**: Allows all origins (cannot be used with credentials)  
+* **`null`**: Represents requests from sandboxed documents, `file://` URLs, some extensions, or data URLs  
 
-  * Sandboxed documents (e.g., `<iframe sandbox>`)
-  * Files loaded via the `file://` scheme
-  * Some browser extensions or data URLs
+> Misconfigured servers that trust `null` may be vulnerable to restricted-context attacks.
 
-> Misconfigured servers that trust `null` as an origin may become vulnerable to attacks originating from these restricted contexts.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/44759b14-83ef-4ae9-be14-6fd14c52f0c5" width="600" alt="ACAO Example 1">
+  <br>
+  <em>Figure: Example of Access-Control-Allow-Origin with a specific origin</em>
+</p>
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4d621179-0efb-42ad-91fd-f7e400848d25" width="600" alt="ACAO Example 2">
+  <br>
+  <em>Figure: Example of Access-Control-Allow-Origin using a wildcard or null</em>
+</p>
 
-  ![image](https://github.com/user-attachments/assets/44759b14-83ef-4ae9-be14-6fd14c52f0c5)
-
-   
-   ![image](https://github.com/user-attachments/assets/4d621179-0efb-42ad-91fd-f7e400848d25)
-
-
+---
 
 #### Access-Control-Allow-Credentials
 
-This header indicates whether the response to the request can be exposed when the request’s credentials mode is `include`.
+Indicates whether the response can be exposed when the request’s credentials mode is `include`.
 
-* Accepts the value `true` or `false`.
-* If set to `true`, the `Access-Control-Allow-Origin` header **must specify an explicit origin**, not a wildcard (`*`).
+* Accepts `true` or `false`.  
+* If `true`, the `Access-Control-Allow-Origin` header **must specify an explicit origin**, not `*`.
 
-![image](https://github.com/user-attachments/assets/9f85f383-5576-4cd8-b6a7-bc8353915252)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9f85f383-5576-4cd8-b6a7-bc8353915252" width="600" alt="ACAC Example 1">
+  <br>
+  <em>Figure: Correct CORS configuration with credentials</em>
+</p>
 
-> ⚠️ **Important:** `Access-Control-Allow-Origin: *` **cannot be used with** `Access-Control-Allow-Credentials: true` — browsers will block it.
+> ⚠️ **Important:** `Access-Control-Allow-Origin: *` **cannot be used with** `Access-Control-Allow-Credentials: true` — browsers will block the request.
 
-![image](https://github.com/user-attachments/assets/1c2ee5db-60b9-406f-abab-b78d310b7a32)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1c2ee5db-60b9-406f-abab-b78d310b7a32" width="600" alt="ACAC Example 2">
+  <br>
+  <em>Figure: Incorrect CORS configuration using wildcard with credentials</em>
+</p>
 
 ---
 
