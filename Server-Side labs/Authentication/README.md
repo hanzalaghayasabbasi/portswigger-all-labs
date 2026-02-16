@@ -81,13 +81,7 @@ Authentication is the process of verifying the identity of a user.
 
 ---
 
-## Associated Lab Files
 
-- `APPRENTICE_Lab.md`
-- `PRACTITIONER_Lab.md`
-- `EXPERT_Lab.md`
-
----
 
 ## Learn More
 
