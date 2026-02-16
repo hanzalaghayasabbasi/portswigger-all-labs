@@ -2,8 +2,10 @@
 
 This write-up focuses on the following **PRACTITIONER-level lab** from the PortSwigger Web Security Academy related to **Cross-origin resource sharing (CORS)**:
 
-**CORS vulnerability with trusted insecure protocols**  
+**3 CORS vulnerability with trusted insecure protocols** 
+<blockquote>
 This lab demonstrates how trusting insecure protocols (like HTTP instead of HTTPS) in CORS policies can lead to security vulnerabilities.
+</blockquote>
 
 ---
 
@@ -147,4 +149,5 @@ The code is now clean, and here is the API key for the administrator: `7Rdgi0KAR
 ![image](https://github.com/user-attachments/assets/e6da60a7-4c8c-4c47-a57a-0615de5445d6)
 
 ---
+
 
