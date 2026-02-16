@@ -21,23 +21,35 @@ Unlike traditional session tokens, JWTs store all session-related data on the cl
 
 ---
 
+
+
 ## JWT Format
 
-A JWT consists of three parts:
+A **JWT (JSON Web Token)** consists of three parts:
 
 ```
 <Header>.<Payload>.<Signature>
 ```
 
-<img width="987" height="362" alt="image" src="https://github.com/user-attachments/assets/34702012-e5c2-4d04-9c47-e6dd8ddffb46" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/34702012-e5c2-4d04-9c47-e6dd8ddffb46" width="987" alt="JWT Structure Diagram">
+  <br>
+  <em>Figure 1: Structure of a JWT</em>
+</p>
 
+Each part is **Base64URL-encoded**.
 
-Each part is Base64URL-encoded.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e8dcecc5-7c46-4133-a9b7-2f60864fccfc" width="1206" alt="JWT Encoding Example">
+  <br>
+  <em>Figure: JWT encoding process</em>
+</p>
 
-
-<img width="1206" height="827" alt="image" src="https://github.com/user-attachments/assets/e8dcecc5-7c46-4133-a9b7-2f60864fccfc" />
-
-<img width="658" height="464" alt="image" src="https://github.com/user-attachments/assets/cb2b6a46-e882-49ad-a9e6-5318afd07bb6" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cb2b6a46-e882-49ad-a9e6-5318afd07bb6" width="658" alt="JWT Signature Example">
+  <br>
+  <em>Figure: JWT Parts</em>
+</p>
 
 
 ### 1. Header
@@ -79,13 +91,20 @@ Any change to the header or payload invalidates the signature unless the attacke
 
 ## JWT vs JWS vs JWE
 
-* **JWT** – General term for the JSON-based token.
-* **JWS (JSON Web Signature)** – A signed JWT (most common).
-* **JWE (JSON Web Encryption)** – An encrypted JWT (rare).
+* **JWT** – General term for a JSON-based token.
+* **JWS (JSON Web Signature)** – A **signed JWT** (most common).
+* **JWE (JSON Web Encryption)** – An **encrypted JWT** (rare).
 
-Most JWTs you see in the wild are actually **JWS** – signed but not encrypted. JWS ensures the message hasn't been tampered with. JWE ensures message confidentiality.
+Most JWTs you see in the wild are actually **JWS** — signed but **not encrypted**.
 
-<img width="754" height="343" alt="image" src="https://github.com/user-attachments/assets/2aec4085-9405-41c2-9ba4-c69c77cebd37" />
+* **JWS** ensures the message **hasn’t been tampered with**.
+* **JWE** ensures **message confidentiality**.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2aec4085-9405-41c2-9ba4-c69c77cebd37" width="754" alt="JWT vs JWS vs JWE">
+  <br>
+  <em>Figure: Comparison of JWT, JWS, and JWE</em>
+</p>
 
 ---
 
