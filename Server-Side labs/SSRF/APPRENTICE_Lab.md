@@ -2,11 +2,16 @@
 
 This write-up focuses on the following **APPRENTICE-level labs** from the PortSwigger Web Security Academy related to **Server-side request forgery (SSRF)**:
 
-**Basic SSRF against the local server**  
+**1 Basic SSRF against the local server**  
+<blockquote>
 This lab demonstrates how attackers can exploit SSRF vulnerabilities to send requests to the local server and access internal resources.
+</blockquote>
 
-**Basic SSRF against another back-end system**  
+
+**2 Basic SSRF against another back-end system**  
+<blockquote>
 This lab shows how SSRF can be used to interact with other back-end systems connected to the target server.
+<blockquote>
 
 ---
 
@@ -155,3 +160,4 @@ The server processed the internal request and deleted the user `carlos`, success
 
 
 ---
+
