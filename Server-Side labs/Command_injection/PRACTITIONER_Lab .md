@@ -2,17 +2,25 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy:
 
-- **Blind OS command injection with time delays**  
+**2 Blind OS command injection with time delays**  
+<blockquote>
   This lab demonstrates how an attacker can use time-based techniques to detect the success of command injection when no output is returned to the browser.
+</blockquote>
 
-- **Blind OS command injection with output redirection**  
+ **3 Blind OS command injection with output redirection**  
+ <blockquote>
   This lab shows how attackers can redirect command output to a location they can retrieve later, enabling them to exfiltrate data even if no output is returned in the HTTP response.
+ </blockquote>
 
-- **Blind OS command injection with out-of-band interaction**  
+ **4 Blind OS command injection with out-of-band interaction**  
+  <blockquote>
   This lab demonstrates how attackers can use out-of-band channels, such as DNS queries, to receive feedback about whether command injection was successful.
+  </blockquote>
 
-- **Blind OS command injection with out-of-band data exfiltration**  
+**5 Blind OS command injection with out-of-band data exfiltration**  
+  <blockquote>
   This lab builds on out-of-band interaction by showing how attackers can exfiltrate actual data through external DNS queries or other protocols.
+  </blockquote>
 
 ---
 
@@ -181,4 +189,5 @@ We get the username **("peter-0B6BNY")** using the below payload which will exec
 We get response on burpsuite.
 
 ![image](https://github.com/user-attachments/assets/80344474-d188-460c-b74b-0ce717add519)
+
 
