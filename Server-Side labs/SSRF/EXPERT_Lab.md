@@ -2,11 +2,15 @@
 
 This write-up focuses on the following **EXPERT-level labs** from the PortSwigger Web Security Academy related to **Server-side request forgery (SSRF)**:
 
-**Blind SSRF with Shellshock exploitation**  
+**6 Blind SSRF with Shellshock exploitation**  
+<blockquote>
 This lab demonstrates how to exploit SSRF vulnerabilities combined with the Shellshock bug to execute remote code.
+</blockquote>
 
-**SSRF with whitelist-based input filter**  
+**7 SSRF with whitelist-based input filter**  
+<blockquote>
 This lab shows how attackers can bypass whitelist-based input filters to exploit SSRF vulnerabilities.
+</blockquote>
 
 ---
 
@@ -254,3 +258,4 @@ http://localhost%2523@stock.weliketoshop.net/admin/delete?username=carlos
 
 
 ---
+
