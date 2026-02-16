@@ -2,8 +2,10 @@
 
 This write-up focuses on the following **EXPERT-level lab** from the PortSwigger Web Security Academy:
 
-- **Web shell upload via race condition**  
+ **7 Web shell upload via race condition** 
+  <blockquote>
   This lab demonstrates how attackers can exploit race conditions during file upload processing to bypass security controls and successfully upload malicious web shells, leading to remote code execution.
+  </blockquote>
 
 ---
 
@@ -84,3 +86,4 @@ And you will notice you will get secret
 Submit the key above and lab will be solved
 
 ----
+
