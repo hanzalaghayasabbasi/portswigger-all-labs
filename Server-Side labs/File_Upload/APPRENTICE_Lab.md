@@ -2,11 +2,16 @@
 
 This write-up focuses on the following **APPRENTICE-level labs** from the PortSwigger Web Security Academy:
 
-- **Remote code execution via web shell upload**  
+**1 Remote code execution via web shell upload**  
+  <blockquote>
   This lab demonstrates how an attacker can upload a malicious web shell by bypassing insufficient file upload validation, resulting in remote code execution on the server.
+  </blockquote>
 
-- **Web shell upload via Content-Type restriction bypass**  
+
+**2 Web shell upload via Content-Type restriction bypass**  
+<blockquote>
   This lab shows how attackers can bypass file upload restrictions by manipulating the Content-Type header, allowing them to upload web shells and achieve remote code execution.
+</blockquote>
 
 ---
 
@@ -109,4 +114,5 @@ Send request and we will get secret
 Submit the key to solve the lab.
 
 ![image](https://github.com/user-attachments/assets/786f0ef3-7fd3-4075-ae32-fcfd803ad9bd)
+
 
