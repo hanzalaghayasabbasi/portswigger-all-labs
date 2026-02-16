@@ -106,7 +106,12 @@ Ideally, users should be presented with a **confirmation step** before the LLM c
 
 **Important:** Some LLMs also depend heavily on the dataset provided to them.
 
-<img width="1063" height="377" alt="image" src="https://github.com/user-attachments/assets/5866f812-3fea-476e-a52b-49389f12667e" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5866f812-3fea-476e-a52b-49389f12667e" width="1000" alt="LLM Dataset Influence">
+  <br>
+  <em>Figure: Illustration showing how an LLM’s output is influenced by its training dataset</em>
+</p>
+
 
 ---
 
