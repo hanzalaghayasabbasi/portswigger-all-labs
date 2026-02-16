@@ -2,17 +2,25 @@
 
 This write-up focuses on the following **PRACTITIONER-level labs** from the PortSwigger Web Security Academy:
 
-- **Web shell upload via path traversal**  
+ **3 Web shell upload via path traversal** 
+ <blockquote>
   This lab demonstrates how attackers can abuse directory traversal vulnerabilities during file upload to place web shells into executable directories, resulting in remote code execution.
+ </blockquote>
 
-- **Web shell upload via extension blacklist bypass**  
+**4 Web shell upload via extension blacklist bypass**  
+  <blockquote>
   This lab shows how attackers can bypass file extension blacklists by manipulating filenames to evade validation checks, enabling successful web shell uploads.
+  </blockquote>
 
-- **Web shell upload via obfuscated file extension**  
+**5 Web shell upload via obfuscated file extension**  
+ <blockquote>
   This lab demonstrates how attackers can craft filenames with obfuscated extensions (using techniques such as Unicode characters, null bytes, or multiple extensions) to bypass file validation mechanisms.
+ </blockquote>
 
-- **Remote code execution via polyglot web shell upload**  
+ **6 Remote code execution via polyglot web shell upload**  
+  <blockquote>
   This lab shows how attackers can craft polyglot files that satisfy multiple file type checks simultaneously, allowing them to upload executable files disguised as safe file types and achieve remote code execution.
+  </blockquote>
 
 ---
 
@@ -213,4 +221,5 @@ exiftool -Comment="<?php echo 'START ' . file_get_contents('/home/carlos/secret'
 Submit the key to solve the lab.
 
 ![image](https://github.com/user-attachments/assets/fac1e00d-d4b9-4318-904a-b253b892b16e)
+
 
