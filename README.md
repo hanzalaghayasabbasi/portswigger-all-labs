@@ -1,5 +1,10 @@
 # PortSwigger Web Security Academy – Full Lab Writeups
 
+
+[![Website](https://img.shields.io/badge/Live_Site-Visit_Now-green?style=for-the-badge&logo=googlechrome&logoColor=white)](https://labs.hanzalaghayasabbasi.com/)
+
+
+
 ![PortSwigger Writeup Overview](https://github.com/user-attachments/assets/cc2f4fd4-0bb1-4f69-b40c-5e99a55d8676)
 
 This repository contains **complete and categorized writeups** for every lab available on the [PortSwigger Web Security Academy](https://portswigger.net/web-security). Each lab folder includes:
@@ -9,11 +14,11 @@ This repository contains **complete and categorized writeups** for every lab ava
 - Exploitation methodology  
 - Manual + Burp Suite techniques  
 
-> ✅ **Covers all labs across APPRENTICE, PRACTITIONER, and EXPERT levels.**
+>  **Covers all labs across APPRENTICE, PRACTITIONER, and EXPERT levels.**
 
 ---
 
-## 🎯 Lab Categories
+##  Lab Categories
 
 Labs are divided into the following groups:
 
