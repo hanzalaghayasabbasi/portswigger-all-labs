@@ -62,12 +62,16 @@ Indicators of SSTI include:
 
 Test with simple arithmetic expressions:
 
+{% raw %}
 ```
 ${7*7}
 {{7*7}}
 <%= 7*7 %>
 #{7*7}
 ```
+{% endraw %}
+
+
 
 If the output returns `49`, your payload was evaluated — confirming SSTI.
 
@@ -98,6 +102,9 @@ Once SSTI is verified, identifying the specific **template engine** is crucial f
 
 Inject malformed expressions:
 
+
+
+{% raw %}
 ```
 ${}
 {{}}
@@ -109,6 +116,7 @@ ${7/0}
 {{7/0}}
 <%= 7/0 %>
 ```
+{% endraw %}
 
 Error messages or stack traces may reveal the engine name (e.g., Jinja2, Twig, Freemarker, etc.).
 
@@ -124,11 +132,16 @@ Error messages or stack traces may reveal the engine name (e.g., Jinja2, Twig, F
 
 If no explicit error message appears, test common syntaxes for popular engines:
 
+
+
+{% raw %}
 ```
 =${7*3}
 ={{7*3}}
 =<%= 7*3 %>
 ```
+{% endraw %}
+
 If a specific syntax evaluates correctly (`21`), it identifies the underlying template engine.
 
 <p align="center">
