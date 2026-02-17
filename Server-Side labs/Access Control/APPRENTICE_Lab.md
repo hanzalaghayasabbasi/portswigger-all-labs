@@ -61,15 +61,6 @@ This lab demonstrates how manipulating request parameters can lead to exposure o
 ![image](https://github.com/user-attachments/assets/58dca2cf-1524-4431-a4bf-70883fdfd46c)
 
 
-## Overview
-
-Broken access control vulnerabilities exist when a user can access resources or perform actions that they are not supposed to be able to
-
-![image](https://github.com/user-attachments/assets/34fda04b-9451-4504-a752-7838ff740c53)
-
-![image](https://github.com/user-attachments/assets/38aa4848-0361-4057-a5e1-98ce8797dd3f)
-
-![image](https://github.com/user-attachments/assets/32c2fdf1-3410-4a55-a2dd-5f96e401caa0)
 
 ---
 
@@ -546,6 +537,7 @@ Now login as carlos, to solve the lab.
 ![image](https://github.com/user-attachments/assets/87c55d49-0e5e-46a8-b0fd-c1aa9abc15b6)
 
 ---
+
 
 
 
