@@ -39,11 +39,13 @@ This lab illustrates how SSRF attacks can bypass filters by leveraging open redi
 
 - I generated a **Burp Collaborator** client payload.
 - Then, I replaced the value of the `Referer` header with the Collaborator payload URL:
-```
 
+```http
 Referer: http://<your-collaborator-id>.oastify.com
-
 ```
+
+
+
 
 #### 2. **Sending the Request**
 
@@ -322,6 +324,7 @@ We get a `200 OK` response & we can able to access the admin panel.
 
 
 ---
+
 
 
 
