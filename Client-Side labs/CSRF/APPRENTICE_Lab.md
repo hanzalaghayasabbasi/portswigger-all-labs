@@ -28,11 +28,10 @@ This lab demonstrates a basic **Cross-Site Request Forgery (CSRF)** attack where
 ### 1. Logging In
 
 - I logged into the application using the provided credentials:
-```
 
+```http
 Username: wiener
 Password: peter
-
 ````
 
 ![image](https://github.com/user-attachments/assets/f1e65c51-136c-467c-85a7-172edfd3d912)
@@ -118,5 +117,6 @@ Replace `YOUR-LAB-ID` with your actual lab domain.
 ![image](https://github.com/user-attachments/assets/90512ba2-ef1b-4b29-88c9-3444c238bbeb)
 
 ---
+
 
 
