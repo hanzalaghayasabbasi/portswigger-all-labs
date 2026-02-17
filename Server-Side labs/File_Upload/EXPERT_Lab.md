@@ -13,6 +13,8 @@ This write-up focuses on the following **EXPERT-level lab** from the PortSwigger
 
 ### Lab Description :
 
+<img width="1093" height="588" alt="image" src="https://github.com/user-attachments/assets/f7606522-de1f-4437-bdf4-467318ff0dbe" />
+
 
 ### Solution :
 
@@ -86,4 +88,5 @@ And you will notice you will get secret
 Submit the key above and lab will be solved
 
 ----
+
 
