@@ -32,7 +32,7 @@ Broken access control vulnerabilities are extremely common and often critical, a
 <p align="center">
   <img src="https://github.com/user-attachments/assets/34fda04b-9451-4504-a752-7838ff740c53" width="400" alt="Vertical Access Control Example">
   <br>
-  <em>Figure 1: Users with higher roles (like Admin) have more permissions than lower roles (like Regular User).</em>
+  <em>Figure: Users with higher roles (like Admin) have more permissions than lower roles (like Regular User).</em>
 </p>
 
 ---
@@ -50,7 +50,7 @@ Broken access control vulnerabilities are extremely common and often critical, a
 <p align="center">
   <img src="https://github.com/user-attachments/assets/38aa4848-0361-4057-a5e1-98ce8797dd3f" width="400" alt="Horizontal Access Control Example">
   <br>
-  <em>Figure 2: Users with the same role can only access their own data, not others’ data.</em>
+  <em>Figure: Users with the same role can only access their own data, not others’ data.</em>
 </p>
 
 ---
@@ -68,7 +68,7 @@ Broken access control vulnerabilities are extremely common and often critical, a
 <p align="center">
   <img src="https://github.com/user-attachments/assets/32c2fdf1-3410-4a55-a2dd-5f96e401caa0" width="400" alt="Context-Dependent Access Control Example">
   <br>
-  <em>Figure 3: Access granted or denied depending on context, such as device or session state.</em>
+  <em>Figure: Access granted or denied depending on context, such as device or session state.</em>
 </p>
 
 
