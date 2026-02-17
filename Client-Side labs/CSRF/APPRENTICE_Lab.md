@@ -54,7 +54,7 @@ Content-Type: application/x-www-form-urlencoded
 Cookie: session=your_session_cookie
 
 email=admin@abc.com
-````
+```
 
 ![image](https://github.com/user-attachments/assets/30dd02a7-43ed-44fb-b8fa-01f698c32105)
 
@@ -117,6 +117,7 @@ Replace `YOUR-LAB-ID` with your actual lab domain.
 ![image](https://github.com/user-attachments/assets/90512ba2-ef1b-4b29-88c9-3444c238bbeb)
 
 ---
+
 
 
 
