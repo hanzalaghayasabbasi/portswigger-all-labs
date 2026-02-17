@@ -86,8 +86,7 @@ For example:
 * Send `/my-accounthanzala` → also 404
 
   ![image](https://github.com/user-attachments/assets/fee10535-45bf-4537-8647-c62b72031289)
-
-* 
+ 
 
 
 
@@ -154,10 +153,10 @@ Next:
   
    - Repeat this test using the ; delimiter instead of ?.
  
- 3. Try `/my-account;%2f%2e%2e%2frobots.txt` → 200 with user data, `X-Cache: miss`
+ 2. Try `/my-account;%2f%2e%2e%2frobots.txt` → 200 with user data, `X-Cache: miss`
     ![image](https://github.com/user-attachments/assets/bf0f05d8-0033-4b7f-b4ee-dce2a7adfee4)
 
-4. Resend → Now shows `X-Cache: hit`
+3. Resend → Now shows `X-Cache: hit`
 
    ![image](https://github.com/user-attachments/assets/675c8744-a3f1-4553-bdc3-02c833bdd853)
 
@@ -198,19 +197,20 @@ Next:
 
     ![image](https://github.com/user-attachments/assets/3d0c8378-1706-4e5f-b9fd-56b9695439c9)
 
-3 Click Copy html
+ 3 Click Copy html
 
    ![image](https://github.com/user-attachments/assets/b6dec4e3-5501-42b4-911c-c4573b8c2847)
 
 
 
-4. Paste HTML into exploit server’s **Body** field
+ 4. Paste HTML into exploit server’s **Body** field
 
    ![image](https://github.com/user-attachments/assets/7b205cc4-d0d2-471a-b9ca-8bb6b63119ce)
 
-5. Click **Deliver exploit to victim** again to solve the lab
+ 5. Click **Deliver exploit to victim** again to solve the lab
 
    ![image](https://github.com/user-attachments/assets/bf0ae86d-1cfc-4c36-b6ad-31491f55cf3d)
 
 ---
+
 
