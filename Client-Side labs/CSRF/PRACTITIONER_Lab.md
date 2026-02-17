@@ -8,7 +8,7 @@ This lab demonstrates how relying on the request method to validate CSRF tokens 
 </blockquote>
 
 **3 CSRF where token validation depends on token being present**  
-</blockquote>
+<blockquote>
 This lab shows vulnerabilities where validation only checks for the presence of a token, not its correctness.
 </blockquote>
 
@@ -1297,4 +1297,5 @@ Deliver the exploit to victim to solve the lab.
 
 
 ---
+
 
