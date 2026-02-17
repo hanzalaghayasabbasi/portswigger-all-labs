@@ -4,11 +4,11 @@
 
 This repository contains **complete and categorized writeups** for every lab available on the [PortSwigger Web Security Academy](https://portswigger.net/web-security). Each lab folder includes:
 
-- Lab title, description, and objectives  
-- Step-by-step solution using real payloads  
-- Exploitation methodology   
+- **Lab title, description, and objectives**  
+- **Step-by-step solution using real payloads**  
+- **Exploitation methodology**  
 
->  **Covers all labs across APPRENTICE, PRACTITIONER, and EXPERT levels.**
+> ✅ **Covers all labs across APPRENTICE, PRACTITIONER, and EXPERT levels.**
 
 ---
 
