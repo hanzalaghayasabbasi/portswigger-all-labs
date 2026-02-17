@@ -101,12 +101,12 @@ External stock check blocked for security reasons
 
 - This confirmed the presence of SSRF filtering logic.
 
-#### 3. **Bypassing Using Alternative Loopback IP**
+#### 2. **Bypassing Using Alternative Loopback IP**
 
 - I tried `http://127.0.0.1` — also blocked.
 - Then I tried `http://127.1` — this returned a `200 OK` response **and revealed `/admin`** in the response body.
 
-#### 4. **Attempting Access to the Admin Interface**
+#### 3. **Attempting Access to the Admin Interface**
 
 - I tried accessing:
 ```
@@ -127,7 +127,7 @@ External stock check blocked for security reasons
 
 ### Bypassing the Second Filter
 
-#### 5. **URL Encoding `/admin`**
+#### 4. **URL Encoding `/admin`**
 
 - I tried encoding `/admin` as:
 
@@ -142,7 +142,7 @@ External stock check blocked for security reasons
 
 But it was still blocked.
 
-#### 6. **Double URL Encoding**
+#### 5. **Double URL Encoding**
 
 - I encoded `%61%64%6d%69%6e` again to get:
 
@@ -322,5 +322,6 @@ We get a `200 OK` response & we can able to access the admin panel.
 
 
 ---
+
 
 
