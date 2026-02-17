@@ -4,8 +4,8 @@ This write-up focuses on the following **PRACTITIONER-level labs** from the Port
 
  **2 File path traversal, traversal sequences blocked with absolute path bypass**  
      <blockquote>
-  This lab demonstrates how attackers can bypass basic traversal sequence blocking by supplying absolute paths instead of relative traversal patterns.
-   </blockquote>
+     This lab demonstrates how attackers can bypass basic traversal sequence blocking by supplying absolute paths instead of relative traversal patterns.
+     </blockquote>
 
 **3 File path traversal, traversal sequences stripped non-recursively**  
    <blockquote>
@@ -201,4 +201,5 @@ Lab is solved
 ![image](https://github.com/user-attachments/assets/7c2e593d-0fd9-4b22-b8c5-8c5927908f11)
 
 ---
+
 
