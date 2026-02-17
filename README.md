@@ -1,7 +1,7 @@
 # PortSwigger Web Security Academy – Full Lab Writeups
 
 
-[![Website](https://img.shields.io/badge/Live_Site-Visit_Now-green?style=for-the-badge&logo=googlechrome&logoColor=white)](https://labs.hanzalaghayasabbasi.com/)
+[![Website](https://img.shields.io/badge/Live_Site-Visit_Now-green?style=for-the-badge&logo=googlechrome&logoColor=white)](https://portswigger.hanzalaghayasabbasi.com/)
 
 
 
