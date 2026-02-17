@@ -2,23 +2,35 @@
 
 This write-up focuses on the following **EXPERT-level labs** from the PortSwigger Web Security Academy related to **Cross-site scripting (XSS)**:
 
-**Reflected XSS with AngularJS sandbox escape without strings**  
+**25 Reflected XSS with AngularJS sandbox escape without strings**  
+<blockquote>
 This lab demonstrates exploiting AngularJS sandbox escapes to execute reflected XSS without needing string payloads.
+</blockquote>
 
-**Reflected XSS with AngularJS sandbox escape and CSP**  
+**26 Reflected XSS with AngularJS sandbox escape and CSP**  
+<blockquote>
 This lab shows bypassing Content Security Policy (CSP) protections by escaping AngularJS sandboxes in reflected XSS attacks.
+</blockquote>
 
-**Reflected XSS with event handlers and href attributes blocked**  
+**27 Reflected XSS with event handlers and href attributes blocked**  
+<blockquote>
 This lab explores reflected XSS where event handlers and href attributes are blocked, requiring alternative exploitation techniques.
+</blockquote>
 
-**Reflected XSS in a JavaScript URL with some characters blocked**  
+**28 Reflected XSS in a JavaScript URL with some characters blocked**  
+<blockquote>
 This lab demonstrates exploiting reflected XSS when the JavaScript URL scheme is filtered and some characters are blocked.
+</blockquote>
 
-**Reflected XSS protected by very strict CSP, with dangling markup attack**  
+**29 Reflected XSS protected by very strict CSP, with dangling markup attack**  
+<blockquote>
 This lab covers how dangling markup can be used to bypass very strict CSP and cause reflected XSS.
+</blockquote>
 
-**Reflected XSS protected by CSP, with CSP bypass**  
+**30 Reflected XSS protected by CSP, with CSP bypass**  
+<blockquote>
 This lab shows advanced techniques for bypassing CSP protections to achieve reflected XSS.
+</blockquote>
 
 ---
 
@@ -720,3 +732,4 @@ After injecting the payload, the lab is solved.
 
 
 ---
+
