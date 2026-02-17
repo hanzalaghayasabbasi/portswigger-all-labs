@@ -2,21 +2,20 @@
 
 This write-up focuses on the following **EXPERT-level** labs from the PortSwigger Web Security Academy:
 
----
 
 **13 Broken brute-force protection, multiple credentials per request**
 <blockquote>
 This lab demonstrates how a flawed authentication mechanism allows multiple credential pairs to be submitted within a single HTTP request. The server processes each set independently, which enables attackers to bypass standard rate-limiting controls and perform large-scale brute-force attacks efficiently. The lab emphasizes the importance of validating and strictly controlling request formats during authentication.
 </blockquote>
 
----
+
  **14 2FA bypass using a brute-force attack**
 
 <blockquote>
 This lab demonstrates how insufficient brute-force protection on the second authentication factor (2FA) allows attackers to systematically guess 2FA codes once valid primary credentials have been compromised. The absence of proper rate-limiting or account lockout mechanisms on the 2FA step renders multi-factor authentication ineffective. The lab highlights the need for consistent protection across all stages of the authentication workflow.
 </blockquote>
 
-
+---
 
 ## LAB 13- Broken brute-force protection, multiple credentials per request
 
@@ -182,5 +181,6 @@ Then:
 
 
 ![image](https://github.com/user-attachments/assets/51682e4f-35bf-4ea2-9fcf-a1def022628d)
+
 
 
