@@ -98,7 +98,7 @@ Thus we've solved the lab.
 
 ### Steps to Solve
 
-1. **Intercepted the Stock Check Request**
+**1. Intercepted the Stock Check Request**
 
    I accessed the lab and intercepted the stock check feature using **Burp Suite**.  
    The request included a `stockApi` parameter which the server used to fetch internal product stock information.
@@ -106,7 +106,7 @@ Thus we've solved the lab.
    ![image](https://github.com/user-attachments/assets/8bb0ff14-1ee7-46e8-8062-0725c40caf53)
 
 
-2. **Initiated an Internal IP Scan with Intruder**
+**2. Initiated an Internal IP Scan with Intruder**
 
    To find the internal admin panel, I configured **Burp Intruder** to brute-force the final octet (`X`) in the IP range `192.168.0.X`.  
    The payload positions were set on:
@@ -124,7 +124,7 @@ We got a 200 ok response for 23. So the ip of backend server is 192.168.0.23.
 ![image](https://github.com/user-attachments/assets/df9ce912-2546-4ef6-adb9-b67a775d1487)
 
 
-3. **Identified the Admin Interface**
+**3. Identified the Admin Interface**
 
 After scanning, I found that the admin interface was located at:
  ```
@@ -137,9 +137,9 @@ After scanning, I found that the admin interface was located at:
 ![image](https://github.com/user-attachments/assets/a89269bd-f6c7-489b-8804-b77c9cd77a09)
 
 
-4. **Deleted the User via SSRF**
+ **4. Deleted the User via SSRF**
 
-I appended the delete endpoint in the `stockApi` parameter:
+    I appended the delete endpoint in the `stockApi` parameter:
 
  ```
 
@@ -150,8 +150,7 @@ and sent the request.
 
 ![image](https://github.com/user-attachments/assets/ac0678e8-3782-4171-8344-f6d822b399db)
 
-
-5. **Lab Solved**
+**5. Lab Solved**
 
 The server processed the internal request and deleted the user `carlos`, successfully completing the lab.
 
@@ -160,5 +159,6 @@ The server processed the internal request and deleted the user `carlos`, success
 
 
 ---
+
 
 
