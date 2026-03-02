@@ -13,6 +13,7 @@ This write-up focuses on the following **EXPERT-level lab** from the PortSwigger
 
 ### Lab Description :
 
+![image](https://github.com/user-attachments/assets/01e7844a-42fe-4b65-8f1c-e8a499d414ed)
 
 ### Solution :
 
@@ -95,6 +96,7 @@ Login after Registration successfully.
 Delete the carlos user to solve the lab.
 
 ![image](https://github.com/user-attachments/assets/14545807-a920-4994-a239-f074aa3eee36)
+
 
 
 
