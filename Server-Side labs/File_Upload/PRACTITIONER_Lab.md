@@ -85,19 +85,6 @@ Submit the secret to solve the lab.
 ![image](https://github.com/user-attachments/assets/26e86041-d17f-4c13-90ac-7df894f4f3a2)
 
 
-
-### Solution :
-
-(Solution content would go here)
-
----
-
-## LAB 5 - Web shell upload via obfuscated file extension
-
-### Lab Description :
-
-![image](https://github.com/user-attachments/assets/37ecae73-08d3-4631-93d0-75a036bed721)
-
 ## Overview:
 
 One of the more obvious ways of preventing users from uploading malicious scripts is to blacklist potentially dangerous file extensions like `.php`. However, the practice of blacklisting is inherently flawed, as it's difficult to account for every possible variation that could be used to execute code.
@@ -152,7 +139,139 @@ Result
 
 I then copied the key and sumbit it, **the lab is successfully solved**.
 
-![image](https://github.com/user-attachments/assets/0af85376-2707-42c1-94fe-9b216d03f9a5)
+![image](https://github.com/user-attachments/assets/e67a9b85-43e8-4366-b866-7b69a5ce8e6c)
+
+---
+
+## LAB 5 - Web shell upload via obfuscated file extension
+
+### Lab Description :
+
+![image](https://github.com/user-attachments/assets/37ecae73-08d3-4631-93d0-75a036bed721)
+
+
+
+### Solution :
+
+
+**Lab Goal**  
+Read the contents of `/home/carlos/secret` by uploading and executing a malicious PHP file through the avatar upload feature.
+
+**Login**  
+Log in with the provided credentials.
+
+![PHP payload](https://github.com/user-attachments/assets/e6d21dc6-a517-419c-8f6c-746e70a23754)
+
+### 1. Malicious PHP Payload
+
+We will use this simple one-liner PHP script to read and display the secret file:
+
+```php
+<?php echo file_get_contents('/home/carlos/secret'); ?>
+```
+![PHP payload](https://github.com/user-attachments/assets/d78e0472-4c1d-412c-9f8e-a9ff44345da5)
+
+
+This uses `file_get_contents()` to read `/home/carlos/secret` and outputs the result directly.
+
+### 2. Understand Normal Upload Behavior
+
+Before trying the malicious file, upload a normal image to understand how the server handles files.
+
+1. Go to **My account** → Upload any real image (e.g. a screenshot)
+2. Observe the success message
+
+![Uploading a normal image](https://github.com/user-attachments/assets/fd2c1eab-8939-4386-99e8-dd41396cfc5a)
+
+In **Burp Suite**:
+
+- Proxy → HTTP history → Filter → make sure **Images** is checked
+
+![HTTP history filter - show images](https://github.com/user-attachments/assets/d794ac9c-eef5-4b1d-9099-da8121e39486)
+
+Successful upload:
+
+![Image uploaded successfully](https://github.com/user-attachments/assets/7bd2199f-6112-4f0b-a79d-9e833e3c4d95)
+
+- Find the `POST /my-account/avatar` request → **Right-click → Send to Repeater** (Ctrl+R)
+
+![POST request to avatar endpoint in Repeater](https://github.com/user-attachments/assets/a837b1c5-2351-470f-81ae-2f2df60b0209)
+
+- Go back to the site → **Back to my account** → see your image loaded
+
+![Uploaded image displayed on profile](https://github.com/user-attachments/assets/92eb27bd-cb91-46e0-bc40-c2b9e15636cd)
+
+- In Burp, find the corresponding `GET /files/avatars/...` request → also send to **Repeater**
+
+Now we know:
+- Upload endpoint: `POST /my-account/avatar`
+- Files are served from: `/files/avatars/<filename>`
+
+### 3. Attempt to Upload Malicious File
+
+Try uploading our `exploit.php` file directly → blocked.
+
+![Trying to upload .php file - blocked](https://github.com/user-attachments/assets/fee026e8-7206-4a53-87ea-d295c63c0577)
+
+### 4. Bypassing the Filter
+
+### Failed Attempts
+
+- Double extension: `phpinfo.jpg.php` → blocked
+
+![Double extension attempt - failed](https://github.com/user-attachments/assets/96fe9da8-0b9e-45e9-89eb-9f1483985cd1)
+
+- `exploit.php%20.jpg` (space) → also blocked
+
+![%20 attempt - failed](https://github.com/user-attachments/assets/1bb0956a-927a-439b-8547-787c9c0a500c)
+
+### Successful Bypass: Null Byte Injection
+
+Change the filename in the `POST` request to:
+
+```
+filename="exploit.php%00.jpg"
+```
+
+- `%00` = null byte (`\0`)
+- Validation sees: ends with `.jpg` → allowed
+- Filesystem sees: `exploit.php` (stops at null byte)
+
+![Successful upload with null byte](https://github.com/user-attachments/assets/5943689d-4ac9-4888-8516-81f9021e6490)
+
+**Why it works**
+
+| Technique            | What server validation sees | What filesystem sees     | Result     |
+|----------------------|------------------------------|---------------------------|------------|
+| exploit.php          | ends with .php              | exploit.php              | Blocked    |
+| exploit.php.jpg      | ends with .jpg              | exploit.php.jpg          | Blocked    |
+| exploit.php%00.jpg   | ends with .jpg              | exploit.php (stops at \0) | **Allowed & executable** |
+
+### 5. Execute the Webshell
+
+Use the same `GET /files/avatars/...` request pattern from earlier.
+
+Change the filename to:
+
+```
+GET /files/avatars/exploit.php HTTP/1.1
+```
+
+Send the request → you should see the contents of `/home/carlos/secret` in the response.
+
+![Executing the PHP file via GET request](https://github.com/user-attachments/assets/b4bc2523-e6b4-4c78-b303-527e6036bb90)
+
+![Secret file contents revealed](https://github.com/user-attachments/assets/d1476ced-525c-4f6d-9709-de5c5e6ccdc1)
+
+Copy the secret key.
+
+### 6. Solve the Lab
+
+Paste the key into the solution submission box → lab solved!
+
+![Lab solved confirmation](https://github.com/user-attachments/assets/0af85376-2707-42c1-94fe-9b216d03f9a5)
+
+
 
 ---
 
@@ -221,5 +340,6 @@ exiftool -Comment="<?php echo 'START ' . file_get_contents('/home/carlos/secret'
 Submit the key to solve the lab.
 
 ![image](https://github.com/user-attachments/assets/fac1e00d-d4b9-4318-904a-b253b892b16e)
+
 
 
