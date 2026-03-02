@@ -620,7 +620,7 @@ It generates the following HTML code:
 
 <img width="1148" height="77" alt="image" src="https://github.com/user-attachments/assets/202a5b88-3d46-4d02-b643-b1bfb5c133a5" />
 ```
-a id="author" href="http://test4.com" onclick="var tracker={track(){}};tracker.track('http://test4.com');">test2</a>
+<a id="author" href="http://test4.com" onclick="var tracker={track(){}};tracker.track('http://test4.com');">test2</a>
 ```
 
 We see single quote and backslash characters are indeed escaped and angle brackets and double quotes are HTML-encoded:
@@ -847,5 +847,6 @@ Now Stored below comment in blog then lab will be marked ad solve
 <img width="1163" height="248" alt="image" src="https://github.com/user-attachments/assets/20f10f05-d180-4bc6-872e-bddbf3c7e425" />
 
 ---
+
 
 
