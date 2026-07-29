@@ -17,6 +17,12 @@ This lab shows how attackers can leverage indirect prompt injection techniques t
 <blockquote> 
 This lab demonstrates how attackers can manipulate an AI-powered agent through indirect prompt injection to trigger secondary vulnerabilities, highlighting the risks of excessive AI privileges and insufficient input validation. 
 </blockquote>
+
+**7  Lab: Bypassing AI scanner defenses to exfiltrate sensitive information**  
+<blockquote>
+This lab demonstrates an indirect prompt injection attack against an AI-powered content scanner. By embedding malicious instructions in a blog comment, the scanner is manipulated into revealing a sensitive API key, illustrating how AI systems can unintentionally leak confidential information when they fail to distinguish untrusted input from legitimate instructions.
+</blockquote>
+
 ---
 
 ### LAB 4 - Exploiting vulnerabilities in LLM APIs
@@ -345,7 +351,7 @@ The scanner then:
 ---
 
 
-### LAB 6 - Bypassing AI scanner defenses to exfiltrate sensitive information
+### LAB 7 - Bypassing AI scanner defenses to exfiltrate sensitive information
 
 ### Lab Description
 <img width="814" height="862" alt="image" src="https://github.com/user-attachments/assets/72d21a94-f83f-4af5-a568-d1be5ed96e65" />
