@@ -2,7 +2,7 @@
 
 This write-up focuses on the following **EXPERT-level lab** from the PortSwigger Web Security Academy related to **Web LLM attacks**:
 
-### **4 Exploiting Insecure Output Handling in LLMs**
+### **7 Exploiting Insecure Output Handling in LLMs**
 <blockquote>
 This lab demonstrates how insecure handling of LLM outputs can be exploited by attackers to inject unintended instructions, cause data leaks, or compromise downstream systems.
 </blockquote>
