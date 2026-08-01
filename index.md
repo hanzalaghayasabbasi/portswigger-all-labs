@@ -41,7 +41,7 @@ Labs are divided into the following groups:
 | Web Cache Deception            | 5    | [Web Cache Deception](./Server-Side%20labs/Web%20Cache%20Deception/) |
 | XXE Injection                  | 9    | [XXE](./Server-Side%20labs/XXE/)                                     |
 
-**🧮 Total Server‑Side Labs:** 125
+**🧮 Total Server‑Side Labs:** 115
 
 ---
 
@@ -74,9 +74,9 @@ Labs are divided into the following groups:
 | Prototype Pollution             | 10   | [Prototype Pollution](./Advanced%20labs/Prototype%20pollution/)     |
 | SSTI (Template Injection)       | 7    | [SSTI](./Advanced%20labs/SSTI/)                                     |
 | Web Cache Poisoning             | 13   | [Cache Poisoning](./Advanced%20labs/Web%20cache%20poisoning/)       |
-| Web LLM Attacks                 | 4    | [LLM Attacks](./Advanced%20labs/Web_LLM_Attacks/)                   |
+| Web LLM Attacks                 | 8    | [LLM Attacks](./Advanced%20labs/Web_LLM_Attacks/)                   |
 
-**🧮 Total Advanced Labs:** 93
+**🧮 Total Advanced Labs:** 98
 
 ---
 
