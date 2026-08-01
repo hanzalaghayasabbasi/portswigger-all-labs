@@ -81,7 +81,7 @@ Labs are divided into the following groups:
 | Web Cache Poisoning             | 13   | [Cache Poisoning](./Advanced%20labs/Web%20cache%20poisoning/)       |
 | Web LLM Attacks                 | 8    | [LLM Attacks](./Advanced%20labs/Web_LLM_Attacks/)                   |
 
-**🧮 Total Advanced Labs:** 100
+**🧮 Total Advanced Labs:** 98
 
 ---
 
